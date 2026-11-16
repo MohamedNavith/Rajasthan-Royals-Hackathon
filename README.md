@@ -36,7 +36,7 @@ T20 cricket is defined by fluctuating match states where a single delivery can d
 ### 🎯 Top 10 Bowlers Under Pressure
 
 | Rank | Player Name | Pressure Rating | 95% Bootstrap CI | Pressure Balls | Total Balls | Pressure Econ (RPO) | Normal Econ (RPO) | Econ Delta (Δ) | Pressure Wickets | Runs Saved vs Context | Win Prob Added (WPA) | Match Consistency |
-|:---:|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **1** | **Sunil Narine** | **77.46** | [78.07, 78.94] | 395 | 1,533 | **5.65** | 7.14 | **+1.49** | 29 | **+157.3** | **+4.81** | **100.0%** |
 | **2** | **Sufiyan Muqeem** | **74.28** | [75.29, 76.45] | 130 | 518 | **3.74** | 6.65 | **+2.91** | 11 | **+62.3** | +1.91 | **100.0%** |
 | **3** | **Riley Meredith** | **73.79** | [74.31, 76.55] | 72 | 310 | **6.08** | 9.28 | **+3.19** | 5 | +36.5 | +1.09 | **100.0%** |
