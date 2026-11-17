@@ -50,21 +50,59 @@ T20 cricket is defined by fluctuating match states where a single delivery can d
 
 ---
 
-## 👑 Rajasthan Royals War Room: IPL 2027 Auction Strategy
+## 👑 Rajasthan Royals War Room: IPL 2027 Auction Strategy & Post-Trade Blueprint
 
-Connecting empirical pressure analytics to Rajasthan Royals' tactical squad requirements for the IPL 2027 Auction based on an audit of 76 historical RR matches:
+Connecting empirical pressure analytics directly to Rajasthan Royals' tactical requirements following the **2026 IPL franchise rosters** and **verified blockbuster trade transactions**:
 
-### 1. The Core Gaps in the RR Lineup
-* **Death-Overs Power Finisher:** Shimron Hetmyer registered -31.5 Runs Over Expected (ROE) in high-pressure chases for RR. RR requires an elite overseas power hitter at #6/#7.
-* **Spin Choke Succession:** Yuzvendra Chahal (25 pressure wickets) & R Ashwin (17 wickets) were RR's primary middle-overs choke. RR needs an unhittable spin weapon.
-* **145+ km/h Express Death Pace:** To complement Sandeep Sharma's medium-pace variations, RR needs express pace intimidation to blow away lower-order partnerships.
+### 1. 2026 Blockbuster Trade Update & Fortified Bowling Arsenal
+* **RR ⇄ LSG Blockbuster:** Rajasthan Royals traded all-rounder **Sam Curran** to Lucknow Super Giants in exchange for India premier fast bowler **Mohammad Shami** and left-arm orthodox spinner **Manimaran Siddharth**.
+* **Bowling Arsenal Complete:** Shami and Siddharth join Jofra Archer, Sandeep Sharma, Adam Milne (#7 ranked pressure bowler), Ravi Bishnoi, Nandre Burger, and Ravindra Jadeja. **RR's bowling is now completely fortified across all phases**—zero need to spend high auction capital on overseas pacers.
+* **Other Major Rival Trades:**
+  * **DC ⇄ LSG:** Rishabh Pant traded to DC; Kuldeep Yadav traded to LSG.
+  * **DC ⇄ SRH:** T Natarajan to SRH; Zeeshan Ansari to DC.
+  * **SRH ⇄ CSK:** Liam Livingstone & Jack Edwards to CSK; Khaleel Ahmed & Nathan Ellis to SRH.
+  * **MI ⇄ PBKS:** Hardik Pandya to PBKS; Arshdeep Singh to MI.
+  * **SRH ➔ GT:** Harshal Patel transferred to GT.
 
-### 2. Tiered Auction Target Recommendations
-* **⭐ Tier 1 Marquee Target (Batting): Tim David (Rank 1)** — Absolute top priority. 188.6 pressure SR, +134.5 ROE, +2.53 WPA, and 73.0% consistency. Solves RR's death chase deficit.
-* **⭐ Tier 1 Marquee Target (Bowling): Sunil Narine (Rank 1) / Kuldeep Yadav (Rank 5)** — Narine (5.65 RPO pressure economy, +157.3 runs saved, 100% consistency) or Kuldeep (35 pressure wickets, +4.85 WPA) provides the ultimate middle-overs strangle.
+### 2. Critical Remaining Voids in the RR Lineup
+* **Death-Overs Power Finisher:** Shimron Hetmyer registered **-31.5 Runs Over Expected (ROE)** in high-pressure chases for RR. With Sam Curran traded away, RR experiences severe batting collapse risk in 10+ RRR chases.
+* **Severe Wicketkeeping Vulnerability:** Sanju Samson is at CSK; **Dhruv Jurel is RR's sole specialist wicketkeeper**. Acquiring a dual-threat keeper-finisher is paramount.
+
+### 3. Actionable Target Recommendations
+* **⭐ Tier 1 Marquee Target (Batting): Tim David (Rank 1)** — Absolute top priority. 188.6 pressure SR, +134.5 ROE, +2.53 WPA, and 73.0% consistency. Directly solves RR's death chase deficit.
+* **⭐ Tier 1 Marquee Target (Wicketkeeper): Josh Inglis (Rank 5)** — Dual-threat asset offering 183.5 pressure SR, +98.8 ROE, and an unmatched 81.5% consistency. Provides essential wicketkeeping depth behind Jurel and destroys middle-overs spin.
 * **💎 Crown Jewel Retention: Vaibhav Sooryavanshi (Rank 3)** — RR's in-house prodigy delivered 213.8 pressure SR and +93.3 ROE specifically for RR. Strategic directive: Lock him in as primary opener alongside Yashasvi Jaiswal.
-* **⚡ Tier 2 High-Value Specialists:** **Josh Inglis (Rank 5)** (dual-threat WK/batter, 81.5% consistency) and **Riley Meredith (Rank 3) / Mayank Yadav (Rank 9)** (145+ km/h express death pace).
-* **💡 Tier 3 Domestic Steals:** **Naman Dhir (#4)**, **Sameer Rizvi (#8)**, **Ashutosh Sharma (#11)**, and **Sufiyan Muqeem (#2)** offer extreme purse efficiency.
+* **⚡ Tier 2 High-Value Specialists:** **Riley Meredith (Rank 3 Bowler)** (6.08 RPO, 100% consistency) and **Sufiyan Muqeem (Rank 2 Bowler)** (3.74 RPO).
+* **💡 Tier 3 Domestic Steals:** **Naman Dhir (#4)**, **Sameer Rizvi (#8)**, and **Ashutosh Sharma (#11)** offer extreme purse efficiency.
+
+### 4. Playing XI Evolution: 2026 Base vs 2027 Champion Lineup
+* **2026 Post-Trade Probable XI:**
+  1. Yashasvi Jaiswal (LH Opener, +53.8 ROE)
+  2. Vaibhav Sooryavanshi (LH Opener, 213.8 SR - Rank #3)
+  3. Riyan Parag (RH Anchor / Enforcer)
+  4. Ravindra Jadeja (LH Spin All-Rounder)
+  5. Dhruv Jurel (Wicketkeeper / Finisher, +9.3 ROE)
+  6. Shimron Hetmyer (Overseas Finisher - Vulnerability: -31.5 ROE)
+  7. Shubham Dubey / Donovan Ferreira (Impact Batter)
+  8. Ravi Bishnoi (Right-Arm Wrist Spin)
+  9. Mohammad Shami (**New Trade-In** - Pace Spearhead)
+  10. Jofra Archer / Adam Milne (**Milne: Rank #7 Bowler**)
+  11. Sandeep Sharma (Death Yorker & Knuckleballs)
+  * *Impact Sub:* Manimaran Siddharth (**New Trade-In** - Left-Arm Orthodox Spin)
+
+* **👑 Projected 2027 Champion Playing XI:**
+  1. Yashasvi Jaiswal (LH Opener - Powerplay Dominance)
+  2. Vaibhav Sooryavanshi (LH Opener - #3 Pressure Batter)
+  3. Riyan Parag (RH Middle-Overs Aggressor)
+  4. Ravindra Jadeja (LH Spin All-Rounder & Match Finisher)
+  5. **Josh Inglis** (**Target #5** - Dual WK / 360° Spin Destroyer)
+  6. **Tim David** (**Target #1** - 188.6 SR, +134.5 ROE, Elite Power Finisher)
+  7. Dhruv Jurel (Clutch Pressure Finisher / Secondary WK)
+  8. Ravi Bishnoi (Right-Arm Attacking Leg-Spin)
+  9. Mohammad Shami (New Ball Swing & Reverse Yorker Spearhead)
+  10. Jofra Archer / Adam Milne (Express 150 km/h Artillery)
+  11. Sandeep Sharma (Death Over Deception Master)
+  * *Impact Sub:* Manimaran Siddharth / Naman Dhir (**Target #4**)
 
 ---
 

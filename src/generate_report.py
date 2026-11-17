@@ -357,35 +357,48 @@ def generate_docx_report(batters_df: pd.DataFrame, bowlers_df: pd.DataFrame):
         "• Trap 6 (IPL vs T20I Disparity): Opposition tiering, Empirical Bayes shrinkage, and sample cutoffs enforced."
     )
 
-    # Section 7: Rajasthan Royals IPL 2027 Auction Strategy
-    add_h1("7. Rajasthan Royals IPL 2027 Auction Strategy & Squad Fit")
+    # Section 7: Rajasthan Royals IPL 2027 Auction Strategy & Post-Trade Blueprint
+    add_h1("7. Rajasthan Royals IPL 2027 Auction Strategy & Post-Trade Franchise Blueprint")
     doc.add_paragraph(
-        "Translating quantitative metrics into actionable franchise silverware requires aligning player archetypes "
-        "with Rajasthan Royals' specific squad architecture. Analyzing 76 RR matches in the dataset reveals three critical pain points:"
+        "Translating empirical pressure analytics into actionable franchise silverware requires aligning data insights "
+        "with Rajasthan Royals' actual roster dynamics following the 2026 IPL mega-auction and verified trade transactions. "
+        "Most notably, Rajasthan Royals executed a blockbuster trade: trading all-rounder Sam Curran to Lucknow Super Giants (LSG) "
+        "in exchange for India's premier pace spearhead Mohammad Shami and left-arm orthodox spinner Manimaran Siddharth. "
+        "Furthermore, Sanju Samson now anchors Chennai Super Kings (CSK), leaving Dhruv Jurel as RR's primary specialist wicketkeeper."
     )
+    add_h2("7.1 Tactical Audit: Fortified Strengths vs Critical Remaining Voids")
     doc.add_paragraph(
-        "1. Death-Overs Batting Volatility: Shimron Hetmyer generated -31.5 Runs Over Expected in high-pressure chases, "
-        "and Sanju Samson (-21.0 ROE under pressure) often shoulders an excessive burden. RR urgently requires an elite finisher.\n"
-        "2. Spin Succession Planning: As Yuzvendra Chahal (25 pressure wickets for RR) and R Ashwin (17 wickets) transition, "
-        "RR must secure an unhittable middle-overs choke.\n"
-        "3. High-Pace Intimidation: While Sandeep Sharma provides masterclass death deception, RR lacks 150+ km/h express speed to break games open."
+        "1. Fortified Bowling Fortress: The acquisition of Mohammad Shami and Manimaran Siddharth—alongside Jofra Archer, Sandeep Sharma, "
+        "Adam Milne (#7 ranked pressure bowler), Ravi Bishnoi, Nandre Burger, and Ravindra Jadeja—completely fortifies RR's bowling. "
+        "The franchise boasts world-class new-ball swing, middle-overs mystery spin, and death-overs deception. RR does NOT need to exhaust "
+        "auction capital on high-priced overseas bowlers.\n"
+        "2. The Critical Death-Overs Batting Void: In high-pressure chases, Shimron Hetmyer recorded -31.5 Runs Over Expected (ROE) for RR, "
+        "and Sam Curran's departure removes a lower-order buffer. RR exhibits extreme vulnerability when chasing 10+ required run rates.\n"
+        "3. Wicketkeeping Depth: Dhruv Jurel is currently the sole specialist wicketkeeper on the entire RR roster. Acquiring a high-calibre "
+        "dual-threat wicketkeeper-batter is a non-negotiable operational priority."
     )
-    add_h2("7.1 Franchise Target Profiles & Squad Integration")
+    add_h2("7.2 Actionable Auction Targets for RR War Room")
     doc.add_paragraph(
-        "• Tim David (Rank 1 Batter, Rating 76.74): The absolute #1 priority overseas target. David elevates his strike rate to 188.6 "
-        "under pressure, producing +134.5 Runs Over Expected and +2.53 Win Probability Added with 73% consistency. Slotting him at #6 "
-        "instantly solves RR's chase execution.\n"
-        "• Josh Inglis (Rank 5 Batter, Rating 72.98): Dual-threat asset offering 183.5 pressure SR, +98.8 ROE, and an unmatched 81.5% consistency. "
-        "His 360-degree sweep capability against spin and elite wicketkeeping provides invaluable squad flexibility.\n"
-        "• Vaibhav Sooryavanshi (Rank 3 Batter, Rating 73.40): An existing Rajasthan Royals gem. In 35 matches across 2025–2026, he delivered "
-        "a breathtaking 213.8 pressure SR and +93.3 ROE for RR. Recommendation: Cement him as the permanent primary opener alongside "
-        "Yashasvi Jaiswal, forming the most lethal Left-Hand opening pair in the IPL.\n"
-        "• Sunil Narine (Rank 1 Bowler, Rating 77.46) / Sufiyan Muqeem (Rank 2 Bowler, Rating 74.28): Narine (5.65 RPO pressure economy, "
-        "+157.3 runs saved, 100% consistency) or breakout wrist-spinner Sufiyan Muqeem (3.74 RPO pressure economy) provides the ultimate middle-overs choke.\n"
-        "• Riley Meredith (Rank 3 Bowler, Rating 73.79) / Mayank Yadav (Rank 9 Bowler, Rating 65.63): Provides the missing 145–150+ km/h "
-        "express death artillery to complement Sandeep Sharma's medium-pace changeups.\n"
-        "• High-Value Indian Steals: Naman Dhir (#4 Batter, +63.6 ROE), Sameer Rizvi (#8 Batter, 170.7 pressure SR), and Ehsan Khan (#8 Bowler, 5.45 RPO) "
-        "offer immense purse efficiency, allowing RR to dominate marquee bidding."
+        "• Tim David (Rank 1 Batter, Rating 76.74 | Priority: Tier 1 Overseas Marquee): The absolute #1 priority target for RR. "
+        "David elevates his strike rate to 188.6 under pressure, delivering +134.5 Runs Over Expected, +2.53 Win Probability Added, and 73% consistency. "
+        "Slotting him at #6 replaces Hetmyer's negative deficit with dominant boundary-hitting power.\n"
+        "• Josh Inglis (Rank 5 Batter, Rating 72.98 | Priority: Tier 1 Overseas Wicketkeeper): Dual-threat asset offering 183.5 pressure SR, "
+        "+98.8 ROE, and an unmatched 81.5% consistency rate. Solves RR's wicketkeeping depth while offering 360-degree spin destruction at #5.\n"
+        "• Vaibhav Sooryavanshi (Rank 3 Batter, Rating 73.40 | Priority: Crown Jewel Retention): RR's in-house prodigy generated a breathtaking "
+        "213.8 pressure SR and +93.3 ROE specifically for RR. Directive: Cement him permanently as primary opener with Yashasvi Jaiswal.\n"
+        "• High-Value Indian Steals: Naman Dhir (#4 Batter, +63.6 ROE, 183.9 SR) and Sameer Rizvi (#8 Batter, 170.7 SR) provide extreme middle-order "
+        "burst without draining marquee purse funds.\n"
+        "• Bowling Choke Assets: Sunil Narine (#1 Bowler, 5.65 RPO) or Sufiyan Muqeem (#2 Bowler, 3.74 RPO) provides the ultimate middle-overs strangle, "
+        "while Riley Meredith (#3 Bowler, 6.08 RPO) provides 150 km/h death backup."
+    )
+    add_h2("7.3 Projected Rajasthan Royals Playing XI (2026 Base vs 2027 Champion XI)")
+    doc.add_paragraph(
+        "Current 2026 Post-Trade XI: 1. Yashasvi Jaiswal, 2. Vaibhav Sooryavanshi, 3. Riyan Parag, 4. Ravindra Jadeja, 5. Dhruv Jurel (wk), "
+        "6. Shimron Hetmyer (vulnerable), 7. Shubham Dubey/Donovan Ferreira, 8. Ravi Bishnoi, 9. Mohammad Shami (Trade-In), 10. Jofra Archer/Adam Milne, "
+        "11. Sandeep Sharma. [Impact Sub: Manimaran Siddharth (Trade-In)].\n\n"
+        "Projected 2027 Champion XI: 1. Yashasvi Jaiswal, 2. Vaibhav Sooryavanshi (#3 Batter), 3. Riyan Parag, 4. Ravindra Jadeja, "
+        "5. Josh Inglis [AUCTION TARGET - WK / #5 Batter], 6. Tim David [AUCTION TARGET - #1 Finisher], 7. Dhruv Jurel (Finisher), "
+        "8. Ravi Bishnoi, 9. Mohammad Shami, 10. Jofra Archer / Adam Milne, 11. Sandeep Sharma. [Impact Sub: Manimaran Siddharth / Naman Dhir]."
     )
     
     # Save Word doc
@@ -560,16 +573,17 @@ def generate_pdf_report(batters_df: pd.DataFrame, bowlers_df: pd.DataFrame):
         body_style
     ))
     
-    # Section 7: RR IPL 2027 Auction Strategy
-    story.append(Paragraph("6. Rajasthan Royals IPL 2027 Auction Strategy & Squad Fit", h1_style))
+    # Section 7: RR IPL 2027 Auction Strategy & Post-Trade Franchise Blueprint
+    story.append(Paragraph("6. Rajasthan Royals IPL 2027 Auction Strategy & Post-Trade Blueprint", h1_style))
     story.append(Paragraph(
-        "Based on an audit of 76 Rajasthan Royals matches in the dataset, our model delivers actionable war room targets:<br/>"
-        "• <b>Primary Finisher Need:</b> Tim David (#1 Batter, +134.5 ROE, 188.6 SR under pressure) fills RR's death chase finishing void.<br/>"
-        "• <b>Crown Jewel Retention:</b> Vaibhav Sooryavanshi (#3 Batter, 213.8 SR under pressure) should be permanently paired with "
-        "Yashasvi Jaiswal as RR's primary opening weapon.<br/>"
-        "• <b>Spin Choke Succession:</b> Sunil Narine (#1 Bowler, 5.65 RPO) or Sufiyan Muqeem (#2 Bowler, 3.74 RPO) provides the ultimate middle-overs strangle.<br/>"
-        "• <b>Express Death Pace:</b> Riley Meredith (#3 Bowler, 6.08 RPO) or Mayank Yadav (#9 Bowler, 150+ km/h) delivers lethal high-pace execution.<br/>"
-        "• <b>Smart Domestic Steals:</b> Naman Dhir (#4), Sameer Rizvi (#8), and Ashutosh Sharma (#11) optimize purse allocation.",
+        "<b>2026 Blockbuster Trade Update:</b> Rajasthan Royals traded Sam Curran to LSG to acquire India premier fast bowler <b>Mohammad Shami</b> "
+        "and left-arm orthodox spinner <b>Manimaran Siddharth</b>. With Sanju Samson at CSK, Dhruv Jurel anchors wicketkeeping duties.<br/>"
+        "• <b>Fortified Bowling:</b> Shami and Siddharth join Jofra Archer, Sandeep Sharma, Adam Milne (#7 Bowler), and Ravi Bishnoi, creating a complete bowling attack.<br/>"
+        "• <b>Primary Finisher Need (Tier 1):</b> Tim David (#1 Batter, +134.5 ROE, 188.6 SR under pressure) directly solves Shimron Hetmyer's negative regression (-31.5 ROE).<br/>"
+        "• <b>Wicketkeeper Depth (Tier 1):</b> Josh Inglis (#5 Batter, 183.5 SR, 81.5% consistency, specialist keeper) secures vital backup and middle-overs spin acceleration.<br/>"
+        "• <b>Crown Jewel Retention:</b> Vaibhav Sooryavanshi (#3 Batter, 213.8 SR under pressure) cemented as permanent opener with Yashasvi Jaiswal.<br/>"
+        "• <b>Domestic Steals & Choke Assets:</b> Naman Dhir (#4), Sameer Rizvi (#8), and Sufiyan Muqeem (#2 Bowler, 3.74 RPO) provide massive purse efficiency.<br/>"
+        "• <b>Projected 2027 Champion XI:</b> Jaiswal, Sooryavanshi, Parag, Jadeja, Inglis (wk), David, Jurel, Bishnoi, Shami, Archer/Milne, Sandeep Sharma.",
         body_style
     ))
     

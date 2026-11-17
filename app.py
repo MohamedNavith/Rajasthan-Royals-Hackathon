@@ -16,6 +16,7 @@ import plotly.graph_objects as go
 
 from src.config import RR_PINK, RR_BLUE, RR_ROYAL_BLUE, RR_GOLD, RR_SUCCESS, RR_DANGER
 from src.ratings import compute_batter_ratings, compute_bowler_ratings
+from src.squad_analysis import SQUADS_2026, TRADE_DEALS, get_rr_updated_squad, get_rr_tactical_evaluation
 
 # Page Configuration
 st.set_page_config(
@@ -319,8 +320,8 @@ elif page == "👑 RR War Room: IPL 2027 Strategy":
     st.markdown("### 👑 Rajasthan Royals War Room: IPL 2027 Auction Blueprint")
     st.markdown("""
     **Translating Data Science into Silverware:** This module connects our ball-by-ball pressure ratings directly to 
-    **Rajasthan Royals' tactical requirements for the IPL 2027 Auction**. By analyzing 76 historical RR matches in the dataset, 
-    we identify key squad vulnerabilities and target the exact statistical profiles needed to build a champion team.
+    **Rajasthan Royals' tactical requirements for the IPL 2027 Auction**, incorporating the latest **2026 IPL franchise rosters** 
+    and **verified blockbuster trade transactions**.
     """)
     
     # Download Deliverables Section
@@ -356,46 +357,133 @@ elif page == "👑 RR War Room: IPL 2027 Strategy":
             
     st.markdown("---")
     
-    # 3 Strategic Pillars
-    st.markdown("#### 🎯 Rajasthan Royals Tactical Audit & Key Gaps")
-    g1, g2, g3 = st.columns(3)
-    with g1:
+    # 2026 BLOCKBUSTER TRADE TRACKER
+    st.markdown("#### 🔄 IPL 2026 Blockbuster Trade Tracker")
+    st.markdown("""
+    Major pre-season trade deals have altered the franchise competitive landscape. Rajasthan Royals executed a seismic swap 
+    with Lucknow Super Giants (LSG), trading **Sam Curran** to acquire India premier pacer **Mohammad Shami** and left-arm spinner **Manimaran Siddharth**.
+    """)
+    
+    trade_cols = st.columns(2)
+    with trade_cols[0]:
         st.markdown(f"""
-        <div class="metric-card" style="border-top: 4px solid {RR_PINK};">
-            <div class="metric-title">Critical Need 1</div>
-            <div class="metric-val" style="font-size: 1.3rem;">Death-Overs Power Finisher</div>
-            <p style="font-size: 0.85rem; color: #475569; margin-top: 8px;">
-                Shimron Hetmyer generated <b>-31.5 Runs Over Expected</b> under pressure for RR. With Jos Buttler gone, 
-                RR needs an elite overseas assassin to finish tight chases.
+        <div class="metric-card" style="border-left: 6px solid {RR_PINK}; background-color: #FFF5F8;">
+            <div style="font-weight: 800; color: {RR_PINK}; font-size: 1.05rem;">👑 RAJASTHAN ROYALS ⇄ LUCKNOW SUPER GIANTS</div>
+            <p style="margin: 6px 0 2px 0; font-size: 0.95rem;"><b>RR Gives:</b> <span class="badge-blue">Sam Curran</span></p>
+            <p style="margin: 0 0 6px 0; font-size: 0.95rem;"><b>RR Receives:</b> <span class="badge-pink">Mohammad Shami</span> & <span class="badge-pink">Manimaran Siddharth</span></p>
+            <p style="font-size: 0.85rem; color: #475569; margin: 0;">
+                <b>Tactical Rationale:</b> RR fortifies strike-bowling firepower with premier international pace (Shami) and left-arm orthodox spin control (Siddharth), while freeing heavy overseas purse capital.
             </p>
-            <span class="badge-pink">Target: Tim David / Josh Inglis</span>
         </div>
         """, unsafe_allow_html=True)
-    with g2:
+    with trade_cols[1]:
         st.markdown(f"""
-        <div class="metric-card" style="border-top: 4px solid {RR_BLUE};">
-            <div class="metric-title">Critical Need 2</div>
-            <div class="metric-val" style="font-size: 1.3rem;">Spin Choke Succession</div>
-            <p style="font-size: 0.85rem; color: #475569; margin-top: 8px;">
-                Yuzvendra Chahal (25 pressure wkts) and R Ashwin (17 wkts) anchored RR's middle overs. RR must secure 
-                a world-class spin choke to control overs 10-16.
+        <div class="metric-card" style="border-left: 6px solid {RR_BLUE};">
+            <div style="font-weight: 800; color: {RR_BLUE}; font-size: 1.05rem;">⚡ DELHI CAPITALS ⇄ LUCKNOW SUPER GIANTS</div>
+            <p style="margin: 6px 0 2px 0; font-size: 0.95rem;"><b>DC Gives:</b> <span class="badge-blue">Kuldeep Yadav</span></p>
+            <p style="margin: 0 0 6px 0; font-size: 0.95rem;"><b>DC Receives:</b> <span class="badge-pink">Rishabh Pant</span></p>
+            <p style="font-size: 0.85rem; color: #475569; margin: 0;">
+                <b>Tactical Rationale:</b> Marquee Indian star swap: Pant returns to DC to captain, while Kuldeep Yadav anchors LSG's spin attack.
             </p>
-            <span class="badge-blue">Target: Sunil Narine / Sufiyan Muqeem</span>
-        </div>
-        """, unsafe_allow_html=True)
-    with g3:
-        st.markdown(f"""
-        <div class="metric-card" style="border-top: 4px solid {RR_GOLD};">
-            <div class="metric-title">Critical Need 3</div>
-            <div class="metric-val" style="font-size: 1.3rem;">145+ km/h Express Death Pace</div>
-            <p style="font-size: 0.85rem; color: #475569; margin-top: 8px;">
-                While Sandeep Sharma provides elite medium-pace variations, RR lacks raw express intimidation 
-                to blow away lower orders at the death.
-            </p>
-            <span style="background-color: {RR_GOLD}; color: black; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: bold;">Target: Riley Meredith / Mayank Yadav</span>
         </div>
         """, unsafe_allow_html=True)
         
+    with st.expander("🔍 View All Other 2026 Franchise Trade Deals"):
+        st.markdown("""
+        * **DC ⇄ SRH:** Delhi Capitals sent death specialist **T Natarajan** to Sunrisers Hyderabad in exchange for leg-spinner **Zeeshan Ansari**.
+        * **SRH ⇄ CSK:** Sunrisers Hyderabad sent **Liam Livingstone & Jack Edwards** to Chennai Super Kings in exchange for pace duo **Khaleel Ahmed & Nathan Ellis**.
+        * **MI ⇄ PBKS:** Mumbai Indians sent **Hardik Pandya** to Punjab Kings in exchange for premier India death bowler **Arshdeep Singh**.
+        * **SRH ➔ GT:** Sunrisers Hyderabad transferred Purple Cap winning death bowler **Harshal Patel** to Gujarat Titans.
+        """)
+
+    st.markdown("---")
+    
+    # RAJASTHAN ROYALS POST-TRADE SQUAD AUDIT
+    st.markdown("#### 🛡️ Rajasthan Royals Post-Trade Squad Architecture")
+    rr_eval = get_rr_tactical_evaluation()
+    rr_sq = rr_eval["squad"]
+    
+    sq1, sq2, sq3, sq4 = st.columns(4)
+    with sq1:
+        st.metric("Total Squad", f"{len(rr_sq['batters']) + len(rr_sq['all_rounders']) + len(rr_sq['wicket_keepers']) + len(rr_sq['bowlers'])} Players", "Post-Trade")
+    with sq2:
+        st.metric("Batting Depth", f"{len(rr_sq['batters'])} Batters", "2 Elite LH Openers")
+    with sq3:
+        st.metric("Wicketkeepers", f"{len(rr_sq['wicket_keepers'])} Keeper", "⚠️ Dhruv Jurel (Sole Specialist)")
+    with sq4:
+        st.metric("Bowling Arsenal", f"{len(rr_sq['bowlers'])} Bowlers", "🔥 Shami & Siddharth Added")
+
+    # Post-Trade Strengths vs Remaining Voids
+    col_str, col_vuln = st.columns(2)
+    with col_str:
+        st.markdown(f"""
+        <div class="metric-card" style="border-top: 4px solid {RR_SUCCESS};">
+            <div class="metric-title" style="color: {RR_SUCCESS};">✅ Fortified Strengths (Zero Auction Need)</div>
+            <ul style="font-size: 0.88rem; color: #1E293B; margin-top: 8px; padding-left: 18px;">
+                <li><b>Pace Battery Complete:</b> Mohammad Shami joins Jofra Archer, Sandeep Sharma, Adam Milne (Rank 7), Nandre Burger, and Tushar Deshpande.</li>
+                <li><b>Triple Spin Variety:</b> Ravi Bishnoi (wrist-spin), Ravindra Jadeja (finger-spin), and Manimaran Siddharth (powerplay/middle control).</li>
+                <li><b>Dynamic Left-Hand Top Order:</b> Yashasvi Jaiswal (+53.8 ROE) and Vaibhav Sooryavanshi (213.8 SR - Rank 3).</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+    with col_vuln:
+        st.markdown(f"""
+        <div class="metric-card" style="border-top: 4px solid {RR_DANGER};">
+            <div class="metric-title" style="color: {RR_DANGER};">⚠️ Critical Gaps (Primary 2027 Auction Focus)</div>
+            <ul style="font-size: 0.88rem; color: #1E293B; margin-top: 8px; padding-left: 18px;">
+                <li><b>Death Chase Finisher Void:</b> Shimron Hetmyer registered <b>-31.5 ROE</b> under pressure for RR. With Sam Curran traded, #6/#7 lacks power.</li>
+                <li><b>Severe Wicketkeeping Risk:</b> Sanju Samson is at CSK; <b>Dhruv Jurel is RR's only specialist keeper</b>. Any injury causes catastrophic imbalance.</li>
+                <li><b>Spin Acceleration at Home:</b> Need a 360-degree spin destroyer for slow Sawai Mansingh Stadium pitches.</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("---")
+    
+    # PLAYING XI COMPARISON: 2026 POST-TRADE vs 2027 CHAMPION XI
+    st.markdown("#### ⚔️ Playing XI Evolution: 2026 Post-Trade Base vs 2027 Champion Lineup")
+    xi_col1, xi_col2 = st.columns(2)
+    with xi_col1:
+        st.markdown(f"""
+        <div class="metric-card" style="background-color: #F8FAFC;">
+            <div style="font-weight: 800; color: {RR_BLUE}; font-size: 1.1rem; margin-bottom: 8px;">2026 Post-Trade Probable XI</div>
+            <ol style="font-size: 0.88rem; line-height: 1.6; padding-left: 20px; color: #334155;">
+                <li><b>Yashasvi Jaiswal</b> (LH Opener, +53.8 ROE)</li>
+                <li><b>Vaibhav Sooryavanshi</b> (LH Opener, 213.8 SR - <span style="color:{RR_PINK}; font-weight:bold;">Rank #3</span>)</li>
+                <li><b>Riyan Parag</b> (RH Anchor / Enforcer)</li>
+                <li><b>Ravindra Jadeja</b> (LH All-Rounder)</li>
+                <li><b>Dhruv Jurel</b> (Wicketkeeper / Finisher, +9.3 ROE)</li>
+                <li><b>Shimron Hetmyer</b> (<span style="color:{RR_DANGER}; font-weight:bold;">VULNERABILITY: -31.5 ROE</span>)</li>
+                <li><b>Shubham Dubey / Donovan Ferreira</b> (Impact Batter)</li>
+                <li><b>Ravi Bishnoi</b> (Right-Arm Wrist Spin)</li>
+                <li><b>Mohammad Shami</b> (<span style="color:{RR_SUCCESS}; font-weight:bold;">NEW TRADE-IN</span> - Pace Spearhead)</li>
+                <li><b>Jofra Archer / Adam Milne</b> (<span style="color:{RR_PINK}; font-weight:bold;">Milne: Rank #7 Bowler</span>)</li>
+                <li><b>Sandeep Sharma</b> (Death Yorker & Knuckleballs)</li>
+                <li style="list-style-type: none; margin-top: 4px;"><b>Impact Sub:</b> <span class="badge-blue">Manimaran Siddharth (Trade-In)</span></li>
+            </ol>
+        </div>
+        """, unsafe_allow_html=True)
+    with xi_col2:
+        st.markdown(f"""
+        <div class="metric-card" style="border: 2px solid {RR_PINK}; background-color: #FFF9FB;">
+            <div style="font-weight: 800; color: {RR_PINK}; font-size: 1.1rem; margin-bottom: 8px;">👑 Projected 2027 Champion Playing XI</div>
+            <ol style="font-size: 0.88rem; line-height: 1.6; padding-left: 20px; color: #1E293B;">
+                <li><b>Yashasvi Jaiswal</b> (LH Opener - Powerplay Dominance)</li>
+                <li><b>Vaibhav Sooryavanshi</b> (LH Opener - <span style="color:{RR_PINK}; font-weight:bold;">#3 Pressure Batter</span>)</li>
+                <li><b>Riyan Parag</b> (RH Middle-Overs Aggressor)</li>
+                <li><b>Ravindra Jadeja</b> (LH Spin All-Rounder & Match Finisher)</li>
+                <li><b>Josh Inglis</b> (<span class="badge-pink">AUCTION TARGET #5</span> - Dual WK / 360° Spin Player)</li>
+                <li><b>Tim David</b> (<span class="badge-pink">AUCTION TARGET #1</span> - 188.6 SR, +134.5 ROE)</li>
+                <li><b>Dhruv Jurel</b> (Clutch Pressure Finisher / Secondary WK)</li>
+                <li><b>Ravi Bishnoi</b> (Right-Arm Attacking Leg-Spin)</li>
+                <li><b>Mohammad Shami</b> (Pace Spearhead - New Ball & Reverse Swing)</li>
+                <li><b>Jofra Archer / Adam Milne</b> (Express 150 km/h Artillery)</li>
+                <li><b>Sandeep Sharma</b> (Death Over Deception Master)</li>
+                <li style="list-style-type: none; margin-top: 4px;"><b>Impact Sub:</b> <span class="badge-blue">Manimaran Siddharth</span> / <span class="badge-blue">Naman Dhir (Target #4)</span></li>
+            </ol>
+        </div>
+        """, unsafe_allow_html=True)
+
     st.markdown("---")
     
     # In-House Crown Jewel: Vaibhav Sooryavanshi
@@ -418,8 +506,8 @@ elif page == "👑 RR War Room: IPL 2027 Strategy":
         st.markdown("""
         **Strategic Directive for Franchise Leadership:**
         1. **Locked-In Opening Dynamo:** Pair Sooryavanshi with **Yashasvi Jaiswal** to forge the most destructive Left-Hand opening pair in IPL history.
-        2. **Pressure Absorption for Samson:** His 213.8 strike rate dismantles opposition bowling in the Powerplay, completely releasing run-rate pressure from Sanju Samson at #3.
-        3. **Purse Efficiency Multiplier:** Retaining Sooryavanshi at youth scale frees up massive purse resources (₹15–20 Cr) to dominate bidding for Tier 1 bowling cornerstones like Sunil Narine or Tim David.
+        2. **Powerplay Shield:** His 213.8 pressure strike rate destroys opposition bowling early, completely shielding middle-order anchors from required run-rate pressure.
+        3. **Purse Efficiency Multiplier:** Retaining and backing Sooryavanshi at youth valuation saves massive purse resources (₹15–20 Cr) to aggressively target Tier 1 finishers like Tim David.
         """)
 
     st.markdown("---")
@@ -432,18 +520,18 @@ elif page == "👑 RR War Room: IPL 2027 Strategy":
         st.markdown("""
         | Target Player | Role | Pressure Score | Key Impact Metric | Recommended Max Bid | Tactical Rationale |
         |---|---|---|---|---|---|
-        | **Tim David** | Finisher (#6/#7) | **76.74** | 188.6 SR (+134.5 ROE, +2.53 WPA) | ₹12–15 Cr | Absolute priority finisher to solve RR's death chase deficit. |
-        | **Sunil Narine** | Mystery Spinner | **77.46** | 5.65 RPO (+157.3 Runs Saved, 100% Cons) | ₹12–16 Cr | The gold standard spin choke; provides 4 unassailable overs. |
-        | **Kuldeep Yadav** | Wrist Spinner | **67.95** | 35 Wickets (+4.85 WPA, 89.8% Cons) | ₹10–13 Cr | Elite breakthrough spinner to replace Chahal's wicket threat. |
+        | **Tim David** | Finisher (#6/#7) | **76.74** | 188.6 SR (+134.5 ROE, +2.53 WPA) | ₹12–15 Cr | Absolute priority overseas finisher to replace Hetmyer's negative ROE and close out chases. |
+        | **Josh Inglis** | WK / Middle Finisher | **72.98** | 183.5 SR (+98.8 ROE, 81.5% Cons) | ₹7–10 Cr | Dual-threat keeper-batter; provides essential wicketkeeping depth behind Jurel & destroys spin. |
+        | **Sunil Narine** | Mystery Spinner | **77.46** | 5.65 RPO (+157.3 Runs Saved, 100% Cons) | ₹12–16 Cr | The gold standard spin choke; provides 4 unassailable middle-overs. |
         """)
         
     with tab_t2:
         st.markdown("""
         | Target Player | Role | Pressure Score | Key Impact Metric | Recommended Max Bid | Tactical Rationale |
         |---|---|---|---|---|---|
-        | **Josh Inglis** | WK / Middle Finisher | **72.98** | 183.5 SR (+98.8 ROE, 81.5% Cons) | ₹6–9 Cr | Supreme spin player; covers wicketkeeping and middle-order acceleration. |
-        | **Riley Meredith** | Express Pacer | **73.79** | 6.08 RPO (+3.19 Econ Delta, 100% Cons) | ₹5–8 Cr | 145+ km/h express pace at death; partners Sandeep Sharma seamlessly. |
-        | **Mayank Yadav** | Indian Tearaway | **65.63** | 7.47 RPO (10 Wickets in 110 Balls) | ₹6–9 Cr | Indian express speed; delivers unplayable thunderbolts to intimidate lower orders. |
+        | **Riley Meredith** | Express Pacer | **73.79** | 6.08 RPO (+3.19 Econ Delta, 100% Cons) | ₹4–7 Cr | 145+ km/h express pace at death; partners Sandeep Sharma seamlessly. |
+        | **Mayank Yadav** | Indian Tearaway | **65.63** | 7.47 RPO (10 Wickets in 110 Balls) | ₹5–8 Cr | Indian express speed; delivers unplayable thunderbolts to intimidate lower orders. |
+        | **Sufiyan Muqeem** | Wrist Spinner | **74.28** | 3.74 RPO (+62.3 Runs Saved, 100% Cons) | ₹3–5 Cr | Breakout international wrist-spin sensation; huge upside at budget cost. |
         """)
         
     with tab_t3:
@@ -452,7 +540,6 @@ elif page == "👑 RR War Room: IPL 2027 Strategy":
         |---|---|---|---|---|---|
         | **Naman Dhir** | Indian Top/Middle | **73.01** | 183.9 SR (+63.6 ROE) | ₹3–5 Cr | High-ceiling young Indian batter capable of multiple batting orders. |
         | **Sameer Rizvi** | Spin Destroyer | **68.96** | 170.7 SR (+36.1 SR Delta) | ₹2–4 Cr | Destructive middle-overs spin hitter for Sawai Mansingh Stadium pitch conditions. |
-        | **Sufiyan Muqeem** | Wrist Spinner | **74.28** | 3.74 RPO (+62.3 Runs Saved, 100% Cons) | ₹2–4 Cr | Breakout international wrist-spin sensation; huge upside at budget cost. |
         | **Ashutosh Sharma** | Clutch Finisher | **67.29** | 183.7 SR (+31.8 ROE) | ₹2–4 Cr | Proven domestic ice-in-veins finisher; excellent purse saver. |
         | **Ehsan Khan** | Spin Anchor | **65.74** | 5.45 RPO (100% Consistency) | ₹1–2 Cr | Extreme economy reliability at low auction commitment. |
         """)
