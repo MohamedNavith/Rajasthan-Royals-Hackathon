@@ -23,8 +23,9 @@ Write-Host "`n[Step 3/5] Generating Publication Figures..." -ForegroundColor Yel
 .venv\Scripts\python src/generate_figures.py
 
 # Export CSVs & Reports
-Write-Host "`n[Step 4/5] Generating Top 10 CSVs and Methodology Reports (DOCX & PDF)..." -ForegroundColor Yellow
+Write-Host "`n[Step 4/5] Generating Top 10 CSVs, Methodology Reports (DOCX & PDF), and Presentation..." -ForegroundColor Yellow
 .venv\Scripts\python src/generate_report.py
+.venv\Scripts\python src/generate_presentation.py
 
 # Launch Dashboard
 Write-Host "`n[Step 5/5] Launching Streamlit Interactive Dashboard..." -ForegroundColor Green

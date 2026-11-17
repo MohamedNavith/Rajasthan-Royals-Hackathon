@@ -50,6 +50,24 @@ T20 cricket is defined by fluctuating match states where a single delivery can d
 
 ---
 
+## 👑 Rajasthan Royals War Room: IPL 2027 Auction Strategy
+
+Connecting empirical pressure analytics to Rajasthan Royals' tactical squad requirements for the IPL 2027 Auction based on an audit of 76 historical RR matches:
+
+### 1. The Core Gaps in the RR Lineup
+* **Death-Overs Power Finisher:** Shimron Hetmyer registered -31.5 Runs Over Expected (ROE) in high-pressure chases for RR. RR requires an elite overseas power hitter at #6/#7.
+* **Spin Choke Succession:** Yuzvendra Chahal (25 pressure wickets) & R Ashwin (17 wickets) were RR's primary middle-overs choke. RR needs an unhittable spin weapon.
+* **145+ km/h Express Death Pace:** To complement Sandeep Sharma's medium-pace variations, RR needs express pace intimidation to blow away lower-order partnerships.
+
+### 2. Tiered Auction Target Recommendations
+* **⭐ Tier 1 Marquee Target (Batting): Tim David (Rank 1)** — Absolute top priority. 188.6 pressure SR, +134.5 ROE, +2.53 WPA, and 73.0% consistency. Solves RR's death chase deficit.
+* **⭐ Tier 1 Marquee Target (Bowling): Sunil Narine (Rank 1) / Kuldeep Yadav (Rank 5)** — Narine (5.65 RPO pressure economy, +157.3 runs saved, 100% consistency) or Kuldeep (35 pressure wickets, +4.85 WPA) provides the ultimate middle-overs strangle.
+* **💎 Crown Jewel Retention: Vaibhav Sooryavanshi (Rank 3)** — RR's in-house prodigy delivered 213.8 pressure SR and +93.3 ROE specifically for RR. Strategic directive: Lock him in as primary opener alongside Yashasvi Jaiswal.
+* **⚡ Tier 2 High-Value Specialists:** **Josh Inglis (Rank 5)** (dual-threat WK/batter, 81.5% consistency) and **Riley Meredith (Rank 3) / Mayank Yadav (Rank 9)** (145+ km/h express death pace).
+* **💡 Tier 3 Domestic Steals:** **Naman Dhir (#4)**, **Sameer Rizvi (#8)**, **Ashutosh Sharma (#11)**, and **Sufiyan Muqeem (#2)** offer extreme purse efficiency.
+
+---
+
 ## 🔬 Core Methodology
 
 1. **Win Probability Leverage Index (WPLI)**:
@@ -77,6 +95,7 @@ Rajasthan-Royals-Hackathon/
 │   ├── top10_bowlers.csv              # Exact Top 10 Bowlers CSV
 │   ├── report.docx                    # Comprehensive Methodology Report (Word)
 │   ├── report.pdf                     # Publication-Grade Methodology Report (PDF)
+│   ├── rr_auction_presentation.pptx   # Franchise War Room Executive Presentation (PPTX)
 │   ├── enriched_ball_by_ball.parquet  # Precomputed metrics (14.6 MB)
 │   └── figures/                       # Publication plots & charts
 ├── src/

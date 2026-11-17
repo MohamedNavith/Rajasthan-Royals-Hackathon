@@ -1,6 +1,6 @@
-.PHONY: all test pipeline figures report run clean
+.PHONY: all test pipeline figures report presentation run clean
 
-all: test pipeline figures report
+all: test pipeline figures report presentation
 
 test:
 	.venv/bin/pytest src/tests || .venv/Scripts/pytest src/tests
@@ -13,6 +13,9 @@ figures:
 
 report:
 	.venv/bin/python src/generate_report.py || .venv/Scripts/python src/generate_report.py
+
+presentation:
+	.venv/bin/python src/generate_presentation.py || .venv/Scripts/python src/generate_presentation.py
 
 run:
 	.venv/bin/streamlit run app.py || .venv/Scripts/streamlit run app.py

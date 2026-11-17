@@ -12,3 +12,4 @@ statsmodels>=0.14.0
 pypdf>=4.0.0
 reportlab>=4.1.0
 plotly>=5.20.0
+python-pptx>=1.0.0

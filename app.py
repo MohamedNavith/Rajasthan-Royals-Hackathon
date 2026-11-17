@@ -125,7 +125,10 @@ with st.sidebar:
     
     page = st.radio(
         "Navigation",
-        ["🏆 Home", "📈 What is Pressure?", "👤 Player Profile", "⚔️ Compare Players", "🛡️ Trust & Sensitivity"],
+        [
+            "🏆 Home", "👑 RR War Room: IPL 2027 Strategy", "📈 What is Pressure?",
+            "👤 Player Profile", "⚔️ Compare Players", "🛡️ Trust & Sensitivity"
+        ],
         index=0
     )
     
@@ -308,6 +311,151 @@ if page == "🏆 Home":
             margin=dict(l=20, r=20, t=40, b=30)
         )
         st.plotly_chart(fig_bw, use_container_width=True)
+
+# -------------------------------------------------------------
+# PAGE: RR WAR ROOM (IPL 2027 AUCTION STRATEGY)
+# -------------------------------------------------------------
+elif page == "👑 RR War Room: IPL 2027 Strategy":
+    st.markdown("### 👑 Rajasthan Royals War Room: IPL 2027 Auction Blueprint")
+    st.markdown("""
+    **Translating Data Science into Silverware:** This module connects our ball-by-ball pressure ratings directly to 
+    **Rajasthan Royals' tactical requirements for the IPL 2027 Auction**. By analyzing 76 historical RR matches in the dataset, 
+    we identify key squad vulnerabilities and target the exact statistical profiles needed to build a champion team.
+    """)
+    
+    # Download Deliverables Section
+    st.markdown("#### 📥 Download Submission Artifacts")
+    cd1, cd2, cd3 = st.columns(3)
+    with cd1:
+        with open("outputs/report.pdf", "rb") as f:
+            st.download_button(
+                label="📄 Download Methodology Report (PDF)",
+                data=f,
+                file_name="RR_SupeRR_Selector_Methodology_Report.pdf",
+                mime="application/pdf",
+                use_container_width=True
+            )
+    with cd2:
+        with open("outputs/report.docx", "rb") as f:
+            st.download_button(
+                label="📝 Download Methodology Report (DOCX)",
+                data=f,
+                file_name="RR_SupeRR_Selector_Methodology_Report.docx",
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                use_container_width=True
+            )
+    with cd3:
+        with open("outputs/rr_auction_presentation.pptx", "rb") as f:
+            st.download_button(
+                label="📊 Download War Room Presentation (PPTX)",
+                data=f,
+                file_name="RR_IPL2027_Auction_Strategy_Presentation.pptx",
+                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                use_container_width=True
+            )
+            
+    st.markdown("---")
+    
+    # 3 Strategic Pillars
+    st.markdown("#### 🎯 Rajasthan Royals Tactical Audit & Key Gaps")
+    g1, g2, g3 = st.columns(3)
+    with g1:
+        st.markdown(f"""
+        <div class="metric-card" style="border-top: 4px solid {RR_PINK};">
+            <div class="metric-title">Critical Need 1</div>
+            <div class="metric-val" style="font-size: 1.3rem;">Death-Overs Power Finisher</div>
+            <p style="font-size: 0.85rem; color: #475569; margin-top: 8px;">
+                Shimron Hetmyer generated <b>-31.5 Runs Over Expected</b> under pressure for RR. With Jos Buttler gone, 
+                RR needs an elite overseas assassin to finish tight chases.
+            </p>
+            <span class="badge-pink">Target: Tim David / Josh Inglis</span>
+        </div>
+        """, unsafe_allow_html=True)
+    with g2:
+        st.markdown(f"""
+        <div class="metric-card" style="border-top: 4px solid {RR_BLUE};">
+            <div class="metric-title">Critical Need 2</div>
+            <div class="metric-val" style="font-size: 1.3rem;">Spin Choke Succession</div>
+            <p style="font-size: 0.85rem; color: #475569; margin-top: 8px;">
+                Yuzvendra Chahal (25 pressure wkts) and R Ashwin (17 wkts) anchored RR's middle overs. RR must secure 
+                a world-class spin choke to control overs 10-16.
+            </p>
+            <span class="badge-blue">Target: Sunil Narine / Sufiyan Muqeem</span>
+        </div>
+        """, unsafe_allow_html=True)
+    with g3:
+        st.markdown(f"""
+        <div class="metric-card" style="border-top: 4px solid {RR_GOLD};">
+            <div class="metric-title">Critical Need 3</div>
+            <div class="metric-val" style="font-size: 1.3rem;">145+ km/h Express Death Pace</div>
+            <p style="font-size: 0.85rem; color: #475569; margin-top: 8px;">
+                While Sandeep Sharma provides elite medium-pace variations, RR lacks raw express intimidation 
+                to blow away lower orders at the death.
+            </p>
+            <span style="background-color: {RR_GOLD}; color: black; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: bold;">Target: Riley Meredith / Mayank Yadav</span>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    st.markdown("---")
+    
+    # In-House Crown Jewel: Vaibhav Sooryavanshi
+    st.markdown("#### 💎 Crown Jewel Case Study: Maximizing Vaibhav Sooryavanshi")
+    col_v1, col_v2 = st.columns([1.5, 2.5])
+    with col_v1:
+        st.markdown(f"""
+        <div class="metric-card" style="background: linear-gradient(135deg, {RR_BLUE} 0%, #1B3B6F 100%); color: white;">
+            <div style="color: {RR_GOLD}; font-size: 0.9rem; font-weight: bold;">RR IN-HOUSE ASSET</div>
+            <div style="color: white; font-size: 1.8rem; font-weight: 800; margin: 4px 0;">Vaibhav Sooryavanshi</div>
+            <div style="color: {RR_PINK}; font-size: 1.1rem; font-weight: bold;">Rank #3 Overall Batter (Rating: 73.40)</div>
+            <hr style="border-color: rgba(255,255,255,0.2); margin: 12px 0;">
+            <p style="font-size: 0.9rem; margin-bottom: 4px;">• <b>174 Pressure Balls</b> Faced (35 matches)</p>
+            <p style="font-size: 0.9rem; margin-bottom: 4px;">• <b>213.8 Pressure Strike Rate</b></p>
+            <p style="font-size: 0.9rem; margin-bottom: 4px;">• <b>+111.7 Runs Over Expected</b></p>
+            <p style="font-size: 0.9rem;">• <b>+93.3 ROE specifically for RR</b></p>
+        </div>
+        """, unsafe_allow_html=True)
+    with col_v2:
+        st.markdown("""
+        **Strategic Directive for Franchise Leadership:**
+        1. **Locked-In Opening Dynamo:** Pair Sooryavanshi with **Yashasvi Jaiswal** to forge the most destructive Left-Hand opening pair in IPL history.
+        2. **Pressure Absorption for Samson:** His 213.8 strike rate dismantles opposition bowling in the Powerplay, completely releasing run-rate pressure from Sanju Samson at #3.
+        3. **Purse Efficiency Multiplier:** Retaining Sooryavanshi at youth scale frees up massive purse resources (₹15–20 Cr) to dominate bidding for Tier 1 bowling cornerstones like Sunil Narine or Tim David.
+        """)
+
+    st.markdown("---")
+    
+    # Tiered Target Matrix
+    st.markdown("#### 📋 IPL 2027 Tiered Auction Strategy Matrix")
+    tab_t1, tab_t2, tab_t3 = st.tabs(["⭐ Tier 1: Marquee Cornerstones", "⚡ Tier 2: High-Value Specialists", "💡 Tier 3: Budget Steals"])
+    
+    with tab_t1:
+        st.markdown("""
+        | Target Player | Role | Pressure Score | Key Impact Metric | Recommended Max Bid | Tactical Rationale |
+        |---|---|---|---|---|---|
+        | **Tim David** | Finisher (#6/#7) | **76.74** | 188.6 SR (+134.5 ROE, +2.53 WPA) | ₹12–15 Cr | Absolute priority finisher to solve RR's death chase deficit. |
+        | **Sunil Narine** | Mystery Spinner | **77.46** | 5.65 RPO (+157.3 Runs Saved, 100% Cons) | ₹12–16 Cr | The gold standard spin choke; provides 4 unassailable overs. |
+        | **Kuldeep Yadav** | Wrist Spinner | **67.95** | 35 Wickets (+4.85 WPA, 89.8% Cons) | ₹10–13 Cr | Elite breakthrough spinner to replace Chahal's wicket threat. |
+        """)
+        
+    with tab_t2:
+        st.markdown("""
+        | Target Player | Role | Pressure Score | Key Impact Metric | Recommended Max Bid | Tactical Rationale |
+        |---|---|---|---|---|---|
+        | **Josh Inglis** | WK / Middle Finisher | **72.98** | 183.5 SR (+98.8 ROE, 81.5% Cons) | ₹6–9 Cr | Supreme spin player; covers wicketkeeping and middle-order acceleration. |
+        | **Riley Meredith** | Express Pacer | **73.79** | 6.08 RPO (+3.19 Econ Delta, 100% Cons) | ₹5–8 Cr | 145+ km/h express pace at death; partners Sandeep Sharma seamlessly. |
+        | **Mayank Yadav** | Indian Tearaway | **65.63** | 7.47 RPO (10 Wickets in 110 Balls) | ₹6–9 Cr | Indian express speed; delivers unplayable thunderbolts to intimidate lower orders. |
+        """)
+        
+    with tab_t3:
+        st.markdown("""
+        | Target Player | Role | Pressure Score | Key Impact Metric | Recommended Max Bid | Tactical Rationale |
+        |---|---|---|---|---|---|
+        | **Naman Dhir** | Indian Top/Middle | **73.01** | 183.9 SR (+63.6 ROE) | ₹3–5 Cr | High-ceiling young Indian batter capable of multiple batting orders. |
+        | **Sameer Rizvi** | Spin Destroyer | **68.96** | 170.7 SR (+36.1 SR Delta) | ₹2–4 Cr | Destructive middle-overs spin hitter for Sawai Mansingh Stadium pitch conditions. |
+        | **Sufiyan Muqeem** | Wrist Spinner | **74.28** | 3.74 RPO (+62.3 Runs Saved, 100% Cons) | ₹2–4 Cr | Breakout international wrist-spin sensation; huge upside at budget cost. |
+        | **Ashutosh Sharma** | Clutch Finisher | **67.29** | 183.7 SR (+31.8 ROE) | ₹2–4 Cr | Proven domestic ice-in-veins finisher; excellent purse saver. |
+        | **Ehsan Khan** | Spin Anchor | **65.74** | 5.45 RPO (100% Consistency) | ₹1–2 Cr | Extreme economy reliability at low auction commitment. |
+        """)
 
 # -------------------------------------------------------------
 # PAGE 2: WHAT IS PRESSURE? (MATCH EXPLORER)
