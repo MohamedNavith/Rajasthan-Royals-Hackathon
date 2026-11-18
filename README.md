@@ -5,14 +5,56 @@
 
 ## 📌 EXECUTIVE SUMMARY & CORE PHILOSOPHY
 
-Winning an IPL championship is not about assembling the most expensive collection of individual stars. It is about **tactical equilibrium, role clarity, and composure under extreme pressure**. 
+Winning an IPL championship is not about assembling the most expensive collection of individual stars. It is about **tactical equilibrium, role clarity, physical durability, and composure under extreme pressure**. 
 
 Over the last three cycles (2024–2026), Rajasthan Royals played 45 matches, winning 22 and losing 23. While individual brilliance surfaced intermittently, our defeats followed recurring, predictable patterns:
-1. **Secondary Seam Bleed:** In overs 16–20, support pacers conceded over 11.50 runs per over once the new-ball swing faded.
-2. **Finisher Slot Regression:** A complete breakdown of boundary-hitting in high-leverage chases ($-50.4$ Runs Over Expected from the lower-middle order).
-3. **Over-Reliance on the Impact Player:** Constructing an incomplete starting XI and relying on the substitution rule as an emergency crutch rather than a tactical advantage.
+1. **Secondary Seam Bleed:** In overs 16–20, support pacers conceded over 11.50 runs per over once new-ball swing faded.
+2. **Finisher Slot Regression:** A complete breakdown of lower-order boundary-hitting in high-leverage chases ($-50.4$ Runs Over Expected).
+3. **Over-Reliance on the Impact Player:** Treating the substitution rule as an emergency crutch rather than fielding an inherently balanced starting XI.
+4. **Availability & Medical Oversights:** Bidding blindly on names without vetting international geopolitics, board NOC stability, ECB/CA workload restrictions, or recurring surgical histories.
 
-This master document establishes our **proprietary analytical recruitment framework**, reviews the empirical lessons of the last five championship-winning squads, defines our **tactical open slots**, provides our **primary targets and verified alternates**, and outlines our **strict 20-over law-compliant bowling execution plan**.
+This master document establishes our **proprietary 360° scouting & recruitment framework**, reviews the empirical lessons of the last five championship-winning squads, incorporates **real-world intelligence from the last 6 months (injuries, withdrawals, geopolitical bans)**, defines our **tactical open slots**, provides our **primary targets and verified alternates**, and outlines our **strict 20-over law-compliant bowling execution plan**.
+
+---
+
+## ⚠️ REAL-WORLD INTELLIGENCE AUDIT (LAST 6 MONTHS: AVAILABILITY & MEDICAL VETTING)
+
+A truly world-class scouting department must cross-examine ball-by-ball numbers against real-world geopolitical, regulatory, and medical constraints before committing auction capital.
+
+```
+========================================================================================================================
+                          6-MONTH REAL-WORLD RISK AUDIT (AVAILABILITY, INJURIES & BANS)
+========================================================================================================================
+Player Name           Status / Flag           Risk Category               Real-World Intel & Tactical Directive
+------------------------------------------------------------------------------------------------------------------------
+Mustafizur Rahman     HIGH GEOPOLITICAL RISK  BCCI / Board Directive      BCCI formally instructed KKR to release him due to 
+                                                                          heightened diplomatic friction and civil unrest in 
+                                                                          Bangladesh. Extreme risk of NOC delays, travel curbs, 
+                                                                          or mid-season pullouts. REMOVED FROM TARGETS.
+------------------------------------------------------------------------------------------------------------------------
+Jacob Bethell         OFFICIALLY OUT          ECB Workload & Knee Surgery Released by RCB. Underwent right-knee surgery in 2026; 
+                                                                          officially opted out of the IPL 2027 auction to manage 
+                                                                          ECB workload for the Ashes and ODI World Cup.
+------------------------------------------------------------------------------------------------------------------------
+Ben Duckett           INELIGIBLE (2-YR BAN)   BCCI Player Regulations     Bought by DC for ₹2 Cr in 2026; withdrew before the 
+                                                                          tournament without medical force majeure. Faces a 
+                                                                          mandatory 2-season IPL ban (2026–2027). UNPLAYABLE.
+------------------------------------------------------------------------------------------------------------------------
+Matheesha Pathirana   HIGH SURGICAL RISK      Hamstring Repair in France  Suffered calf tear in T20 WC 2026, then tore his left 
+                                                                          hamstring after just 8 balls for KKR in May 2026. 
+                                                                          Underwent surgical hamstring repair in France (June 2026). 
+                                                                          Elite talent, but CANNOT be our sole bet. Bid capped.
+------------------------------------------------------------------------------------------------------------------------
+Spencer Johnson       RECOVERED / FIT         Back Stress Fracture        Recovered from back stress fracture by late April 2026; 
+                                                                          resumed competitive bowling for Australia/BBL. Full clearance.
+------------------------------------------------------------------------------------------------------------------------
+Gerald Coetzee        FULLY FIT & ACTIVE      Released by SRH (Apr Repl)  Joined SRH as replacement in April 2026; bowling 150 km/h; 
+                                                                          fully fit, no surgical baggage, clean international NOC.
+------------------------------------------------------------------------------------------------------------------------
+Pathum Nissanka       PEAK FORM & ACTIVE      Full SLC Availability       Sensational white-ball run for Sri Lanka; fully fit; 
+                                                                          zero NOC conflicts during the IPL 2027 window.
+========================================================================================================================
+```
 
 ---
 
@@ -52,7 +94,7 @@ Season & Champion   Overseas Deployment (4 OS)     Balance Architecture         
 
 ### The Rajasthan Royals 2027 Blueprint:
 * **Overseas Batter #1 (Slot #4):** Middle-Overs Spin Enforcer & Chase Stabilizer.
-* **Overseas Batter #2 (Slot #6):** **Donovan Ferreira** (360° Death Finisher & Backup Wicketkeeper).
+* **Overseas Batter #2 (Slot #6):** **Donovan Ferreira** (360° Death Finisher & Reserve Wicketkeeper).
 * **Overseas Bowler #1 (Slot #9):** Express Death Slinger & Toe-Crushing Yorker Specialist.
 * **Overseas Bowler #2 (Slot #11):** **Jofra Archer** (New-Ball Enforcer & Death Closer).
 
@@ -63,7 +105,7 @@ Season & Champion   Overseas Deployment (4 OS)     Balance Architecture         
 A deep query across all 23 defeats suffered by Rajasthan Royals isolates the exact breakdown points:
 
 > [!IMPORTANT]
-> **Squad Fact Verification:** Mohammad Shami was acquired ahead of the 2026/2027 cycle via trade from Lucknow Super Giants (Sam Curran traded for Shami + M Siddharth). Jofra Archer was retained after injury recovery. Neither was responsible for RR's historical bowling leak in 2024–2025.
+> **Squad Fact Verification:** Mohammad Shami was acquired ahead of the 2026/2027 cycle via trade from Lucknow Super Giants (*Sam Curran traded for Shami + M Siddharth*). Jofra Archer was retained after injury recovery. Neither was responsible for RR's historical bowling leak in 2024–2025.
 
 ### 1. Where Bowling Lost Us Matches
 ```
@@ -98,8 +140,6 @@ Vaibhav Sooryavanshi       12             203        425      35.42       209.4 
 ========================================================================================================
 ```
 
-**Key Takeaway:** Vaibhav Sooryavanshi was brilliant even in defeats (striking at 209.4), but the collapse of the finisher role (Hetmyer averaging 17.07 at 132.6 SR) and expensive secondary seamers (conceding 11.5–12.5 RPO) cost RR victory after victory.
-
 ---
 
 ## 🔬 3. OUR PROPRIETARY 5-PILLAR RECRUITMENT FRAMEWORK
@@ -114,12 +154,12 @@ To prevent past errors, every candidate is evaluated across five objective pilla
 | 2. Positional Role Precision:   Execution in the exact batting/bowling phase required.                |
 | 3. Venue Suitability (Jaipur):  Handling large straight boundaries (75m+) and dry surface dimensions. |
 | 4. Tactical Matchups:           Left/Right combinations, high-pace handling, and spin bash rates.     |
-| 5. Auction Value & Discipline:  Strict walkaway ceilings to prevent emotional overspending.           |
+| 5. Medical & Availability Due Diligence: Zero ban risk, zero political unrest risk, vetted joints.   |
 +-------------------------------------------------------------------------------------------------------+
 ```
 
 ### Key Scouting Thresholds:
-* **Middle Overs Batters (Overs 7–15):** Strike Rate against spin $\ge 140.0$, Dot Ball $\% \le 28.0\%$, ability to work singles on large outfields.
+* **Middle-Overs Batters (Overs 7–15):** Strike Rate against spin $\ge 140.0$, Dot Ball $\% \le 28.0\%$, ability to work singles on large outfields.
 * **Finishers (Overs 16–20):** Death Strike Rate $\ge 175.0$, Balls per Boundary $\le 4.2$, positive Runs Over Expected ($\text{ROE} > 0$).
 * **Death Bowlers (Overs 16–20):** Death Economy $\le 9.20$ RPO, Yorker accuracy $\ge 35\%$, Dot Ball $\% \ge 35\%$.
 * **Sawai Mansingh Stadium (SMS) Benchmark:** Historically, SMS Jaipur rewards finger/wrist spin (**8.88 RPO**) and punishes standard pace (**10.12 RPO**). Pace bowlers must possess express velocity ($145+$ km/h) or unpickable dipping yorkers.
@@ -156,7 +196,7 @@ Pos   Player Status                   Role / Archetype                 Tactical 
 
 ## 🎯 5. TARGET SLOTS & RECRUITMENT SHORTLIST (PRIMARY + 3 ALTERNATES)
 
-Every candidate's release status has been verified against the official IPL 2027 auction pool.
+Every candidate's release status has been verified against the official IPL 2027 auction pool, and vetted against the 6-month medical and availability report.
 
 ---
 
@@ -164,25 +204,29 @@ Every candidate's release status has been verified against the official IPL 2027
 * **Tactical Need:** Eliminate middle-overs scoring stagnations (overs 7–15), attack left-arm orthodox and leg-spin on dry surfaces, and anchor during top-order collapses.
 
 #### 🌟 Primary Target: Pathum Nissanka (Released by Delhi Capitals)
+* **Recent Form & Fitness:** Sensational white-ball form for Sri Lanka in late 2026; unblemished fitness; 100% tournament availability with full SLC NOC clearance.
 * **Statistical Profile:** 347 pressure balls, **141.5 SR**, **+21.2 Runs Over Expected (ROE)**.
 * **Jaipur SMS Record:** Blistering **182.4 Strike Rate** across 34 balls at SMS Jaipur.
 * **Role Precision:** Rotates strike effortlessly against high pace; neutralizes spin with supple wrists.
 * **Valuation & Ceilings:** Base Value: ₹2.50 Cr | **Target Bid: ₹3.20 Cr** | **Ceiling: ₹3.80 Cr**.
 * **Key Bidding Rivals:** Delhi Capitals (₹39.5 Cr purse), Sunrisers Hyderabad (₹40.2 Cr purse).
 
-#### 🔄 Verified Alternates:
-1. **Ben Duckett (Released by Delhi Capitals):**
-   * *Profile:* 18 pressure balls, **194.4 SR**, **+10.9 ROE**.
-   * *Tactical Strength:* World-class sweep and reverse-sweep variations dismantle defensive spin fields.
-   * *Valuation:* Target Bid: ₹2.20 Cr | **Ceiling: ₹3.00 Cr**.
-2. **Kamindu Mendis (Released by Sunrisers Hyderabad):**
+#### 🔄 Verified Alternates (100% Available & Vetted):
+1. **Kamindu Mendis (Released by Sunrisers Hyderabad):**
+   * *Recent Form & Status:* Prolific multi-format run-scorer for Sri Lanka (ICC Player of the Month); fully fit; released by SRH due to overseas squad rebalancing.
    * *Profile:* 458 pressure balls, **139.3 SR**, **+40.3 ROE**.
-   * *Tactical Strength:* Composed left-handed middle-order anchor; provides bonus ambidextrous off/leg spin.
+   * *Tactical Strength:* Composed left-handed middle-order anchor; provides bonus ambidextrous spin.
    * *Valuation:* Target Bid: ₹2.00 Cr | **Ceiling: ₹2.80 Cr**.
-3. **Jacob Bethell (Released by Royal Challengers Bengaluru):**
-   * *Profile:* 130 pressure balls, **148.5 SR**, **193.3 Death SR**.
-   * *Tactical Strength:* High-ceiling 3D all-rounder; strikes at near 200 in the death and bowls tidy left-arm spin.
-   * *Valuation:* Target Bid: ₹2.50 Cr | **Ceiling: ₹3.50 Cr**.
+2. **Matthew Short (Released by Chennai Super Kings):**
+   * *Recent Form & Status:* Active Australian white-ball star; two-time BBL Player of the Tournament; fully fit with full Cricket Australia clearance.
+   * *Profile:* 65 pressure balls, **161.1 Death SR**, tall boundary striker against hard lengths; tidy off-spin.
+   * *Valuation:* Target Bid: ₹1.20 Cr | **Ceiling: ₹1.80 Cr**.
+3. **Daryl Mitchell (Uncontracted Pool):**
+   * *Recent Form & Status:* Veteran New Zealand campaigner; proven track record of handling spin on big Asian grounds; 100% available with NZC casual contract flexibility.
+   * *Profile:* 142 pressure balls, **135.8 SR**, **+12.4 ROE**.
+   * *Valuation:* Target Bid: ₹1.50 Cr | **Ceiling: ₹2.20 Cr**.
+
+*(Note: Jacob Bethell opted out of IPL 2027 to manage right-knee surgery rehabilitation; Ben Duckett is ineligible under the BCCI 2-season withdrawal ban).*
 
 ---
 
@@ -190,11 +234,13 @@ Every candidate's release status has been verified against the official IPL 2027
 * **Tactical Need:** Ice in the veins during 10+ RRR chases, clear Jaipur's 75m straight boundary, and provide specialist wicketkeeping coverage behind Dhruv Jurel.
 
 #### 🌟 Primary Starting Choice: Donovan Ferreira (Retained Core — Overseas #2)
+* **Recent Form & Status:** Dominating franchise leagues with explosive strike rates; 100% fit; dual wicketkeeper.
 * **Statistical Profile:** 62 pressure balls, **189.4 Death SR**, **+14.2 ROE**.
 * **Jaipur SMS Record:** Extraordinary **227.3 Strike Rate** (44 balls faced at SMS Jaipur).
 * **Role Precision:** Retained for ₹0.75 Cr; eliminates the need to expend mega-auction capital on an overseas finisher.
 
 #### 🌟 Primary Auction Target (Domestic Clutch): Karun Nair (Released by Delhi Capitals)
+* **Recent Form & Status:** In sublime domestic form leading state teams; veteran composure; exceptional physical conditioning.
 * **Statistical Profile:** 63 pressure balls, **174.6 SR**, **+18.6 ROE**, **+47.8 Strike Rate Delta Under Pressure**.
 * **Jaipur SMS Record:** **157.1 Strike Rate** (28 balls) at SMS Jaipur.
 * **Role Precision:** High-pressure domestic accumulator and boundary-hitter; ideal #6 or primary Impact Batter.
@@ -203,7 +249,7 @@ Every candidate's release status has been verified against the official IPL 2027
 #### 🔄 Verified Alternates:
 1. **Shahrukh Khan (Released by Gujarat Titans):**
    * *Profile:* 551 pressure balls, **133.6 SR**, **179.2 SR at SMS Jaipur**.
-   * *Tactical Strength:* Raw physical power against spin; clears big boundaries with ease; off-spin utility.
+   * *Tactical Strength:* Raw physical power against spin; clears big boundaries with ease; off-spin utility. Fully fit.
    * *Valuation:* Target Bid: ₹3.50 Cr | **Ceiling: ₹4.50 Cr**.
 2. **Mahipal Lomror (Released by Mumbai Indians):**
    * *Profile:* 19 pressure balls, **163.2 SR**, **156.5 Death SR**.
@@ -211,7 +257,7 @@ Every candidate's release status has been verified against the official IPL 2027
    * *Valuation:* Target Bid: ₹1.00 Cr | **Ceiling: ₹1.80 Cr**.
 3. **Zak Foulkes (Released by Chennai Super Kings):**
    * *Profile:* 12 pressure balls, **183.3 SR**, **+8.3 ROE**, 9.22 seam economy.
-   * *Tactical Strength:* Dynamic overseas pace all-rounder; direct replacement option for Ferreira.
+   * *Tactical Strength:* Rising New Zealand pace all-rounder; strikes 140 km/h; dynamic finisher.
    * *Valuation:* Target Bid: ₹0.80 Cr | **Ceiling: ₹1.40 Cr**.
 
 ---
@@ -219,26 +265,31 @@ Every candidate's release status has been verified against the official IPL 2027
 ### 🔹 SLOT 3: Overseas Express Death Slinger (Bowling #9)
 * **Tactical Need:** Command overs 17 and 19, deliver toe-crushing yorkers at will, maintain sub-9.20 RPO at the death, and eliminate RR's historical death-overs bleed.
 
-#### 🌟 Primary Target: Matheesha Pathirana (Released by Kolkata Knight Riders)
+#### 🌟 Target Option A (The Yorker King — High-Risk / High-Reward): Matheesha Pathirana
+* **Medical Reality:** Underwent surgical hamstring repair in France in June 2026 following a recurrence of muscle tears. Recovering well, but carries soft-tissue vulnerability.
 * **Statistical Profile:** 192 pressure balls, **9.59 Pressure Econ**, **+21.1 Runs Saved**; Career Death: **541 balls, 9.23 Econ, 50 Wickets**.
 * **Jaipur SMS Record:** Concedes just **7.44 RPO in Over 18** and **8.89 RPO in Over 19**.
-* **Role Precision:** Unorthodox slingy release angle makes yorkers nearly impossible to get under.
-* **Valuation & Ceilings:** Base Value: ₹6.50 Cr | **Target Bid: ₹7.50 Cr** | **Ceiling: ₹8.50 Cr**.
-* **Key Bidding Rivals:** Lucknow Super Giants (₹47.5 Cr purse), Kolkata Knight Riders (₹41.7 Cr purse).
+* **Auction Directive:** We will bid on Pathirana **only up to ₹7.50 Cr**. If bids exceed this or if medical reports raise flags, we walk away immediately.
 
-#### 🔄 Verified Alternates:
-1. **Mustafizur Rahman (Released by Kolkata Knight Riders):**
-   * *Profile:* 408 pressure balls, **7.91 Pressure Econ**, **+22.2 Runs Saved**, **8.25 SMS Jaipur Econ**.
-   * *Tactical Strength:* Master of dipping cutters into the abrasive SMS surface; nearly unhittable when grip is on offer.
-   * *Valuation:* Target Bid: ₹3.00 Cr | **Ceiling: ₹4.00 Cr**.
-2. **Gerald Coetzee (Released by Sunrisers Hyderabad):**
-   * *Profile:* 98 pressure balls, **7.84 Pressure Econ**, **+15.1 Runs Saved**, 17 death wickets.
-   * *Tactical Strength:* Express 150 km/h bouncers and hard lengths; hostility under pressure.
-   * *Valuation:* Target Bid: ₹4.00 Cr | **Ceiling: ₹5.00 Cr**.
-3. **Trent Boult (Released by Mumbai Indians):**
-   * *Profile:* 208 pressure balls, **8.68 Pressure Econ**, **8.44 Econ at SMS Jaipur (8 wickets)**.
+#### 🌟 Target Option B (The Express Hostility Weapon — 100% Fit): Gerald Coetzee (Released by SRH)
+* **Recent Form & Status:** Joined SRH as replacement in April 2026; bowling 150 km/h thunderbolts; fully fit with zero structural surgeries; 100% available with CSA clearance.
+* **Statistical Profile:** 98 pressure balls, **7.84 Pressure Econ**, **+15.1 Runs Saved**, 17 death wickets.
+* **Tactical Strength:** High pace bouncers, hostility, and execution under pressure.
+* **Valuation & Ceilings:** Base Value: ₹2.00 Cr | **Target Bid: ₹4.00 Cr** | **Ceiling: ₹5.00 Cr**.
+
+#### 🔄 Other Fully Vetted Alternates:
+1. **Spencer Johnson (Released by Chennai Super Kings):**
+   * *Recent Form & Status:* Back stress fracture fully healed by April 2026; resumed full match bowling for Australia. 
+   * *Profile:* 71 pressure balls, **9.46 Pressure Econ**; left-arm angle generates awkward steep bounce at SMS Jaipur.
+   * *Valuation:* Target Bid: ₹2.00 Cr | **Ceiling: ₹3.00 Cr**.
+2. **Trent Boult (Released by Mumbai Indians):**
+   * *Recent Form & Status:* Fully fit global franchise veteran; 8 wickets at SMS Jaipur (**8.44 Econ**); zero injury concerns.
    * *Tactical Strength:* Proven franchise familiarity; legendary new-ball swing (5.92 Ov 1 Econ).
    * *Valuation:* Target Bid: ₹3.50 Cr | **Ceiling: ₹4.50 Cr**.
+3. **Nandre Burger (Already Retained by RR):**
+   * *In-House Anchor:* 145+ km/h express left-arm pace; conceded just **6.22 RPO in Over 19**! Provides an immediate zero-cost solution if auction prices spike.
+
+*(Note: Mustafizur Rahman is excluded due to BCCI geopolitical directives instructing franchises against signing Bangladesh players amid cross-border civil unrest).*
 
 ---
 
@@ -249,8 +300,8 @@ A winning strategy requires flawless over-by-over discipline. This blueprint str
 * **Over 1:** Jofra Archer (10 Over 1 wickets in 2024–2026; sets the tone).
 * **Over 2:** Mohammad Shami (6.11 Ov 1 Econ, 58.8% dots; seam movement).
 * **Powerplay Balance:** Shami completes **3 overs** (Overs 2, 4, 6); Archer bowls **2 overs** (Overs 1, 5); Bishnoi bowls **1 over** (Over 3 ambush).
-* **Middle Overs Spin Choke:** Ravindra Jadeja bowls **4 overs** (7, 9, 11, 13) in tandem with Ravi Bishnoi (10, 12, 15) and Pathirana (8, 14).
-* **Death Overs Lockdown:** Over 16 Archer, Over 17 Pathirana, Over 18 Shami (reverse seam), Over 19 Pathirana (yorkers), Over 20 Archer (closer).
+* **Middle-Overs Spin Choke:** Ravindra Jadeja bowls **4 overs** (7, 9, 11, 13) in tandem with Ravi Bishnoi (10, 12, 15) and our Death Slinger (8, 14).
+* **Death Overs Lockdown:** Over 16 Archer, Over 17 Death Slinger, Over 18 Shami (reverse seam), Over 19 Death Slinger (yorkers), Over 20 Archer (closer).
 * **Over 20:** Archer finishes (career **7.50 Econ and 39.3% dots** in the final over). Shami is completely protected from overs 19 and 20.
 
 ```
@@ -263,25 +314,25 @@ Over  Bowling End  Designated Bowler   Career Econ  Dot Ball %  Jaipur Econ  Tac
  4.   End B        Mohd. Shami (2)         7.38       39.6%       7.00 RPO   2nd PP Over: Targets top of off-stump with seam.
  5.   End A        Jofra Archer (2)       10.18       43.1%      15.00 RPO   2nd PP Over: 150 km/h thunderbolts into the ribs.
  6.   End B        Mohd. Shami (3)         8.52       32.5%       9.80 RPO   3rd PP Over: Finishes 3 overs in Powerplay!
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
 >>> POWERPLAY RECAP: Archer (Overs 1, 5), Shami (Overs 2, 4, 6), Bishnoi (Over 3) | Target: 38–44/2
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
  7.   End A        Ravindra Jadeja (1)     7.29       38.0%       4.00 RPO   Flat left-arm darts from Pavilion End.
- 8.   End B        M. Pathirana (1)        8.88       35.0%       9.00 RPO   Slingy yorker/slower ball burst changes rhythm.
+ 8.   End B        Death Slinger (1)       8.88       35.0%       9.00 RPO   Slingy yorker/slower ball burst changes rhythm.
  9.   End A        Ravindra Jadeja (2)     7.73       30.0%       4.00 RPO   Dries up singles through mid-wicket.
 10.   End B        Ravi Bishnoi (2)        8.19       36.3%         --       Attacking wrong-uns from High Court End.
 11.   End A        Ravindra Jadeja (3)     8.23       31.0%       4.00 RPO   Jaipur masterclass: 4.00 Econ at SMS Stadium!
 12.   End B        Ravi Bishnoi (3)        8.23       33.0%         --       Tandem spin choke (sub-7.80 RPO combined).
 13.   End A        Ravindra Jadeja (4)     7.14       32.0%         --       Completes 4-over quota (7.87 career middle Econ).
-14.   End B        M. Pathirana (2)        6.57       40.0%         --       Round-arm yorkers break set partnerships.
+14.   End B        Death Slinger (2)       6.57       40.0%         --       Round-arm yorkers break set partnerships.
 15.   End A        Ravi Bishnoi (4)        8.05       35.0%         --       Completes 4-over quota (76 middle-overs wkts).
-------------------------------------------------------------------------------------------------------------------------
->>> MIDDLE OVERS RECAP: Jadeja (Overs 7, 9, 11, 13), Bishnoi (Overs 10, 12, 15), Pathirana (Overs 8, 14)
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+>>> MIDDLE OVERS RECAP: Jadeja (Overs 7, 9, 11, 13), Bishnoi (Overs 10, 12, 15), Death Slinger (Overs 8, 14)
+--------------------------------------------------------------------------------------------------------
 16.   End B        Jofra Archer (3)        7.91       37.9%      12.00 RPO   3rd Over: 150 km/h enforcer burst (7.91 death Econ).
-17.   End A        M. Pathirana (3)       10.44       30.2%         --       Wide yorkers outside off; sets up boundary traps.
+17.   End A        Death Slinger (3)      10.44       30.2%         --       Wide yorkers outside off; sets up boundary traps.
 18.   End B        Mohd. Shami (4)         9.67       22.2%       3.00 RPO   4th & Final Over: Tail-in reverse seam (3.00 at SMS).
-19.   End A        M. Pathirana (4)        8.89       38.8%       8.67 RPO   4th & Final Over: 8.89 Econ, 14 wkts in Ov 19!
+19.   End A        Death Slinger (4)       8.89       38.8%       8.67 RPO   4th & Final Over: 8.89 Econ, 14 wkts in Ov 19!
 20.   End B        Jofra Archer (4)        7.50       39.3%       9.00 RPO   4th & Final Over: The Ultimate Closer (7.50 Econ, 39.3% dots)!
 ========================================================================================================================
 ```
@@ -296,32 +347,33 @@ Over  Bowling End  Designated Bowler   Career Econ  Dot Ball %  Jaipur Econ  Tac
 ========================================================================================================================
 Target Player          Role & Priority                 Base Valuation  Target Win Bid  RR Max Walkaway Ceiling
 ------------------------------------------------------------------------------------------------------------------------
-1. Matheesha Pathirana Starting Death Slinger (#9)        ₹6.50 Cr        ₹7.50 Cr            ₹8.50 Cr
+1. Coetzee / Pathirana Starting Death Slinger (#9)        ₹4.00–6.50 Cr   ₹5.00–7.50 Cr       ₹8.00 Cr
 2. Pathum Nissanka     Starting Middle Enforcer (#4)     ₹2.50 Cr        ₹3.20 Cr            ₹3.80 Cr
 3. Karun Nair          Domestic Clutch Bat (Impact Sub)  ₹0.75 Cr        ₹1.00 Cr            ₹1.50 Cr
 4. Sufiyan Muqeem      Proprietary Mystery Spin Steal    ₹0.40 Cr        ₹0.60 Cr            ₹0.80 Cr
 5. Adam Milne          Backup 150 km/h Express Pacer     ₹0.80 Cr        ₹1.00 Cr            ₹1.20 Cr
 6. Domestic Fast BowlerIndian Seam Depth Reserve         ₹0.30 Cr        ₹0.50 Cr            ₹0.80 Cr
 --------------------------------------------------------------------------------------------------------
-TOTAL PROJECTED EXPENDITURE:                                             ₹13.80 Cr           ₹16.60 Cr
+TOTAL PROJECTED EXPENDITURE:                                             ₹11.30–13.80 Cr     ₹16.10 Cr
 TOTAL AVAILABLE PURSE:                                                   ₹27.05 Cr           ₹27.05 Cr
-REMAINING EMERGENCY CASH BUFFER:                                        +₹13.25 Cr          +₹10.45 Cr (100% SOLVENT!)
+REMAINING EMERGENCY CASH BUFFER:                                        +₹13.25–15.75 Cr    +₹10.95 Cr (100% SOLVENT!)
 ========================================================================================================================
 ```
 
 ### The Walkaway Discipline Protocol:
-* If bidding on **Pathirana** exceeds **₹8.50 Cr**, RR pivots immediately to **Mustafizur Rahman (₹3.50 Cr)** or **Gerald Coetzee (₹4.50 Cr)**, retaining in-house weapon **Nandre Burger (6.22 Econ in Over 19)** as express left-arm backup.
-* If bidding on **Nissanka** exceeds **₹3.80 Cr**, RR pivots to **Ben Duckett (₹2.50 Cr)** or **Kamindu Mendis (₹2.20 Cr)**.
+* If bidding on **Pathirana** exceeds **₹7.50 Cr** (reflecting his France hamstring surgery discount), RR pivots immediately to **Gerald Coetzee (₹4.00–5.00 Cr)** or **Spencer Johnson (₹2.50–3.00 Cr)**, retaining in-house express weapon **Nandre Burger (6.22 Econ in Over 19)** as left-arm cover.
+* If bidding on **Nissanka** exceeds **₹3.80 Cr**, RR pivots to **Kamindu Mendis (₹2.20 Cr)** or **Matthew Short (₹1.50 Cr)**.
 * **Under no scenario does RR enter auction insolvency.** We maintain a ₹10+ Crore surplus for flexible in-season tactical adjustments.
 
 ---
 
 ## 🏆 8. THE WINNING FORMULA: WHAT WE MUST DO TO WIN
 
-1. **Eliminate the Death-Overs Bleed:** Replace 12.0+ RPO secondary seamers with Pathirana and Archer, protecting Shami from overs 19 and 20.
+1. **Eliminate the Death-Overs Bleed:** Replace 12.0+ RPO secondary seamers with high-pace yorker execution (Coetzee/Pathirana and Archer), protecting Shami from overs 19 and 20.
 2. **Sustain Middle-Overs Run Rates:** Deploy Nissanka (182.4 SMS SR) to ensure innings don't stall when opponents bowl spin in overs 7–15.
 3. **Master SMS Jaipur's Ground Dynamics:** Strangle visiting teams with 8 overs of precision spin from Jadeja (4.00 SMS Econ) and Bishnoi (76 middle-overs wickets) on Jaipur's large 75m straight boundary.
 4. **Self-Reliant Starting XI:** Play 7 proven batters and 6 specialist bowling options in the primary eleven, using the Impact Player exclusively as a tactical multiplier rather than an emergency fix.
+5. **Medical & Regulatory Rigor:** Avoid players with geopolitical NOC friction (Mustafizur), tournament withdrawal bans (Duckett), or unvetted surgeries (Bethell/unrestricted Pathirana bids).
 
 ---
 
