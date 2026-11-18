@@ -127,7 +127,7 @@ with st.sidebar:
     page = st.radio(
         "Navigation",
         [
-            "🏆 Home", "👑 RR War Room: IPL 2027 Strategy", "📈 What is Pressure?",
+            "🏆 Home", "👑 RR Auction: IPL 2027 Strategy", "📈 What is Pressure?",
             "👤 Player Profile", "⚔️ Compare Players", "🛡️ Trust & Sensitivity"
         ],
         index=0
@@ -314,13 +314,13 @@ if page == "🏆 Home":
         st.plotly_chart(fig_bw, use_container_width=True)
 
 # -------------------------------------------------------------
-# PAGE: RR WAR ROOM (IPL 2027 AUCTION STRATEGY)
+# PAGE: RR AUCTION (IPL 2027 STRATEGY & TACTICAL BLUEPRINT)
 # -------------------------------------------------------------
-elif page == "👑 RR War Room: IPL 2027 Strategy":
-    st.markdown("### 👑 Rajasthan Royals War Room: IPL 2027 Strategy & Tactical Blueprint")
+elif page == "👑 RR Auction: IPL 2027 Strategy":
+    st.markdown("### 👑 Rajasthan Royals Auction: IPL 2027 Strategy & Tactical Blueprint")
     st.markdown("""
     **Transforming Pressure Analytics into Silverware:** This command center equips the Director of Cricket, Head Coach, 
-    and Scouting Analysts with an interactive war-room interface. Every recommendation is grounded in ball-by-ball empirical truth, 
+    and Scouting Analysts with an interactive auction strategy interface. Every recommendation is grounded in ball-by-ball empirical truth, 
     contextual leverage ($WPLI$), home-ground dynamics at Sawai Mansingh Stadium (Jaipur), real-world availability intelligence, 
     and disciplined auction economics.
     """)
@@ -390,7 +390,7 @@ elif page == "👑 RR War Room: IPL 2027 Strategy":
         if pptx_file.exists():
             with open(pptx_file, "rb") as f:
                 st.download_button(
-                    label="📊 War Room Deck (PPTX)",
+                    label="📊 Auction Strategy Deck (PPTX)",
                     data=f,
                     file_name="RR_IPL2027_Executive_Deck.pptx",
                     mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",

@@ -1,13 +1,15 @@
-# 👑 RAJASTHAN ROYALS — IPL 2027 WAR ROOM STRATEGY & AUCTION BLUEPRINT
+# 👑 RAJASTHAN ROYALS — IPL 2027 MEGA AUCTION STRATEGY & TACTICAL BLUEPRINT
 ### *A Data-Driven Architecture to End the 20-Year Championship Drought*
 
-[![GitHub Pages Dashboard](https://img.shields.io/badge/Live_Dashboard-GitHub_Pages-EA1B86?style=for-the-badge&logo=github)](https://mohamednavith.github.io/Rajasthan-Royals-Hackathon/)
-[![Official PDF Dossier](https://img.shields.io/badge/Download_Report-PDF_680KB-F59E0B?style=for-the-badge&logo=adobeacrobatreader)](outputs/report.pdf)
-[![Streamlit Command Center](https://img.shields.io/badge/Local_War_Room-Streamlit-00E5FF?style=for-the-badge&logo=streamlit)](http://localhost:8501)
+[![GitHub Pages Dashboard](https://img.shields.io/badge/Live_Auction_Dashboard-GitHub_Pages-EA1B86?style=for-the-badge&logo=github)](https://mohamednavith.github.io/Rajasthan-Royals-Hackathon/)
+[![Official PDF Dossier](https://img.shields.io/badge/Download_Auction_Dossier-PDF_680KB-F59E0B?style=for-the-badge&logo=adobeacrobatreader)](outputs/report.pdf)
+[![Streamlit Command Center](https://img.shields.io/badge/Local_Auction_Center-Streamlit-00E5FF?style=for-the-badge&logo=streamlit)](http://localhost:8501)
 
 > 🌐 **Live Web Dashboard (Hosted on GitHub Pages):**  
 > **[https://mohamednavith.github.io/Rajasthan-Royals-Hackathon/](https://mohamednavith.github.io/Rajasthan-Royals-Hackathon/)**  
-> *Fully interactive, responsive war room with live bid sliders, 20-over law-compliant bowling matrix, authentic player photos scraped from `iplt20.com` via Playwright, and instant PDF download capabilities.*
+> *Fully interactive, responsive auction dashboard with live bid sliders, 20-over law-compliant bowling matrix, authentic player photos scraped from `iplt20.com` via Playwright, and instant PDF download capabilities.*
+>
+> ⚙️ **GitHub Pages Deployment Workflow:** Deployed automatically via `.github/workflows/deploy-pages.yml`. In your repo settings under **Settings > Pages > Build and deployment > Source**, ensure **GitHub Actions** (or **Deploy from a branch > main > / root**) is active.
 
 ---
 
@@ -405,8 +407,8 @@ Rajasthan-Royals-Hackathon/
 │   ├── reliability.py                 # Bootstrap 95% CIs & stability verification
 │   ├── generate_figures.py            # High-resolution charts & visualizations
 │   └── generate_report.py             # Report generation engine
-├── app.py                             # Interactive Streamlit War Room Dashboard
-├── RR_IPL_2027_WAR_ROOM_STRATEGY.md   # Complete Tactical War Room Strategy
+├── app.py                             # Interactive Streamlit Auction Dashboard
+├── RR_IPL_2027_WAR_ROOM_STRATEGY.md   # Complete Tactical Auction Strategy Dossier
 ├── requirements.txt                   # Locked dependencies
 ├── Makefile                           # Unified build pipeline
 └── run.ps1                            # Windows PowerShell runner
@@ -422,4 +424,4 @@ streamlit run app.py
 ```
 
 ---
-*Dossier prepared and statistically validated for the Rajasthan Royals War Room.*
+*Dossier prepared and statistically validated for the Rajasthan Royals Auction Strategy & Tactical Command.*
