@@ -396,7 +396,7 @@ Rajasthan-Royals-Hackathon/
 │   ├── top10_bowlers.csv              # Ordered Top-10 Bowlers Under Pressure
 │   ├── report.pdf                     # Submission-Ready Technical Report
 │   ├── report.docx                    # Formatted Word Document
-│   └── rr_auction_presentation.pptx   # 13-Slide War Room Executive Deck
+│   └── rr_auction_presentation.pptx   # 13-Slide Auction Strategy Executive Deck
 ├── src/
 │   ├── config.py                      # Constants & model hyperparameters
 │   ├── data_loader.py                 # Ingestion & data trap reconciliation

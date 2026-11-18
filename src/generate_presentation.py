@@ -1,5 +1,5 @@
 """
-Rajasthan Royals Franchise War Room: IPL 2027 Auction Presentation Generator.
+Rajasthan Royals Franchise Auction Strategy: IPL 2027 Auction Presentation Generator.
 Generates outputs/rr_auction_presentation.pptx using python-pptx with official RR branding:
 - RR Pink (#E01B6B)
 - RR Navy Blue (#0B1B3D)
@@ -40,7 +40,7 @@ def apply_slide_background(slide, prs, color=C_LIGHT_BG):
     bg.line.fill.background()
     return bg
 
-def add_header(slide, title_text, category_text="RAJASTHAN ROYALS WAR ROOM | IPL 2027 AUCTION"):
+def add_header(slide, title_text, category_text="RAJASTHAN ROYALS AUCTION STRATEGY | IPL 2027"):
     """Adds standard branded header to slides."""
     top_bar = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(0.12))
     top_bar.fill.solid()
@@ -118,7 +118,7 @@ def build_presentation():
     tf_t.word_wrap = True
     
     p_kicker = tf_t.paragraphs[0]
-    p_kicker.text = "RAJASTHAN ROYALS WAR ROOM | IPL 2027 AUCTION STRATEGY"
+    p_kicker.text = "RAJASTHAN ROYALS AUCTION STRATEGY | IPL 2027"
     p_kicker.font.size = Pt(12)
     p_kicker.font.bold = True
     p_kicker.font.color.rgb = C_PINK
@@ -138,7 +138,7 @@ def build_presentation():
     p_sub.space_after = Pt(24)
     
     p_meta = tf_t.add_paragraph()
-    p_meta.text = "Prepared for Rajasthan Royals Franchise Leadership, Scouting Operations & Auction War Room"
+    p_meta.text = "Prepared for Rajasthan Royals Franchise Leadership, Scouting Operations & Auction Strategy Table"
     p_meta.font.size = Pt(11)
     p_meta.font.italic = True
     p_meta.font.color.rgb = RGBColor(200, 210, 230)
@@ -359,7 +359,7 @@ def build_presentation():
             "1. LOCKED-IN OPENER: Pair Sooryavanshi with Yashasvi Jaiswal for an ultra-aggressive Left-Hand / Left-Hand assault.",
             "2. PRESSURE CUSHION: Destroys powerplay bowling, cushioning Riyan Parag and Dhruv Jurel at #3/#4.",
             "3. PURSE DIVIDEND: Backing him at youth valuation saves ₹15–20 Cr in auction capital.",
-            "4. WAR ROOM DIRECTIVE: Build the top-order around Jaiswal + Sooryavanshi for the next decade."
+            "4. AUCTION DIRECTIVE: Build the top-order around Jaiswal + Sooryavanshi for the next decade."
         ],
         border_color=C_PINK
     )
@@ -529,7 +529,7 @@ def build_presentation():
     # =========================================================================
     s12 = prs.slides.add_slide(blank_layout)
     apply_slide_background(s12, prs)
-    add_header(s12, "War Room Action Plan: Tiered Auction Target Matrix & Budget (₹27.05 Cr)")
+    add_header(s12, "Auction Action Plan: Tiered Target Matrix & Budget Allocation (₹27.05 Cr)")
     
     add_card(s12, Inches(0.8), Inches(1.5), Inches(3.6), Inches(5.3),
         "TIER 1: MARQUEE AUCTION STARTERS",

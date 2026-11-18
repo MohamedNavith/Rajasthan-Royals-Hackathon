@@ -1,4 +1,4 @@
-# 👑 RAJASTHAN ROYALS — IPL 2027 WAR ROOM STRATEGY DOSSIER
+# 👑 RAJASTHAN ROYALS — IPL 2027 AUCTION STRATEGY DOSSIER
 ### *Data-Driven Squad Architecture, Tactical Allocations & Pressure Analytics*
 
 ---
@@ -215,4 +215,4 @@ REMAINING EMERGENCY CASH BUFFER:                                        +₹13.2
 ```
 
 ---
-*Prepared and calibrated for the Rajasthan Royals Franchise War Room.*
+*Prepared and calibrated for the Rajasthan Royals Franchise Auction Table.*

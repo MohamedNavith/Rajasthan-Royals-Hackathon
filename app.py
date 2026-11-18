@@ -402,7 +402,7 @@ elif page == "👑 RR Auction: IPL 2027 Strategy":
     st.markdown("---")
 
     # ---------------------------------------------------------
-    # 3. INTERACTIVE WAR ROOM MODULE TABS
+    # 3. INTERACTIVE AUCTION MODULE TABS
     # ---------------------------------------------------------
     subtab0, subtab1, subtab2, subtab3, subtab4, subtab5 = st.tabs([
         "👑 1. Champion Playing XI (Visual Roster)",

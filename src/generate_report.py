@@ -358,7 +358,7 @@ def generate_docx_report(batters_df: pd.DataFrame, bowlers_df: pd.DataFrame):
     )
 
     # Section 7: Rajasthan Royals IPL 2027 Auction Strategy & Post-Trade Blueprint
-    add_h1("7. Rajasthan Royals IPL 2027 War Room Strategy & Tactical Blueprint")
+    add_h1("7. Rajasthan Royals IPL 2027 Auction Strategy & Tactical Blueprint")
     doc.add_paragraph(
         "Translating empirical pressure analytics into championship silverware requires addressing the structural failures "
         "that caused Rajasthan Royals' 23 defeats across 2024–2026: secondary pace bleed (Akash Madhwal 12.45 RPO, FazalHaq Farooqi 12.35 RPO, "
@@ -569,8 +569,8 @@ def generate_pdf_report(batters_df: pd.DataFrame, bowlers_df: pd.DataFrame):
         body_style
     ))
     
-    # Section 7: RR IPL 2027 War Room Strategy & Tactical Blueprint
-    story.append(Paragraph("6. Rajasthan Royals IPL 2027 War Room Strategy & Tactical Blueprint", h1_style))
+    # Section 7: RR IPL 2027 Auction Strategy & Tactical Blueprint
+    story.append(Paragraph("6. Rajasthan Royals IPL 2027 Auction Strategy & Tactical Blueprint", h1_style))
     story.append(Paragraph(
         "<b>Empirical Loss Audit (2024–2026):</b> RR suffered 23 defeats driven by secondary pace bleed (Madhwal 12.45 RPO, Farooqi 12.35 RPO, "
         "Deshpande 11.52 RPO), finisher breakdown (Hetmyer -50.4 ROE), and over-reliance on the Impact Sub. Shami was acquired ahead of 2026/27 "
