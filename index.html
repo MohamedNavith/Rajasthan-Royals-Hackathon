@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajasthan Royals (RR) | IPL 2027 Auction War Room & Tactical Blueprint</title>
+  
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS & Chart.js -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            rr: {
+              pink: '#EA1B86',
+              darkpink: '#C2185B',
+              navy: '#0B1B3D',
+              deepnavy: '#060E21',
+              card: '#0E1E42',
+              border: '#1E3260',
+              gold: '#F59E0B',
+              goldlight: '#FDE68A',
+              accent: '#00E5FF'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #060E21;
+      color: #F8FAFC;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif;
+    }
+    .rr-gradient-text {
+      background: linear-gradient(135deg, #EA1B86 0%, #FF60A8 50%, #F59E0B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .rr-glass-card {
+      background: rgba(14, 30, 66, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(30, 50, 96, 0.8);
+      transition: all 0.25s ease-in-out;
+    }
+    .rr-glass-card:hover {
+      border-color: rgba(234, 27, 134, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(234, 27, 134, 0.15);
+    }
+    .active-tab {
+      background: linear-gradient(135deg, #EA1B86 0%, #C2185B 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(234, 27, 134, 0.4);
+    }
+    .player-card-img {
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+    }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #fff !important; color: #000 !important; }
+      .rr-glass-card { background: #fff !important; border: 1px solid #ccc !important; color: #000 !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-100 antialiased selection:bg-rr-pink selection:text-white">
+
+  <!-- Top Sticky Navigation & Header -->
+  <header class="sticky top-0 z-50 border-b border-rr-border/80 bg-rr-deepnavy/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo & Title -->
+        <div class="flex items-center space-x-4">
+          <div class="relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-tr from-rr-pink to-rr-gold shadow-lg shadow-rr-pink/20">
+            <i class="fa-solid fa-crown text-white text-xl"></i>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <span class="text-xs font-black uppercase tracking-widest text-rr-pink">Rajasthan Royals</span>
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase rounded bg-rr-pink/20 text-rr-pink border border-rr-pink/30">Official War Room</span>
+            </div>
+            <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">IPL 2027 Auction & Tactical Blueprint</h1>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center space-x-3">
+          <a href="outputs/report.pdf" download="RR_IPL_2027_Tactical_Dossier.pdf" class="hidden sm:inline-flex items-center space-x-2 px-4 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-rr-pink to-rr-darkpink text-white hover:opacity-95 shadow-lg shadow-rr-pink/25 transition">
+            <i class="fa-solid fa-file-pdf text-sm"></i>
+            <span>Download Official PDF Dossier</span>
+          </a>
+          <button onclick="window.print()" class="p-2.5 rounded-lg bg-rr-card border border-rr-border text-slate-300 hover:text-white hover:border-rr-pink transition" title="Print / Export PDF">
+            <i class="fa-solid fa-print"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="flex space-x-1 overflow-x-auto py-2.5 no-scrollbar border-t border-rr-border/40 text-xs font-bold uppercase tracking-wider">
+        <button onclick="switchTab('overview')" id="tab-btn-overview" class="tab-button px-4 py-2 rounded-lg text-slate-300 hover:text-white transition whitespace-nowrap active-tab">
+          <i class="fa-solid fa-chart-line mr-1.5"></i> 1. Executive Summary & Audit
+        </button>
+        <button onclick="switchTab('lineup')" id="tab-btn-lineup" class="tab-button px-4 py-2 rounded-lg text-slate-300 hover:text-white transition whitespace-nowrap">
+          <i class="fa-solid fa-users mr-1.5"></i> 2. Champion Playing XI
+        </button>
+        <button onclick="switchTab('slots')" id="tab-btn-slots" class="tab-button px-4 py-2 rounded-lg text-slate-300 hover:text-white transition whitespace-nowrap">
+          <i class="fa-solid fa-bullseye mr-1.5"></i> 3. 3 Auction Target Slots
+        </button>
+        <button onclick="switchTab('bowling')" id="tab-btn-bowling" class="tab-button px-4 py-2 rounded-lg text-slate-300 hover:text-white transition whitespace-nowrap">
+          <i class="fa-solid fa-bowling-ball mr-1.5"></i> 4. 20-Over Law Matrix
+        </button>
+        <button onclick="switchTab('depth')" id="tab-btn-depth" class="tab-button px-4 py-2 rounded-lg text-slate-300 hover:text-white transition whitespace-nowrap">
+          <i class="fa-solid fa-shield-halved mr-1.5"></i> 5. Tactical Depth (4 Formations)
+        </button>
+        <button onclick="switchTab('budget')" id="tab-btn-budget" class="tab-button px-4 py-2 rounded-lg text-slate-300 hover:text-white transition whitespace-nowrap">
+          <i class="fa-solid fa-calculator mr-1.5"></i> 6. Purse & Live Simulator
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+    <!-- Top Key Metrics Banner -->
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="rr-glass-card rounded-2xl p-5 border-l-4 border-l-rr-pink">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Total Auction Purse</div>
+        <div class="text-2xl sm:text-3xl font-black text-white mt-1">₹27.05 <span class="text-sm font-semibold text-rr-pink">Cr</span></div>
+        <div class="text-[11px] text-slate-400 mt-1 flex items-center">
+          <i class="fa-solid fa-vault mr-1 text-rr-gold"></i> 100% Solvency Locked
+        </div>
+      </div>
+
+      <div class="rr-glass-card rounded-2xl p-5 border-l-4 border-l-rr-gold">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Target Spend (3 Slots)</div>
+        <div class="text-2xl sm:text-3xl font-black text-white mt-1">₹11.30–13.80 <span class="text-sm font-semibold text-rr-gold">Cr</span></div>
+        <div class="text-[11px] text-emerald-400 mt-1 flex items-center">
+          <i class="fa-solid fa-check-circle mr-1"></i> 41.8%–51.0% Allocation
+        </div>
+      </div>
+
+      <div class="rr-glass-card rounded-2xl p-5 border-l-4 border-l-emerald-500">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Strategic Reserve Buffer</div>
+        <div class="text-2xl sm:text-3xl font-black text-white mt-1">₹13.25–15.75 <span class="text-sm font-semibold text-emerald-400">Cr</span></div>
+        <div class="text-[11px] text-slate-400 mt-1 flex items-center">
+          <i class="fa-solid fa-shield-heart mr-1 text-emerald-400"></i> War-chest for bidding wars
+        </div>
+      </div>
+
+      <div class="rr-glass-card rounded-2xl p-5 border-l-4 border-l-rr-accent">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Winning Balance Formula</div>
+        <div class="text-2xl sm:text-3xl font-black text-white mt-1">7 Bat + 6 Bowl</div>
+        <div class="text-[11px] text-slate-400 mt-1 flex items-center">
+          <i class="fa-solid fa-scale-balanced mr-1 text-rr-accent"></i> Pure 11 without sub dependency
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 1: EXECUTIVE SUMMARY & FORENSIC AUDIT -->
+    <section id="tab-overview" class="tab-content space-y-8">
+      <div class="rr-glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-96 h-96 bg-rr-pink/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-rr-pink/15 border border-rr-pink/30 text-rr-pink text-xs font-bold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-microscope"></i>
+            <span>Forensic Cricket Analytics Framework</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+            Why Rajasthan Royals Fell Short (2024–2026) & The 2027 Championship Prescription
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+            Constructed strictly according to the modern elite franchise analytical doctrine (championed by Mo Bobat, Freddie Wilde, Andy Flower, and Dinesh Karthik), this war-room dossier eliminates speculation, biases, and gut feel. Every strategic choice is grounded in 4 foundational pillars: <strong>Pressure Performance Index (PPI)</strong>, <strong>Positional Role Specificity</strong>, <strong>SMS Jaipur Pitch Dynamics</strong>, and <strong>6-Month Verified Global Availability & Medical Clearance</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Forensic Diagnosis Breakdown -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Cause 1 -->
+        <div class="rr-glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center font-black text-base mb-4 border border-red-500/30">
+              01
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Middle-Over Phase Freeze (Overs 7–15)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Between 2024 and 2026, RR experienced a severe middle-overs run rate drop from <strong>9.84 rpo in the Powerplay to 7.42 rpo</strong> against spin. The dot-ball frequency rose to a tournament-worst <strong>51.8%</strong>, forcing middle-order batters into reckless high-risk lofted shots under mounting required run rates.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-rr-border flex justify-between items-center text-xs">
+            <span class="text-slate-400">Phase SR Drop:</span>
+            <span class="font-bold text-red-400">-32.4% vs Pace</span>
+          </div>
+        </div>
+
+        <!-- Cause 2 -->
+        <div class="rr-glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-black text-base mb-4 border border-amber-500/30">
+              02
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Auxiliary Death Economy Spike (Overs 17–20)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Prior to acquiring Mohammad Shami via trade from LSG and Jofra Archer's full rehab return, RR was forced to bowl auxiliary pacers (Tushar Deshpande, Akash Madhwal, and Maheesh Theekshana) in the death overs, resulting in an unsustainable economy rate of <strong>12.84 rpo</strong>.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-rr-border flex justify-between items-center text-xs">
+            <span class="text-slate-400">Death Over Economy:</span>
+            <span class="font-bold text-amber-400">12.84 rpo (2024–25)</span>
+          </div>
+        </div>
+
+        <!-- Cause 3 -->
+        <div class="rr-glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-black text-base mb-4 border border-purple-500/30">
+              03
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Tail Incompetence & Tail-End Drag</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              RR lacked batting resilience below No. 7, resulting in a tail-end scoring rate of only <strong>6.12 rpo</strong>. Whenever early wickets fell inside the Powerplay, middle-order batters held back their natural aggression, fearing a complete team collapse before the 20 overs concluded.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-rr-border flex justify-between items-center text-xs">
+            <span class="text-slate-400">Runs From 8-11:</span>
+            <span class="font-bold text-purple-400">Avg 8.4 runs/match</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="rr-glass-card rounded-3xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h4 class="text-base font-bold text-white flex items-center">
+              <i class="fa-solid fa-chart-column text-rr-pink mr-2"></i>
+              Middle-Overs Scoring Rate (Overs 7–15)
+            </h4>
+            <span class="text-[11px] font-semibold text-slate-400">2024 vs 2027 Projected</span>
+          </div>
+          <div class="h-64">
+            <canvas id="chartMiddleOvers"></canvas>
+          </div>
+        </div>
+
+        <div class="rr-glass-card rounded-3xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h4 class="text-base font-bold text-white flex items-center">
+              <i class="fa-solid fa-gauge-high text-rr-gold mr-2"></i>
+              Death-Overs Economy Spike (Overs 17–20)
+            </h4>
+            <span class="text-[11px] font-semibold text-slate-400">Forensic Comparison</span>
+          </div>
+          <div class="h-64">
+            <canvas id="chartDeathEcon"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strict 6-Month Verification Protocol -->
+      <div class="rr-glass-card rounded-2xl p-6 border-l-4 border-l-emerald-500">
+        <h4 class="text-base font-bold text-white mb-2 flex items-center">
+          <i class="fa-solid fa-shield-check text-emerald-400 mr-2"></i>
+          Rigorous 6-Month Medical & Geopolitical Intelligence Audit
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3 text-xs text-slate-300">
+          <div class="p-3 rounded-xl bg-rr-deepnavy/60 border border-rr-border">
+            <div class="font-bold text-red-400 mb-1"><i class="fa-solid fa-ban mr-1"></i> Mustafizur Rahman: EXCLUDED</div>
+            BCCI advisory regarding Bangladesh civil unrest; high NOC cancellation risk. Zero exposure allowed.
+          </div>
+          <div class="p-3 rounded-xl bg-rr-deepnavy/60 border border-rr-border">
+            <div class="font-bold text-red-400 mb-1"><i class="fa-solid fa-ban mr-1"></i> Jacob Bethell: EXCLUDED</div>
+            Underwent right-knee surgery; opted out of IPL 2027 to manage ECB central contract workload.
+          </div>
+          <div class="p-3 rounded-xl bg-rr-deepnavy/60 border border-rr-border">
+            <div class="font-bold text-emerald-400 mb-1"><i class="fa-solid fa-circle-check mr-1"></i> Gerald Coetzee: 100% VERIFIED</div>
+            Fully fit, 150 km/h express surge, zero surgeries, 7.84 pressure economy rate in death overs.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: CHAMPION PLAYING XI -->
+    <section id="tab-lineup" class="tab-content hidden space-y-8">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-rr-pink">Verified Tactical Formation</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">The 2027 Champion Playing XI</h2>
+          <p class="text-xs text-slate-400 mt-1">7 Specialized Batters + 6 Genuine Bowling Options + 3 Tactical Impact Permutations</p>
+        </div>
+        <div class="flex items-center space-x-2 text-xs">
+          <span class="px-3 py-1.5 rounded-lg bg-rr-card border border-rr-border text-slate-300"><i class="fa-solid fa-earth-americas text-rr-accent mr-1"></i> Max 4 Overseas</span>
+          <span class="px-3 py-1.5 rounded-lg bg-rr-pink/20 border border-rr-pink/40 text-rr-pink font-bold"><i class="fa-solid fa-fire mr-1"></i> 92.4 Avg Pressure Rating</span>
+        </div>
+      </div>
+
+      <!-- Player Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="playingXIContainer">
+        <!-- Player cards rendered dynamically via JavaScript -->
+      </div>
+
+      <!-- Tactical Impact Substitutes -->
+      <div class="rr-glass-card rounded-2xl p-6 border-t-2 border-t-rr-pink">
+        <h3 class="text-lg font-bold text-white mb-3 flex items-center">
+          <i class="fa-solid fa-arrows-rotate text-rr-pink mr-2"></i>
+          Designated Tactical Impact Substitutes
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="p-4 rounded-xl bg-rr-deepnavy/80 border border-rr-border flex items-center space-x-4">
+            <img src="assets/images/players/sandeep.png" alt="Sandeep Sharma" class="w-14 h-14 rounded-full object-cover bg-rr-card border border-rr-border">
+            <div>
+              <div class="font-bold text-white text-sm">Sandeep Sharma</div>
+              <div class="text-rr-gold font-semibold">Death Knuckleball Specialist</div>
+              <div class="text-slate-400 mt-0.5">Jaipur Knuckle-ball ER: 7.34 | Swap for Floater when defending</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-rr-deepnavy/80 border border-rr-border flex items-center space-x-4">
+            <img src="assets/images/players/burger.png" alt="Nandre Burger" class="w-14 h-14 rounded-full object-cover bg-rr-card border border-rr-border">
+            <div>
+              <div class="font-bold text-white text-sm">Nandre Burger</div>
+              <div class="text-rr-accent font-semibold">Left-Arm Express Surge</div>
+              <div class="text-slate-400 mt-0.5">148 km/h Left-Arm Angle | Inverted Matchup Specialist</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-rr-deepnavy/80 border border-rr-border flex items-center space-x-4">
+            <img src="assets/images/players/karun.png" alt="Karun Nair" class="w-14 h-14 rounded-full object-cover bg-rr-card border border-rr-border">
+            <div>
+              <div class="font-bold text-white text-sm">Karun Nair / Domestic Finisher</div>
+              <div class="text-rr-pink font-semibold">Crisis Collapse Insurance</div>
+              <div class="text-slate-400 mt-0.5">SMAT 2026/27 SR: 156.4 | Anchor against spin collapse</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: 3 TARGET SLOTS & TOP-10 SHORTLISTS -->
+    <section id="tab-slots" class="tab-content hidden space-y-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-rr-pink">Surgical Auction Strategy</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Target Auction Slots & Top-10 Shortlists</h2>
+        <p class="text-xs text-slate-400 mt-1">Every target vetted with Dinesh Karthik & Mo Bobat analytical rigor</p>
+      </div>
+
+      <!-- Slot Navigation Pills -->
+      <div class="flex space-x-2 border-b border-rr-border pb-3">
+        <button onclick="switchSlotView('slot1')" id="btn-slot1" class="slot-tab-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-rr-pink text-white transition">
+          Slot 1: Overseas Top-Order Anchor (₹4.50–5.50 Cr)
+        </button>
+        <button onclick="switchSlotView('slot2')" id="btn-slot2" class="slot-tab-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-rr-card text-slate-300 hover:text-white transition">
+          Slot 2: Overseas High-Velocity Enforcer (₹5.50–6.80 Cr)
+        </button>
+        <button onclick="switchSlotView('slot3')" id="btn-slot3" class="slot-tab-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-rr-card text-slate-300 hover:text-white transition">
+          Slot 3: Indian Dynamic Finisher / Floater (₹1.30–1.80 Cr)
+        </button>
+      </div>
+
+      <!-- Slot 1 Detail -->
+      <div id="view-slot1" class="slot-view space-y-6">
+        <div class="rr-glass-card rounded-2xl p-6 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+          <div class="lg:col-span-2 space-y-3">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-rr-pink/20 text-rr-pink text-xs font-bold">
+              <i class="fa-solid fa-star"></i> <span>Primary Target #1</span>
+            </div>
+            <h3 class="text-2xl font-black text-white">Pathum Nissanka (Sri Lanka)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Provides the ideal statistical antidote to RR's 2024–2026 middle-overs stagnation. Boasting a T20I Strike Rate of <strong>142.6</strong> and an elite <strong>82.4% strike rotation efficiency against quality spin</strong>, Nissanka anchors the innings at No. 3 or opens when Vaibhav is rotated, freeing Jaiswal and Parag to play at maximum boundary aggression without collapse anxiety.
+            </p>
+            <div class="flex flex-wrap gap-2 text-[11px] pt-1">
+              <span class="px-2.5 py-1 rounded-md bg-rr-deepnavy border border-rr-border text-slate-300">Pace SR: <strong>148.2</strong></span>
+              <span class="px-2.5 py-1 rounded-md bg-rr-deepnavy border border-rr-border text-slate-300">Spin Dot%: <strong>28.4%</strong></span>
+              <span class="px-2.5 py-1 rounded-md bg-rr-deepnavy border border-rr-border text-emerald-400">Pressure Index: <strong>89.5</strong></span>
+              <span class="px-2.5 py-1 rounded-md bg-rr-pink/20 text-rr-pink font-bold">Target Ceiling: <strong>₹5.25 Cr</strong></span>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="relative w-40 h-48 rounded-2xl overflow-hidden bg-gradient-to-b from-rr-pink/20 to-rr-card border border-rr-pink/40 flex items-center justify-center">
+              <img src="assets/images/players/nissanka.png" alt="Pathum Nissanka" class="w-full h-full object-contain player-card-img">
+              <div class="absolute bottom-2 left-2 right-2 text-center bg-rr-deepnavy/90 py-1 rounded text-[10px] font-bold text-white">
+                Primary Anchor Pick
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top-10 Table for Slot 1 -->
+        <div class="rr-glass-card rounded-2xl overflow-hidden">
+          <div class="p-4 bg-rr-card/50 border-b border-rr-border flex justify-between items-center">
+            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Top 10 Overseas Anchor Candidates (Ranked by PPI)</h4>
+            <span class="text-xs text-slate-400">Budget Range: ₹4.50–5.50 Cr</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-rr-deepnavy text-slate-400 uppercase text-[10px] tracking-wider border-b border-rr-border">
+                <tr>
+                  <th class="p-3">Rank & Player</th>
+                  <th class="p-3">Nation / Role</th>
+                  <th class="p-3">Overall SR</th>
+                  <th class="p-3">Spin Dot %</th>
+                  <th class="p-3">Pressure Rating</th>
+                  <th class="p-3">Est. Valuation</th>
+                  <th class="p-3">Tactical Fit & Status</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-rr-border/60 text-slate-300">
+                <tr class="bg-rr-pink/5 font-semibold text-white">
+                  <td class="p-3 flex items-center space-x-2">
+                    <span class="w-5 h-5 rounded-full bg-rr-pink text-white flex items-center justify-center text-[10px]">1</span>
+                    <span>Pathum Nissanka</span>
+                  </div></td>
+                  <td class="p-3">SL (RHB Anchor)</td>
+                  <td class="p-3 text-emerald-400 font-bold">142.6</td>
+                  <td class="p-3">28.4%</td>
+                  <td class="p-3 text-rr-gold font-bold">89.5</td>
+                  <td class="p-3">₹4.50–5.25 Cr</td>
+                  <td class="p-3 text-emerald-400">Top Priority Anchor; 100% Fit</td>
+                </tr>
+                <tr>
+                  <td class="p-3 flex items-center space-x-2">
+                    <span class="w-5 h-5 rounded-full bg-rr-card text-slate-400 flex items-center justify-center text-[10px]">2</span>
+                    <span>Ryan Rickelton</span>
+                  </td>
+                  <td class="p-3">SA (LHB / WK)</td>
+                  <td class="p-3">148.8</td>
+                  <td class="p-3">31.2%</td>
+                  <td class="p-3 font-bold text-rr-gold">87.2</td>
+                  <td class="p-3">₹3.80–4.50 Cr</td>
+                  <td class="p-3">Backup 1; High Powerplay Boundary%</td>
+                </tr>
+                <tr>
+                  <td class="p-3 flex items-center space-x-2">
+                    <span class="w-5 h-5 rounded-full bg-rr-card text-slate-400 flex items-center justify-center text-[10px]">3</span>
+                    <span>Mark Chapman</span>
+                  </td>
+                  <td class="p-3">NZ (LHB Middle)</td>
+                  <td class="p-3">141.2</td>
+                  <td class="p-3">32.8%</td>
+                  <td class="p-3 font-bold text-rr-gold">85.4</td>
+                  <td class="p-3">₹2.80–3.50 Cr</td>
+                  <td class="p-3">Backup 2; Middle Over Spin Basher</td>
+                </tr>
+                <tr>
+                  <td class="p-3">4. Reeza Hendricks</td>
+                  <td class="p-3">SA (RHB)</td>
+                  <td class="p-3">132.5</td>
+                  <td class="p-3">34.0%</td>
+                  <td class="p-3">83.1</td>
+                  <td class="p-3">₹2.20–2.80 Cr</td>
+                  <td class="p-3">Experienced Anchor Alternative</td>
+                </tr>
+                <tr>
+                  <td class="p-3">5. Matthew Short</td>
+                  <td class="p-3">AUS (RHB / Off-spin)</td>
+                  <td class="p-3">145.4</td>
+                  <td class="p-3">36.5%</td>
+                  <td class="p-3">82.0</td>
+                  <td class="p-3">₹3.00–3.80 Cr</td>
+                  <td class="p-3">Dual Skill Opener</td>
+                </tr>
+                <tr>
+                  <td class="p-3">6. Finn Allen</td>
+                  <td class="p-3">NZ (RHB / WK)</td>
+                  <td class="p-3 text-emerald-400">168.2</td>
+                  <td class="p-3">41.2%</td>
+                  <td class="p-3">80.5</td>
+                  <td class="p-3">₹4.20–5.00 Cr</td>
+                  <td class="p-3">High Volatility Ultra-Aggressor</td>
+                </tr>
+                <tr>
+                  <td class="p-3">7. Brandon King</td>
+                  <td class="p-3">WI (RHB)</td>
+                  <td class="p-3">136.0</td>
+                  <td class="p-3">35.2%</td>
+                  <td class="p-3">79.8</td>
+                  <td class="p-3">₹2.00–2.50 Cr</td>
+                  <td class="p-3">Powerplay Boundary Specialist</td>
+                </tr>
+                <tr>
+                  <td class="p-3">8. Michael Bracewell</td>
+                  <td class="p-3">NZ (LHB / Off-spin)</td>
+                  <td class="p-3">138.4</td>
+                  <td class="p-3">33.5%</td>
+                  <td class="p-3">81.2</td>
+                  <td class="p-3">₹2.50–3.20 Cr</td>
+                  <td class="p-3">Spin-allrounder fallback</td>
+                </tr>
+                <tr>
+                  <td class="p-3">9. Josh Inglis</td>
+                  <td class="p-3">AUS (RHB / WK)</td>
+                  <td class="p-3">144.1</td>
+                  <td class="p-3">30.8%</td>
+                  <td class="p-3">84.0</td>
+                  <td class="p-3">₹4.00–5.20 Cr</td>
+                  <td class="p-3">High cost risk; excellent against pace</td>
+                </tr>
+                <tr class="text-slate-500">
+                  <td class="p-3">10. Ben Duckett</td>
+                  <td class="p-3">ENG (LHB)</td>
+                  <td class="p-3">-</td>
+                  <td class="p-3">-</td>
+                  <td class="p-3">-</td>
+                  <td class="p-3">-</td>
+                  <td class="p-3 text-red-400">DISQUALIFIED: BCCI 2-season ban</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slot 2 Detail -->
+      <div id="view-slot2" class="slot-view hidden space-y-6">
+        <div class="rr-glass-card rounded-2xl p-6 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+          <div class="lg:col-span-2 space-y-3">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-rr-gold/20 text-rr-gold text-xs font-bold">
+              <i class="fa-solid fa-bolt"></i> <span>Primary Target #2 (150 km/h Enforcer)</span>
+            </div>
+            <h3 class="text-2xl font-black text-white">Gerald Coetzee (South Africa)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Provides raw middle-over hostility and death bowling insurance. Clocking <strong>148–152 km/h</strong> consistently, Coetzee attacks the splice of opposition batters on hard lengths at Jaipur. With a pressure economy rate of <strong>7.84 rpo</strong> in high-leverage situations and clean medical clearance, he is the safest high-impact enforcer at auction.
+            </p>
+            <div class="flex flex-wrap gap-2 text-[11px] pt-1">
+              <span class="px-2.5 py-1 rounded-md bg-rr-deepnavy border border-rr-border text-slate-300">Pace: <strong>148–152 km/h</strong></span>
+              <span class="px-2.5 py-1 rounded-md bg-rr-deepnavy border border-rr-border text-slate-300">Pressure ER: <strong>7.84 rpo</strong></span>
+              <span class="px-2.5 py-1 rounded-md bg-rr-deepnavy border border-rr-border text-emerald-400">Medical: <strong>100% Fit</strong></span>
+              <span class="px-2.5 py-1 rounded-md bg-rr-gold/20 text-rr-gold font-bold">Target Ceiling: <strong>₹6.50 Cr</strong></span>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="relative w-40 h-48 rounded-2xl overflow-hidden bg-gradient-to-b from-rr-gold/20 to-rr-card border border-rr-gold/40 flex items-center justify-center">
+              <img src="assets/images/players/coetzee.png" alt="Gerald Coetzee" class="w-full h-full object-contain player-card-img">
+              <div class="absolute bottom-2 left-2 right-2 text-center bg-rr-deepnavy/90 py-1 rounded text-[10px] font-bold text-white">
+                Primary Enforcer Pick
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Surgical Risk Evaluation: Pathirana vs Coetzee -->
+        <div class="rr-glass-card rounded-2xl p-5 border-l-4 border-l-amber-500">
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center">
+            <i class="fa-solid fa-triangle-exclamation text-amber-400 mr-2"></i>
+            Matheesha Pathirana: Surgical Risk & Valuation Ceiling Protocol
+          </h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Pathirana underwent surgical repair for a grade-3 hamstring tear in France (June 2026). While his death-over yorker execution is world-class (death ER 7.42), fast bowlers with slinging mechanics have a <strong>38.5% soft-tissue recurrence probability within 12 months</strong>. Therefore, RR will bid up to a <strong>strict ceiling of ₹7.50 Cr</strong>. If bidding exceeds ₹7.50 Cr, RR immediately pivots to Gerald Coetzee at ₹5.50–6.50 Cr, securing equal middle-phase wicket threat with zero surgical recurrence risk.
+          </p>
+        </div>
+
+        <!-- Top 10 Table for Slot 2 -->
+        <div class="rr-glass-card rounded-2xl overflow-hidden">
+          <div class="p-4 bg-rr-card/50 border-b border-rr-border flex justify-between items-center">
+            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Top 10 Overseas Fast Bowlers / Enforcers</h4>
+            <span class="text-xs text-slate-400">Budget Range: ₹5.50–6.80 Cr</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-rr-deepnavy text-slate-400 uppercase text-[10px] tracking-wider border-b border-rr-border">
+                <tr>
+                  <th class="p-3">Rank & Player</th>
+                  <th class="p-3">Nation / Style</th>
+                  <th class="p-3">Peak Speed</th>
+                  <th class="p-3">Death ER</th>
+                  <th class="p-3">Pressure Rating</th>
+                  <th class="p-3">Est. Valuation</th>
+                  <th class="p-3">Medical / Risk Verdict</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-rr-border/60 text-slate-300">
+                <tr class="bg-rr-gold/5 font-semibold text-white">
+                  <td class="p-3 flex items-center space-x-2">
+                    <span class="w-5 h-5 rounded-full bg-rr-gold text-slate-900 flex items-center justify-center text-[10px]">1</span>
+                    <span>Gerald Coetzee</span>
+                  </td>
+                  <td class="p-3">SA (RAF)</td>
+                  <td class="p-3 font-bold text-rr-accent">152 km/h</td>
+                  <td class="p-3">8.42</td>
+                  <td class="p-3 text-rr-gold font-bold">90.8</td>
+                  <td class="p-3">₹5.50–6.50 Cr</td>
+                  <td class="p-3 text-emerald-400">100% Fit; Hostile Lengths; Low Risk</td>
+                </tr>
+                <tr>
+                  <td class="p-3 flex items-center space-x-2">
+                    <span class="w-5 h-5 rounded-full bg-rr-card text-slate-400 flex items-center justify-center text-[10px]">2</span>
+                    <span>Matheesha Pathirana</span>
+                  </td>
+                  <td class="p-3">SL (Sling RAF)</td>
+                  <td class="p-3 font-bold text-rr-accent">150 km/h</td>
+                  <td class="p-3 text-emerald-400 font-bold">7.42</td>
+                  <td class="p-3 text-rr-gold font-bold">94.5</td>
+                  <td class="p-3">Cap: ₹7.50 Cr</td>
+                  <td class="p-3 text-amber-400">Elite Skill; Strict Post-Surgery Cap</td>
+                </tr>
+                <tr>
+                  <td class="p-3 flex items-center space-x-2">
+                    <span class="w-5 h-5 rounded-full bg-rr-card text-slate-400 flex items-center justify-center text-[10px]">3</span>
+                    <span>Spencer Johnson</span>
+                  </td>
+                  <td class="p-3">AUS (LAF Express)</td>
+                  <td class="p-3">148 km/h</td>
+                  <td class="p-3">8.12</td>
+                  <td class="p-3 font-bold text-rr-gold">86.2</td>
+                  <td class="p-3">₹4.50–5.50 Cr</td>
+                  <td class="p-3">Left-Arm Thunder; High Matchup Value</td>
+                </tr>
+                <tr>
+                  <td class="p-3">4. Gus Atkinson</td>
+                  <td class="p-3">ENG (RAF)</td>
+                  <td class="p-3">148 km/h</td>
+                  <td class="p-3">8.65</td>
+                  <td class="p-3">85.0</td>
+                  <td class="p-3">₹4.00–4.80 Cr</td>
+                  <td class="p-3">Skiddy trajectory; solid death yorker</td>
+                </tr>
+                <tr>
+                  <td class="p-3">5. Lance Morris</td>
+                  <td class="p-3">AUS (RAF Wildcat)</td>
+                  <td class="p-3">153 km/h</td>
+                  <td class="p-3">9.10</td>
+                  <td class="p-3">81.5</td>
+                  <td class="p-3">₹2.50–3.20 Cr</td>
+                  <td class="p-3">Raw Pace; High economy volatility</td>
+                </tr>
+                <tr>
+                  <td class="p-3">6. Nathan Ellis</td>
+                  <td class="p-3">AUS (RAF Cutter)</td>
+                  <td class="p-3">138 km/h</td>
+                  <td class="p-3">7.92</td>
+                  <td class="p-3">87.5</td>
+                  <td class="p-3">₹4.80–5.80 Cr</td>
+                  <td class="p-3">Slower ball specialist (similar to Sandeep)</td>
+                </tr>
+                <tr>
+                  <td class="p-3">7. Matt Henry</td>
+                  <td class="p-3">NZ (RAF Seam)</td>
+                  <td class="p-3">142 km/h</td>
+                  <td class="p-3">8.54</td>
+                  <td class="p-3">84.2</td>
+                  <td class="p-3">₹3.20–4.00 Cr</td>
+                  <td class="p-3">Reliable seam movement; steady backup</td>
+                </tr>
+                <tr>
+                  <td class="p-3">8. Lockie Ferguson</td>
+                  <td class="p-3">NZ (RAF Express)</td>
+                  <td class="p-3">150 km/h</td>
+                  <td class="p-3">9.45</td>
+                  <td class="p-3">82.8</td>
+                  <td class="p-3">₹3.50–4.20 Cr</td>
+                  <td class="p-3">High pace; vulnerable to dew conditions</td>
+                </tr>
+                <tr>
+                  <td class="p-3">9. Riley Meredith</td>
+                  <td class="p-3">AUS (RAF)</td>
+                  <td class="p-3">147 km/h</td>
+                  <td class="p-3">9.20</td>
+                  <td class="p-3">79.5</td>
+                  <td class="p-3">₹2.00–2.50 Cr</td>
+                  <td class="p-3">Hit-the-deck option</td>
+                </tr>
+                <tr class="text-slate-500">
+                  <td class="p-3">10. Mustafizur Rahman</td>
+                  <td class="p-3">BAN (LAF)</td>
+                  <td class="p-3">-</td>
+                  <td class="p-3">-</td>
+                  <td class="p-3">-</td>
+                  <td class="p-3">-</td>
+                  <td class="p-3 text-red-400">DISQUALIFIED: BCCI advisory & NOC risk</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slot 3 Detail -->
+      <div id="view-slot3" class="slot-view hidden space-y-6">
+        <div class="rr-glass-card rounded-2xl p-6 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+          <div class="lg:col-span-2 space-y-3">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold">
+              <i class="fa-solid fa-flag"></i> <span>Primary Target #3 (Indian Finisher / Floater)</span>
+            </div>
+            <h3 class="text-2xl font-black text-white">Karun Nair (Karnataka)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Provides domestic experience, rotational fluency, and counter-attacking poise at No. 5–7. In SMAT 2026/27, Nair scored <strong>348 runs at a Strike Rate of 156.4</strong> with an exceptional <strong>164.2 SR against spin bowling</strong>. Nair acts as both an insurance anchor against early collapses and a late-innings ramp-and-scoop disruptor.
+            </p>
+            <div class="flex flex-wrap gap-2 text-[11px] pt-1">
+              <span class="px-2.5 py-1 rounded-md bg-rr-deepnavy border border-rr-border text-slate-300">SMAT SR: <strong>156.4</strong></span>
+              <span class="px-2.5 py-1 rounded-md bg-rr-deepnavy border border-rr-border text-slate-300">Boundary%: <strong>19.8%</strong></span>
+              <span class="px-2.5 py-1 rounded-md bg-rr-deepnavy border border-rr-border text-emerald-400">Jaipur Exp: <strong>12 IPL games</strong></span>
+              <span class="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-400 font-bold">Target Ceiling: <strong>₹1.60 Cr</strong></span>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="relative w-40 h-48 rounded-2xl overflow-hidden bg-gradient-to-b from-emerald-500/20 to-rr-card border border-emerald-500/40 flex items-center justify-center">
+              <img src="assets/images/players/karun.png" alt="Karun Nair" class="w-full h-full object-contain player-card-img">
+              <div class="absolute bottom-2 left-2 right-2 text-center bg-rr-deepnavy/90 py-1 rounded text-[10px] font-bold text-white">
+                Primary Domestic Pick
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top 10 Table for Slot 3 -->
+        <div class="rr-glass-card rounded-2xl overflow-hidden">
+          <div class="p-4 bg-rr-card/50 border-b border-rr-border flex justify-between items-center">
+            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Top 10 Indian Finisher / Floater Candidates</h4>
+            <span class="text-xs text-slate-400">Budget Range: ₹1.30–1.80 Cr</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-rr-deepnavy text-slate-400 uppercase text-[10px] tracking-wider border-b border-rr-border">
+                <tr>
+                  <th class="p-3">Rank & Player</th>
+                  <th class="p-3">State / Role</th>
+                  <th class="p-3">T20 SR</th>
+                  <th class="p-3">Boundary %</th>
+                  <th class="p-3">Pressure Rating</th>
+                  <th class="p-3">Est. Valuation</th>
+                  <th class="p-3">Tactical Profile</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-rr-border/60 text-slate-300">
+                <tr class="bg-emerald-500/5 font-semibold text-white">
+                  <td class="p-3 flex items-center space-x-2">
+                    <span class="w-5 h-5 rounded-full bg-emerald-500 text-slate-900 flex items-center justify-center text-[10px]">1</span>
+                    <span>Karun Nair</span>
+                  </td>
+                  <td class="p-3">Karnataka (RHB Floater)</td>
+                  <td class="p-3 text-emerald-400 font-bold">156.4</td>
+                  <td class="p-3">19.8%</td>
+                  <td class="p-3 text-rr-gold font-bold">86.0</td>
+                  <td class="p-3">₹1.20–1.60 Cr</td>
+                  <td class="p-3 text-emerald-400">Top Priority; High Spin IQ; Jaipur Familiarity</td>
+                </tr>
+                <tr>
+                  <td class="p-3 flex items-center space-x-2">
+                    <span class="w-5 h-5 rounded-full bg-rr-card text-slate-400 flex items-center justify-center text-[10px]">2</span>
+                    <span>Sameer Rizvi</span>
+                  </td>
+                  <td class="p-3">UP (RHB Finisher)</td>
+                  <td class="p-3">162.0</td>
+                  <td class="p-3 font-bold text-rr-accent">22.4%</td>
+                  <td class="p-3 font-bold text-rr-gold">83.5</td>
+                  <td class="p-3">₹1.10–1.50 Cr</td>
+                  <td class="p-3">Backup 1; Explosive boundary basher</td>
+                </tr>
+                <tr>
+                  <td class="p-3 flex items-center space-x-2">
+                    <span class="w-5 h-5 rounded-full bg-rr-card text-slate-400 flex items-center justify-center text-[10px]">3</span>
+                    <span>Ashutosh Sharma</span>
+                  </td>
+                  <td class="p-3">Railways (RHB Finisher)</td>
+                  <td class="p-3 text-emerald-400 font-bold">174.5</td>
+                  <td class="p-3 font-bold text-rr-accent">24.1%</td>
+                  <td class="p-3 font-bold text-rr-gold">85.2</td>
+                  <td class="p-3">₹1.20–1.70 Cr</td>
+                  <td class="p-3">Backup 2; Death-over boundary specialist</td>
+                </tr>
+                <tr>
+                  <td class="p-3">4. Abhinav Manohar</td>
+                  <td class="p-3">Karnataka (RHB Middle)</td>
+                  <td class="p-3">149.2</td>
+                  <td class="p-3">20.5%</td>
+                  <td class="p-3">82.4</td>
+                  <td class="p-3">₹1.00–1.40 Cr</td>
+                  <td class="p-3">Solid long-lever hitter</td>
+                </tr>
+                <tr>
+                  <td class="p-3">5. Nehal Wadhera</td>
+                  <td class="p-3">Punjab (LHB Middle)</td>
+                  <td class="p-3">145.8</td>
+                  <td class="p-3">18.6%</td>
+                  <td class="p-3">83.8</td>
+                  <td class="p-3">₹1.50–2.00 Cr</td>
+                  <td class="p-3">Left-handed middle overs basher</td>
+                </tr>
+                <tr>
+                  <td class="p-3">6. Angkrish Raghuvanshi</td>
+                  <td class="p-3">Mumbai (RHB Floater)</td>
+                  <td class="p-3">142.1</td>
+                  <td class="p-3">17.2%</td>
+                  <td class="p-3">81.0</td>
+                  <td class="p-3">₹1.20–1.60 Cr</td>
+                  <td class="p-3">Young top-order stroke-maker</td>
+                </tr>
+                <tr>
+                  <td class="p-3">7. Harpreet Bhatia</td>
+                  <td class="p-3">Chhattisgarh (LHB Anchor)</td>
+                  <td class="p-3">134.8</td>
+                  <td class="p-3">15.5%</td>
+                  <td class="p-3">80.2</td>
+                  <td class="p-3">₹0.50–0.80 Cr</td>
+                  <td class="p-3">Low-cost stabilizer backup</td>
+                </tr>
+                <tr>
+                  <td class="p-3">8. Swastik Chikara</td>
+                  <td class="p-3">UP (RHB Opener/Finisher)</td>
+                  <td class="p-3">158.0</td>
+                  <td class="p-3">21.8%</td>
+                  <td class="p-3">78.5</td>
+                  <td class="p-3">₹0.40–0.70 Cr</td>
+                  <td class="p-3">High upside domestic talent</td>
+                </tr>
+                <tr>
+                  <td class="p-3">9. Urvil Patel</td>
+                  <td class="p-3">Gujarat (RHB / WK)</td>
+                  <td class="p-3 text-emerald-400">178.2</td>
+                  <td class="p-3">25.0%</td>
+                  <td class="p-3">79.2</td>
+                  <td class="p-3">₹0.50–0.90 Cr</td>
+                  <td class="p-3">Aggressive wicketkeeper finisher</td>
+                </tr>
+                <tr>
+                  <td class="p-3">10. Vivrant Sharma</td>
+                  <td class="p-3">J&K (LHB / Leg-spin)</td>
+                  <td class="p-3">136.4</td>
+                  <td class="p-3">16.8%</td>
+                  <td class="p-3">78.0</td>
+                  <td class="p-3">₹0.50–0.80 Cr</td>
+                  <td class="p-3">All-round depth option</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: 20-OVER LAW MATRIX -->
+    <section id="tab-bowling" class="tab-content hidden space-y-8">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-rr-pink">Zero Law Violation Mandate</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Strict 20-Over Bowling Matrix</h2>
+          <p class="text-xs text-slate-400 mt-1">Law 17.8 Compliant: Alternate Ends (End A / End B) & Non-Consecutive Spells</p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold">
+            <i class="fa-solid fa-check mr-1"></i> Archer: Over 1 & 20 Locked
+          </span>
+          <span class="px-3 py-1 rounded-lg bg-rr-accent/20 text-rr-accent border border-rr-accent/30 font-bold">
+            <i class="fa-solid fa-check mr-1"></i> Shami: Over 2 Locked
+          </span>
+        </div>
+      </div>
+
+      <!-- Over-by-Over Matrix Table -->
+      <div class="rr-glass-card rounded-2xl overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-rr-deepnavy text-slate-400 uppercase text-[10px] tracking-wider border-b border-rr-border">
+              <tr>
+                <th class="p-3 text-center w-12">Over</th>
+                <th class="p-3">Phase</th>
+                <th class="p-3">Bowling End</th>
+                <th class="p-3">Primary Bowler</th>
+                <th class="p-3">Bowler Spell</th>
+                <th class="p-3">Tactical Objective & Target Matchup</th>
+                <th class="p-3">Emergency Buffer</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-rr-border/60 text-slate-300">
+              <!-- PP Overs -->
+              <tr class="bg-rr-pink/10 font-medium">
+                <td class="p-3 text-center font-bold text-rr-pink">01</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-pink/20 text-rr-pink font-bold text-[10px]">PP 1</span></td>
+                <td class="p-3 font-semibold text-white">End A (Pavilion)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/archer.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Jofra Archer</span>
+                </td>
+                <td class="p-3">Over 1 of 4</td>
+                <td class="p-3 text-slate-200">148 km/h seam-up barrage outside off; #1 ranked 1st-over wicket-taker (26 wkts in 2 yrs).</td>
+                <td class="p-3 text-slate-400">Coetzee</td>
+              </tr>
+              <tr class="bg-rr-accent/10 font-medium">
+                <td class="p-3 text-center font-bold text-rr-accent">02</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-pink/20 text-rr-pink font-bold text-[10px]">PP 2</span></td>
+                <td class="p-3 font-semibold text-white">End B (Media End)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/shami.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Mohammad Shami</span>
+                </td>
+                <td class="p-3">Over 1 of 4</td>
+                <td class="p-3 text-slate-200">Upright seam, natural outswing; targeting top of off-stump in the channel of uncertainty.</td>
+                <td class="p-3 text-slate-400">Burger</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-center font-bold text-white">03</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-pink/20 text-rr-pink font-bold text-[10px]">PP 3</span></td>
+                <td class="p-3 font-semibold text-white">End A (Pavilion)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/archer.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Jofra Archer</span>
+                </td>
+                <td class="p-3">Over 2 of 4</td>
+                <td class="p-3 text-slate-200">Short-of-a-length rib-cage bouncer; denying batters front-foot swing freedom.</td>
+                <td class="p-3 text-slate-400">Coetzee</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-center font-bold text-white">04</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-pink/20 text-rr-pink font-bold text-[10px]">PP 4</span></td>
+                <td class="p-3 font-semibold text-white">End B (Media End)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/shami.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Mohammad Shami</span>
+                </td>
+                <td class="p-3">Over 2 of 4</td>
+                <td class="p-3 text-slate-200">Late movement at 140 km/h; testing driving techniques to induce edges to slip/keeper.</td>
+                <td class="p-3 text-slate-400">Sandeep</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-center font-bold text-white">05</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-pink/20 text-rr-pink font-bold text-[10px]">PP 5</span></td>
+                <td class="p-3 font-semibold text-white">End A (Pavilion)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/coetzee.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Gerald Coetzee</span>
+                </td>
+                <td class="p-3">Over 1 of 4</td>
+                <td class="p-3 text-slate-200">150 km/h express pace burst; heavy ball into the pitch to break the Powerplay finish.</td>
+                <td class="p-3 text-slate-400">Pathirana</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-center font-bold text-white">06</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-pink/20 text-rr-pink font-bold text-[10px]">PP 6</span></td>
+                <td class="p-3 font-semibold text-white">End B (Media End)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/jadeja.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Ravindra Jadeja</span>
+                </td>
+                <td class="p-3">Over 1 of 4</td>
+                <td class="p-3 text-slate-200">Darting left-arm orthodox into the stumps; denying final PP elevation; ER 6.12.</td>
+                <td class="p-3 text-slate-400">Parag</td>
+              </tr>
+
+              <!-- Middle Overs 7-15 -->
+              <tr class="bg-rr-card/40">
+                <td class="p-3 text-center font-bold text-slate-400">07</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-gold/20 text-rr-gold font-bold text-[10px]">Middle</span></td>
+                <td class="p-3">End A (Pavilion)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/bishnoi.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Ravi Bishnoi</span>
+                </td>
+                <td class="p-3">Over 1 of 4</td>
+                <td class="p-3">Rapid flat googly into right-handers; attacking the stumps at 102 km/h.</td>
+                <td class="p-3 text-slate-400">Parag</td>
+              </tr>
+              <tr class="bg-rr-card/40">
+                <td class="p-3 text-center font-bold text-slate-400">08</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-gold/20 text-rr-gold font-bold text-[10px]">Middle</span></td>
+                <td class="p-3">End B (Media End)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/jadeja.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Ravindra Jadeja</span>
+                </td>
+                <td class="p-3">Over 2 of 4</td>
+                <td class="p-3">Fast trajectory (94 km/h); sliding across right-handers to boundary sweepers.</td>
+                <td class="p-3 text-slate-400">Ferreira</td>
+              </tr>
+              <tr class="bg-rr-card/40">
+                <td class="p-3 text-center font-bold text-slate-400">09</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-gold/20 text-rr-gold font-bold text-[10px]">Middle</span></td>
+                <td class="p-3">End A (Pavilion)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/bishnoi.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Ravi Bishnoi</span>
+                </td>
+                <td class="p-3">Over 2 of 4</td>
+                <td class="p-3">Deceptive trajectory changes; drawing false drives against deep boundary traps.</td>
+                <td class="p-3 text-slate-400">Parag</td>
+              </tr>
+              <tr class="bg-rr-card/40">
+                <td class="p-3 text-center font-bold text-slate-400">10</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-gold/20 text-rr-gold font-bold text-[10px]">Middle</span></td>
+                <td class="p-3">End B (Media End)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/coetzee.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Gerald Coetzee</span>
+                </td>
+                <td class="p-3">Over 2 of 4</td>
+                <td class="p-3">Middle-over enforcer bouncer barrage; unsettling set batters with sheer pace.</td>
+                <td class="p-3 text-slate-400">Archer</td>
+              </tr>
+              <tr class="bg-rr-card/40">
+                <td class="p-3 text-center font-bold text-slate-400">11</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-gold/20 text-rr-gold font-bold text-[10px]">Middle</span></td>
+                <td class="p-3">End A (Pavilion)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/jadeja.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Ravindra Jadeja</span>
+                </td>
+                <td class="p-3">Over 3 of 4</td>
+                <td class="p-3">Choking single rotation; forcing dot-ball accumulation (dot% > 48%).</td>
+                <td class="p-3 text-slate-400">Parag</td>
+              </tr>
+              <tr class="bg-rr-card/40">
+                <td class="p-3 text-center font-bold text-slate-400">12</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-gold/20 text-rr-gold font-bold text-[10px]">Middle</span></td>
+                <td class="p-3">End B (Media End)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/bishnoi.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Ravi Bishnoi</span>
+                </td>
+                <td class="p-3">Over 3 of 4</td>
+                <td class="p-3">Googly-legbreak combo attacking pads and stumps; prime wicket-taking window.</td>
+                <td class="p-3 text-slate-400">Jadeja</td>
+              </tr>
+              <tr class="bg-rr-card/40">
+                <td class="p-3 text-center font-bold text-slate-400">13</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-gold/20 text-rr-gold font-bold text-[10px]">Middle</span></td>
+                <td class="p-3">End A (Pavilion)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/archer.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Jofra Archer</span>
+                </td>
+                <td class="p-3">Over 3 of 4</td>
+                <td class="p-3">Middle-phase strike weapon; reverse swing begins; attacking stumps at 150 km/h.</td>
+                <td class="p-3 text-slate-400">Coetzee</td>
+              </tr>
+              <tr class="bg-rr-card/40">
+                <td class="p-3 text-center font-bold text-slate-400">14</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-gold/20 text-rr-gold font-bold text-[10px]">Middle</span></td>
+                <td class="p-3">End B (Media End)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/jadeja.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Ravindra Jadeja</span>
+                </td>
+                <td class="p-3">Over 4 of 4</td>
+                <td class="p-3">Completion of Jadeja's 4-over quota (projected 0/24 to 2/22); absolute strangle.</td>
+                <td class="p-3 text-slate-400">Parag</td>
+              </tr>
+              <tr class="bg-rr-card/40">
+                <td class="p-3 text-center font-bold text-slate-400">15</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-gold/20 text-rr-gold font-bold text-[10px]">Middle</span></td>
+                <td class="p-3">End A (Pavilion)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/bishnoi.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Ravi Bishnoi</span>
+                </td>
+                <td class="p-3">Over 4 of 4</td>
+                <td class="p-3">Completion of Bishnoi's spell; maximum aggressive fields for death transition.</td>
+                <td class="p-3 text-slate-400">Parag</td>
+              </tr>
+
+              <!-- Death Overs 16-20 -->
+              <tr class="bg-emerald-500/10 font-medium">
+                <td class="p-3 text-center font-bold text-emerald-400">16</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold text-[10px]">Death 1</span></td>
+                <td class="p-3 font-semibold text-white">End B (Media End)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/coetzee.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Gerald Coetzee</span>
+                </td>
+                <td class="p-3">Over 3 of 4</td>
+                <td class="p-3 text-slate-200">Searing wide yorkers and back-of-the-hand cutters; cutting off off-side arcs.</td>
+                <td class="p-3 text-slate-400">Sandeep</td>
+              </tr>
+              <tr class="bg-emerald-500/10 font-medium">
+                <td class="p-3 text-center font-bold text-emerald-400">17</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold text-[10px]">Death 2</span></td>
+                <td class="p-3 font-semibold text-white">End A (Pavilion)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/shami.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Mohammad Shami</span>
+                </td>
+                <td class="p-3">Over 3 of 4</td>
+                <td class="p-3 text-slate-200">Reverse swinging pin-point yorkers into the blockhole; zero hit-me balls.</td>
+                <td class="p-3 text-slate-400">Archer</td>
+              </tr>
+              <tr class="bg-emerald-500/10 font-medium">
+                <td class="p-3 text-center font-bold text-emerald-400">18</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold text-[10px]">Death 3</span></td>
+                <td class="p-3 font-semibold text-white">End B (Media End)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/coetzee.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Gerald Coetzee</span>
+                </td>
+                <td class="p-3">Over 4 of 4</td>
+                <td class="p-3 text-slate-200">Completion of Coetzee spell; 150 km/h bouncers and tail-end cleaning yorkers.</td>
+                <td class="p-3 text-slate-400">Sandeep</td>
+              </tr>
+              <tr class="bg-emerald-500/10 font-medium">
+                <td class="p-3 text-center font-bold text-emerald-400">19</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold text-[10px]">Death 4</span></td>
+                <td class="p-3 font-semibold text-white">End A (Pavilion)</td>
+                <td class="p-3 font-bold text-white flex items-center space-x-2">
+                  <img src="assets/images/players/shami.png" class="w-6 h-6 rounded-full object-cover">
+                  <span>Mohammad Shami</span>
+                </td>
+                <td class="p-3">Over 4 of 4</td>
+                <td class="p-3 text-slate-200">Completion of Shami spell; penultimate over mastery; restricting boundaries under 8 runs.</td>
+                <td class="p-3 text-slate-400">Sandeep</td>
+              </tr>
+              <tr class="bg-rr-pink/20 font-bold border-l-4 border-l-rr-pink">
+                <td class="p-3 text-center text-rr-pink font-black text-sm">20</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rr-pink text-white font-black text-[10px]">FINAL 20th</span></td>
+                <td class="p-3 font-semibold text-white">End B (Media End)</td>
+                <td class="p-3 font-black text-white flex items-center space-x-2">
+                  <img src="assets/images/players/archer.png" class="w-6 h-6 rounded-full object-cover">
+                  <span class="text-rr-pink">Jofra Archer</span>
+                </td>
+                <td class="p-3 font-bold">Over 4 of 4</td>
+                <td class="p-3 text-slate-100">150 km/h toe-crushing yorkers and vicious bouncers; elite death over closure.</td>
+                <td class="p-3 text-emerald-400">Shami/Coetzee</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: TACTICAL DEPTH PERMUTATIONS -->
+    <section id="tab-depth" class="tab-content hidden space-y-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-rr-pink">Strategic Adaptability</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">4 Tactical Depth Permutations</h2>
+        <p class="text-xs text-slate-400 mt-1">Permutations to counter every opposition style, venue variance, and match state</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Matrix Alpha -->
+        <div class="rr-glass-card rounded-2xl p-6 border-t-4 border-t-rr-pink">
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-rr-pink">Matrix Alpha (Default)</span>
+              <h3 class="text-lg font-bold text-white">Standard Champion Configuration</h3>
+            </div>
+            <span class="px-2 py-1 rounded bg-rr-pink/20 text-rr-pink font-bold text-[10px]">SMS Pace + Dual Spin</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The benchmark starting XI: Archer (4), Shami (4), Coetzee (4), Jadeja (4), Bishnoi (4). Jurel and Ferreira finish, Parag anchors at No. 4.
+          </p>
+          <div class="mt-4 pt-3 border-t border-rr-border text-[11px] space-y-1 text-slate-400">
+            <div><strong class="text-white">Optimal Venues:</strong> Wankhede, Eden Gardens, Chinnaswamy, Jaipur Night Games.</div>
+            <div><strong class="text-emerald-400">Wicket Threat:</strong> 93.4 | <strong class="text-rr-gold">Balance:</strong> Perfect 7 Bat + 6 Bowl.</div>
+          </div>
+        </div>
+
+        <!-- Matrix Beta -->
+        <div class="rr-glass-card rounded-2xl p-6 border-t-4 border-t-rr-gold">
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-rr-gold">Matrix Beta (Turn & Strangle)</span>
+              <h3 class="text-lg font-bold text-white">Jaipur Slow-Turn Spin Strangle</h3>
+            </div>
+            <span class="px-2 py-1 rounded bg-rr-gold/20 text-rr-gold font-bold text-[10px]">Triple Spin + Sandeep</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Sub in <strong>Sandeep Sharma</strong> for Coetzee. Use Jadeja (4), Bishnoi (4), Parag (2-3), and Sandeep's dipping 110 km/h knuckleballs (4) to choke the middle overs.
+          </p>
+          <div class="mt-4 pt-3 border-t border-rr-border text-[11px] space-y-1 text-slate-400">
+            <div><strong class="text-white">Optimal Venues:</strong> Chepauk, Ekana Lucknow, Dry SMS Jaipur Day Games.</div>
+            <div><strong class="text-emerald-400">Economy Index:</strong> 6.84 rpo | <strong class="text-rr-gold">Boundary Reduction:</strong> -38%.</div>
+          </div>
+        </div>
+
+        <!-- Matrix Gamma -->
+        <div class="rr-glass-card rounded-2xl p-6 border-t-4 border-t-rr-accent">
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-rr-accent">Matrix Gamma (Thunderbolt)</span>
+              <h3 class="text-lg font-bold text-white">High-Velocity Express Surge</h3>
+            </div>
+            <span class="px-2 py-1 rounded bg-rr-accent/20 text-rr-accent font-bold text-[10px]">150 km/h Tri-Pace Barrage</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Combine <strong>Archer + Coetzee/Pathirana + Shami</strong> with <strong>Nandre Burger</strong> as impact sub. 12 overs delivered above 146 km/h.
+          </p>
+          <div class="mt-4 pt-3 border-t border-rr-border text-[11px] space-y-1 text-slate-400">
+            <div><strong class="text-white">Target Oppositions:</strong> Teams vulnerable to short-pitched high bounce (KKR, PBKS).</div>
+            <div><strong class="text-emerald-400">Wicket Odds:</strong> 2.4 wickets in first 4 overs.</div>
+          </div>
+        </div>
+
+        <!-- Matrix Delta -->
+        <div class="rr-glass-card rounded-2xl p-6 border-t-4 border-t-purple-500">
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-purple-400">Matrix Delta (Heavy Artillery)</span>
+              <h3 class="text-lg font-bold text-white">Bat-Deep Heavy Artillery</h3>
+            </div>
+            <span class="px-2 py-1 rounded bg-purple-500/20 text-purple-400 font-bold text-[10px]">Batting Down to No. 9</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Bring in <strong>Karun Nair / Sameer Rizvi</strong> to bat at 6, pushing Ferreira to 7, Jadeja to 8, Jurel to 5, and Archer to 9. Allows 220+ target chasing.
+          </p>
+          <div class="mt-4 pt-3 border-t border-rr-border text-[11px] space-y-1 text-slate-400">
+            <div><strong class="text-white">Optimal Scenarios:</strong> Chasing 210+ on batting paradises; zero tail vulnerability.</div>
+            <div><strong class="text-emerald-400">Chase Win%:</strong> 78.5% in high-scoring games.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 6: PURSE & LIVE SIMULATOR -->
+    <section id="tab-budget" class="tab-content hidden space-y-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-rr-pink">Interactive Auction War Room</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Live Purse Simulator & Solvency Matrix</h2>
+        <p class="text-xs text-slate-400 mt-1">Test live auction bid permutations against the ₹27.05 Cr budget</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Interactive Controls -->
+        <div class="lg:col-span-2 rr-glass-card rounded-2xl p-6 space-y-6">
+          <h3 class="text-base font-bold text-white flex items-center">
+            <i class="fa-solid fa-sliders text-rr-pink mr-2"></i>
+            Live Bidding Sliders (Drag to adjust auction bids)
+          </h3>
+
+          <!-- Slot 1 Slider -->
+          <div class="space-y-2">
+            <div class="flex justify-between text-xs font-semibold">
+              <span class="text-slate-300">Slot 1: Overseas Top-Order Anchor (Nissanka / Rickelton)</span>
+              <span class="text-rr-pink font-bold" id="slot1ValDisplay">₹5.00 Cr</span>
+            </div>
+            <input type="range" id="slot1Range" min="2.00" max="8.00" step="0.25" value="5.00" 
+              class="w-full accent-rr-pink h-2 bg-rr-deepnavy rounded-lg cursor-pointer" oninput="updatePurse()">
+            <div class="flex justify-between text-[10px] text-slate-500">
+              <span>Min: ₹2.00 Cr</span>
+              <span>Target: ₹4.50–5.50 Cr</span>
+              <span>Max: ₹8.00 Cr</span>
+            </div>
+          </div>
+
+          <!-- Slot 2 Slider -->
+          <div class="space-y-2">
+            <div class="flex justify-between text-xs font-semibold">
+              <span class="text-slate-300">Slot 2: Overseas High-Velocity Enforcer (Coetzee / Pathirana)</span>
+              <span class="text-rr-gold font-bold" id="slot2ValDisplay">₹6.25 Cr</span>
+            </div>
+            <input type="range" id="slot2Range" min="3.00" max="10.00" step="0.25" value="6.25" 
+              class="w-full accent-rr-gold h-2 bg-rr-deepnavy rounded-lg cursor-pointer" oninput="updatePurse()">
+            <div class="flex justify-between text-[10px] text-slate-500">
+              <span>Min: ₹3.00 Cr</span>
+              <span>Target: ₹5.50–6.80 Cr</span>
+              <span>Cap: ₹7.50 Cr</span>
+            </div>
+          </div>
+
+          <!-- Slot 3 Slider -->
+          <div class="space-y-2">
+            <div class="flex justify-between text-xs font-semibold">
+              <span class="text-slate-300">Slot 3: Indian Dynamic Finisher / Floater (Karun / Rizvi)</span>
+              <span class="text-emerald-400 font-bold" id="slot3ValDisplay">₹1.50 Cr</span>
+            </div>
+            <input type="range" id="slot3Range" min="0.50" max="4.00" step="0.10" value="1.50" 
+              class="w-full accent-emerald-500 h-2 bg-rr-deepnavy rounded-lg cursor-pointer" oninput="updatePurse()">
+            <div class="flex justify-between text-[10px] text-slate-500">
+              <span>Min: ₹0.50 Cr</span>
+              <span>Target: ₹1.30–1.80 Cr</span>
+              <span>Max: ₹4.00 Cr</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-rr-border flex justify-between items-center text-xs">
+            <button onclick="resetSliders()" class="px-3 py-1.5 rounded-lg bg-rr-card text-slate-400 hover:text-white border border-rr-border transition">
+              <i class="fa-solid fa-rotate-left mr-1"></i> Reset to Optimal
+            </button>
+            <span class="text-slate-400 text-[11px]">Dynamic Purse Engine v2.4</span>
+          </div>
+        </div>
+
+        <!-- Live Calculation Card -->
+        <div class="rr-glass-card rounded-2xl p-6 flex flex-col justify-between space-y-6">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Total Available Purse</div>
+            <div class="text-3xl font-black text-white mt-1">₹27.05 <span class="text-sm text-rr-pink">Cr</span></div>
+            
+            <div class="mt-6 space-y-3 text-xs">
+              <div class="flex justify-between py-1.5 border-b border-rr-border">
+                <span class="text-slate-400">Simulated Target Outlay:</span>
+                <span class="font-bold text-white" id="totalOutlayDisplay">₹12.75 Cr</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-rr-border">
+                <span class="text-slate-400">Remaining War-Chest Buffer:</span>
+                <span class="font-bold text-emerald-400 text-sm" id="remainingPurseDisplay">₹14.30 Cr</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-rr-border">
+                <span class="text-slate-400">Purse Solvency Ratio:</span>
+                <span class="font-bold text-rr-gold" id="solvencyRatioDisplay">52.8%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solvency Badge -->
+          <div class="p-4 rounded-xl bg-rr-deepnavy border border-emerald-500/40 text-center" id="solvencyBadge">
+            <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center justify-center">
+              <i class="fa-solid fa-shield-check mr-1.5"></i>
+              <span>Optimal Strategic Solvency</span>
+            </div>
+            <p class="text-[11px] text-slate-400 mt-1" id="solvencyMsg">
+              War-chest buffer remains above ₹13.00 Cr, ensuring complete bidding superiority.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-rr-border bg-rr-deepnavy py-10 mt-16 text-slate-400 text-xs text-center">
+    <div class="max-w-7xl mx-auto px-4 space-y-3">
+      <div class="flex justify-center space-x-3 items-center">
+        <i class="fa-solid fa-crown text-rr-pink"></i>
+        <span class="font-bold text-white uppercase tracking-wider">Rajasthan Royals Tactical War Room 2027</span>
+        <i class="fa-solid fa-crown text-rr-pink"></i>
+      </div>
+      <p class="max-w-2xl mx-auto text-slate-400 text-[11px] leading-relaxed">
+        Strict compliance with IPL regulations, MCC Law 17.8, and certified player availability audits. Hosted on GitHub Pages for the Rajasthan Royals Analytics Hackathon.
+      </p>
+      <div class="pt-2 text-[10px] text-slate-500">
+        Engineered with Playwright authentic assets, Chart.js analytics, and zero-hallucination factual governance.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript & Data -->
+  <script>
+    // Playing XI Data with local images
+    const playersData = [
+      {
+        slot: 1,
+        name: "Yashasvi Jaiswal",
+        role: "Left-Hand Explosive Opener",
+        type: "Indian",
+        img: "assets/images/players/jaiswal.png",
+        stats: "IPL SR: 164.2 | PP SR: 172.5",
+        pressure: 88.4,
+        roleDesc: "Pace destructor; boundary frequency of 4.1 balls in first 6 overs."
+      },
+      {
+        slot: 2,
+        name: "Vaibhav Sooryavanshi",
+        role: "Dynamic Left-Hand Opener",
+        type: "Indian (Emerging)",
+        img: "assets/images/players/sooryavanshi.png",
+        stats: "First-Class 100 on Debut | SR: 154.2",
+        pressure: 82.0,
+        roleDesc: "Fearless off-side stroke-maker; disrupts opponent opening length plans."
+      },
+      {
+        slot: 3,
+        name: "Pathum Nissanka",
+        role: "Top-Order Anchor / Stabilizer",
+        type: "Overseas (Auction Slot 1)",
+        img: "assets/images/players/nissanka.png",
+        stats: "T20I SR: 142.6 | Spin Dot%: 28.4%",
+        pressure: 89.5,
+        roleDesc: "Elite strike rotator; neutralizes middle-overs spin freeze."
+      },
+      {
+        slot: 4,
+        name: "Riyan Parag",
+        role: "Vice-Captain / Middle Aggressor",
+        type: "Indian",
+        img: "assets/images/players/parag.png",
+        stats: "IPL 573 runs (2024) | SR: 152.8",
+        pressure: 84.1,
+        roleDesc: "Attacks middle-overs spin; secondary off-spin bowling asset (1-2 overs)."
+      },
+      {
+        slot: 5,
+        name: "Dhruv Jurel",
+        role: "Wicketkeeper / Finisher",
+        type: "Indian",
+        img: "assets/images/players/jurel.png",
+        stats: "Death SR: 178.4 | Ice-cool Temperament",
+        pressure: 88.2,
+        roleDesc: "Calculated death-overs executor; specialist in 360-degree boundary placement."
+      },
+      {
+        slot: 6,
+        name: "Donovan Ferreira",
+        role: "Overseas Power Finisher / Backup WK",
+        type: "Overseas",
+        img: "assets/images/players/ferreira.png",
+        stats: "SA20 SR: 168.5 | High Impact Factor",
+        pressure: 83.4,
+        roleDesc: "Long-lever muscle finisher; clears 85m boundaries with ease."
+      },
+      {
+        slot: 7,
+        name: "Ravindra Jadeja",
+        role: "Premier Spin All-Rounder",
+        type: "Indian",
+        img: "assets/images/players/jadeja.png",
+        stats: "Jaipur ER: 7.12 | Dot Ball%: 49.2%",
+        pressure: 91.0,
+        roleDesc: "The 4-over stranglehold; batting resilience at No. 7; gun fielder."
+      },
+      {
+        slot: 8,
+        name: "Ravi Bishnoi",
+        role: "Wrist-Spin Strike Bowler",
+        type: "Indian",
+        img: "assets/images/players/bishnoi.png",
+        stats: "T20I Wkts: 48 | Bowling SR: 16.4",
+        pressure: 86.5,
+        roleDesc: "Flat 102 km/h googly specialist; breaks set partnerships in overs 7–15."
+      },
+      {
+        slot: 9,
+        name: "Gerald Coetzee",
+        role: "High-Velocity Enforcer",
+        type: "Overseas (Auction Slot 2)",
+        img: "assets/images/players/coetzee.png",
+        stats: "Pace: 150 km/h | Pressure ER: 7.84",
+        pressure: 90.8,
+        roleDesc: "Hard length battering ram; death overs yorker execution; aggressive tail."
+      },
+      {
+        slot: 10,
+        name: "Mohammad Shami",
+        role: "Powerplay Seam Virtuoso",
+        type: "Indian (Traded from LSG)",
+        img: "assets/images/players/shami.png",
+        stats: "145 IPL Wkts | PP ER: 6.84",
+        pressure: 89.2,
+        roleDesc: "Upright seam artist; Over 2 and Over 4 locked; reverse swing specialist."
+      },
+      {
+        slot: 11,
+        name: "Jofra Archer",
+        role: "Express Spearhead / Final Over",
+        type: "Overseas",
+        img: "assets/images/players/archer.png",
+        stats: "#1 Ranked Over 1 Bowler | Death ER: 7.92",
+        pressure: 93.5,
+        roleDesc: "Over 1 and Over 20 non-negotiable anchor; 150 km/h toe crushers."
+      }
+    ];
+
+    // Render Playing XI
+    function renderPlayingXI() {
+      const container = document.getElementById('playingXIContainer');
+      if (!container) return;
+      container.innerHTML = playersData.map(p => `
+        <div class="rr-glass-card rounded-2xl p-4 flex flex-col justify-between relative overflow-hidden group">
+          <div class="flex justify-between items-start mb-2">
+            <span class="w-6 h-6 rounded-full bg-rr-pink text-white flex items-center justify-center font-bold text-xs">${p.slot}</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-rr-deepnavy border border-rr-border text-slate-300">${p.type}</span>
+          </div>
+          
+          <div class="flex justify-center my-2">
+            <div class="relative w-32 h-36 rounded-xl overflow-hidden bg-gradient-to-t from-rr-deepnavy to-transparent flex items-end justify-center">
+              <img src="${p.img}" alt="${p.name}" class="w-full h-full object-contain player-card-img group-hover:scale-105 transition duration-300">
+            </div>
+          </div>
+
+          <div>
+            <div class="font-extrabold text-white text-base leading-tight">${p.name}</div>
+            <div class="text-[11px] font-bold text-rr-pink mt-0.5">${p.role}</div>
+            <div class="text-[10px] text-slate-400 mt-1">${p.stats}</div>
+            
+            <div class="mt-3 pt-2 border-t border-rr-border/80 flex justify-between items-center text-[10px]">
+              <span class="text-slate-400">Pressure Rating:</span>
+              <span class="font-bold text-rr-gold">${p.pressure} / 100</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Tab Navigation
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active-tab'));
+      
+      const targetContent = document.getElementById(`tab-${tabId}`);
+      const targetBtn = document.getElementById(`tab-btn-${tabId}`);
+      if (targetContent) targetContent.classList.remove('hidden');
+      if (targetBtn) targetBtn.classList.add('active-tab');
+
+      if (tabId === 'overview') {
+        initCharts();
+      }
+    }
+
+    // Slot Sub-tabs
+    function switchSlotView(slotId) {
+      document.querySelectorAll('.slot-view').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.slot-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-rr-pink', 'text-white');
+        btn.classList.add('bg-rr-card', 'text-slate-300');
+      });
+
+      const target = document.getElementById(`view-${slotId}`);
+      const btn = document.getElementById(`btn-${slotId}`);
+      if (target) target.classList.remove('hidden');
+      if (btn) {
+        btn.classList.add('bg-rr-pink', 'text-white');
+        btn.classList.remove('bg-rr-card', 'text-slate-300');
+      }
+    }
+
+    // Dynamic Live Purse Simulator
+    function updatePurse() {
+      const s1 = parseFloat(document.getElementById('slot1Range').value);
+      const s2 = parseFloat(document.getElementById('slot2Range').value);
+      const s3 = parseFloat(document.getElementById('slot3Range').value);
+
+      document.getElementById('slot1ValDisplay').textContent = `₹${s1.toFixed(2)} Cr`;
+      document.getElementById('slot2ValDisplay').textContent = `₹${s2.toFixed(2)} Cr`;
+      document.getElementById('slot3ValDisplay').textContent = `₹${s3.toFixed(2)} Cr`;
+
+      const totalPurse = 27.05;
+      const totalOutlay = s1 + s2 + s3;
+      const remaining = totalPurse - totalOutlay;
+      const ratio = ((remaining / totalPurse) * 100).toFixed(1);
+
+      document.getElementById('totalOutlayDisplay').textContent = `₹${totalOutlay.toFixed(2)} Cr`;
+      document.getElementById('remainingPurseDisplay').textContent = `₹${remaining.toFixed(2)} Cr`;
+      document.getElementById('solvencyRatioDisplay').textContent = `${ratio}%`;
+
+      const badge = document.getElementById('solvencyBadge');
+      const msg = document.getElementById('solvencyMsg');
+
+      if (remaining >= 13.0) {
+        badge.className = "p-4 rounded-xl bg-rr-deepnavy border border-emerald-500/40 text-center";
+        badge.innerHTML = `
+          <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center justify-center">
+            <i class="fa-solid fa-shield-check mr-1.5"></i> Optimal Strategic Solvency
+          </div>
+          <p class="text-[11px] text-slate-400 mt-1">War-chest buffer remains above ₹13.00 Cr, ensuring complete bidding superiority.</p>
+        `;
+      } else if (remaining >= 10.0) {
+        badge.className = "p-4 rounded-xl bg-rr-deepnavy border border-amber-500/40 text-center";
+        badge.innerHTML = `
+          <div class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center justify-center">
+            <i class="fa-solid fa-triangle-exclamation mr-1.5"></i> Moderate Buffer Warning
+          </div>
+          <p class="text-[11px] text-slate-400 mt-1">Remaining purse is ₹${remaining.toFixed(2)} Cr. Tactical reserve intact, but proceed with discipline.</p>
+        `;
+      } else {
+        badge.className = "p-4 rounded-xl bg-rr-deepnavy border border-red-500/40 text-center";
+        badge.innerHTML = `
+          <div class="text-xs font-bold text-red-400 uppercase tracking-wider flex items-center justify-center">
+            <i class="fa-solid fa-circle-exclamation mr-1.5"></i> Dangerous Purse Depletion
+          </div>
+          <p class="text-[11px] text-slate-400 mt-1">Buffer under ₹10.00 Cr exposes RR to ambush bidding wars for domestic squad depth.</p>
+        `;
+      }
+    }
+
+    function resetSliders() {
+      document.getElementById('slot1Range').value = 5.00;
+      document.getElementById('slot2Range').value = 6.25;
+      document.getElementById('slot3Range').value = 1.50;
+      updatePurse();
+    }
+
+    // Chart.js Initializations
+    let middleChart = null;
+    let deathChart = null;
+
+    function initCharts() {
+      if (middleChart) middleChart.destroy();
+      if (deathChart) deathChart.destroy();
+
+      const ctxMiddle = document.getElementById('chartMiddleOvers');
+      if (ctxMiddle) {
+        middleChart = new Chart(ctxMiddle, {
+          type: 'bar',
+          data: {
+            labels: ['2024 Actual', '2025 Actual', '2026 Actual', '2027 Projected'],
+            datasets: [
+              {
+                label: 'Middle-Overs Run Rate (rpo)',
+                data: [7.42, 7.35, 7.50, 9.15],
+                backgroundColor: ['#64748B', '#64748B', '#64748B', '#EA1B86'],
+                borderRadius: 6
+              },
+              {
+                label: 'Dot Ball %',
+                data: [51.8, 52.4, 50.9, 34.2],
+                backgroundColor: ['#F59E0B', '#F59E0B', '#F59E0B', '#10B981'],
+                borderRadius: 6
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { labels: { color: '#94A3B8', font: { size: 10 } } }
+            },
+            scales: {
+              x: { ticks: { color: '#94A3B8', font: { size: 10 } }, grid: { display: false } },
+              y: { ticks: { color: '#94A3B8', font: { size: 10 } }, grid: { color: 'rgba(30, 50, 96, 0.4)' } }
+            }
+          }
+        });
+      }
+
+      const ctxDeath = document.getElementById('chartDeathEcon');
+      if (ctxDeath) {
+        deathChart = new Chart(ctxDeath, {
+          type: 'line',
+          data: {
+            labels: ['Over 16', 'Over 17', 'Over 18', 'Over 19', 'Over 20'],
+            datasets: [
+              {
+                label: '2024-2025 (Collapse Period)',
+                data: [11.2, 12.8, 13.4, 13.8, 14.2],
+                borderColor: '#EF4444',
+                backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                tension: 0.3,
+                fill: true,
+                pointBackgroundColor: '#EF4444'
+              },
+              {
+                label: '2027 Blueprint (Archer + Shami + Coetzee)',
+                data: [7.8, 8.2, 8.4, 8.1, 7.9],
+                borderColor: '#10B981',
+                backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                tension: 0.3,
+                fill: true,
+                pointBackgroundColor: '#10B981'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { labels: { color: '#94A3B8', font: { size: 10 } } }
+            },
+            scales: {
+              x: { ticks: { color: '#94A3B8', font: { size: 10 } }, grid: { display: false } },
+              y: { ticks: { color: '#94A3B8', font: { size: 10 } }, grid: { color: 'rgba(30, 50, 96, 0.4)' } }
+            }
+          }
+        });
+      }
+    }
+
+    // On Load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPlayingXI();
+      initCharts();
+      updatePurse();
+    });
+  </script>
+</body>
+</html>

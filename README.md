@@ -1,6 +1,14 @@
 # 👑 RAJASTHAN ROYALS — IPL 2027 WAR ROOM STRATEGY & AUCTION BLUEPRINT
 ### *A Data-Driven Architecture to End the 20-Year Championship Drought*
 
+[![GitHub Pages Dashboard](https://img.shields.io/badge/Live_Dashboard-GitHub_Pages-EA1B86?style=for-the-badge&logo=github)](https://mohamednavith.github.io/Rajasthan-Royals-Hackathon/)
+[![Official PDF Dossier](https://img.shields.io/badge/Download_Report-PDF_680KB-F59E0B?style=for-the-badge&logo=adobeacrobatreader)](outputs/report.pdf)
+[![Streamlit Command Center](https://img.shields.io/badge/Local_War_Room-Streamlit-00E5FF?style=for-the-badge&logo=streamlit)](http://localhost:8501)
+
+> 🌐 **Live Web Dashboard (Hosted on GitHub Pages):**  
+> **[https://mohamednavith.github.io/Rajasthan-Royals-Hackathon/](https://mohamednavith.github.io/Rajasthan-Royals-Hackathon/)**  
+> *Fully interactive, responsive war room with live bid sliders, 20-over law-compliant bowling matrix, authentic player photos scraped from `iplt20.com` via Playwright, and instant PDF download capabilities.*
+
 ---
 
 ## 📌 EXECUTIVE SUMMARY & CORE PHILOSOPHY

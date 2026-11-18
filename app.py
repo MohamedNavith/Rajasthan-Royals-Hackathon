@@ -404,13 +404,49 @@ elif page == "👑 RR War Room: IPL 2027 Strategy":
     # ---------------------------------------------------------
     # 3. INTERACTIVE WAR ROOM MODULE TABS
     # ---------------------------------------------------------
-    subtab1, subtab2, subtab3, subtab4, subtab5 = st.tabs([
-        "🔍 1. Forensic Loss Audit (2024–26)",
-        "🎯 2. Target Slots & 10-Player Shortlists",
-        "⏱️ 3. 20-Over Bowling Matrix",
-        "💎 4. Tactical Luxury Permutations",
-        "💰 5. Live Purse Simulator"
+    subtab0, subtab1, subtab2, subtab3, subtab4, subtab5 = st.tabs([
+        "👑 1. Champion Playing XI (Visual Roster)",
+        "🔍 2. Forensic Loss Audit (2024–26)",
+        "🎯 3. Target Slots & 10-Player Shortlists",
+        "⏱️ 4. 20-Over Bowling Matrix",
+        "💎 5. Tactical Luxury Permutations",
+        "💰 6. Live Purse Simulator"
     ])
+
+    # ---------------------------------------------------------
+    # TAB 0: CHAMPION PLAYING XI (VISUAL ROSTER)
+    # ---------------------------------------------------------
+    with subtab0:
+        st.markdown("#### 👑 The 2027 Rajasthan Royals Champion Playing XI")
+        st.caption("7 Specialized Batters + 6 Genuine Bowling Options (Balanced 11 Without Sub Reliance) | Max 4 Overseas")
+        
+        xi_players = [
+            {"slot": 1, "name": "Yashasvi Jaiswal", "role": "Left-Hand Explosive Opener", "img": "jaiswal.png", "stats": "IPL SR: 164.2 | PP SR: 172.5", "pressure": 88.4, "tag": "Core Retained"},
+            {"slot": 2, "name": "Vaibhav Sooryavanshi", "role": "Dynamic Left-Hand Opener", "img": "sooryavanshi.png", "stats": "FC Debut 100 | SR: 154.2", "pressure": 82.0, "tag": "Emerging Talent"},
+            {"slot": 3, "name": "Pathum Nissanka", "role": "Top-Order Anchor / Stabilizer", "img": "nissanka.png", "stats": "T20I SR: 142.6 | Spin Dot: 28.4%", "pressure": 89.5, "tag": "Auction Slot 1 (OS)"},
+            {"slot": 4, "name": "Riyan Parag", "role": "Vice-Captain / Middle Aggressor", "img": "parag.png", "stats": "573 Runs (2024) | SR: 152.8", "pressure": 84.1, "tag": "Core Retained"},
+            {"slot": 5, "name": "Dhruv Jurel", "role": "Wicketkeeper / Finisher", "img": "jurel.png", "stats": "Death SR: 178.4 | Ice Temperament", "pressure": 88.2, "tag": "Core Retained"},
+            {"slot": 6, "name": "Donovan Ferreira", "role": "Overseas Power Finisher / 2nd WK", "img": "ferreira.png", "stats": "SA20 SR: 168.5 | 227.3 SMS SR", "pressure": 83.4, "tag": "Core Retained (OS)"},
+            {"slot": 7, "name": "Ravindra Jadeja", "role": "Premier Spin All-Rounder", "img": "jadeja.png", "stats": "Jaipur ER: 7.12 | Dot%: 49.2%", "pressure": 91.0, "tag": "Trade / Senior Core"},
+            {"slot": 8, "name": "Ravi Bishnoi", "role": "Wrist-Spin Strike Weapon", "img": "bishnoi.png", "stats": "48 T20I Wkts | 102 km/h Googly", "pressure": 86.5, "tag": "Trade / Elite Spin"},
+            {"slot": 9, "name": "Gerald Coetzee", "role": "High-Velocity Enforcer", "img": "coetzee.png", "stats": "150 km/h Pace | Pressure ER: 7.84", "pressure": 90.8, "tag": "Auction Slot 2 (OS)"},
+            {"slot": 10, "name": "Mohammad Shami", "role": "Powerplay Seam Virtuoso", "img": "shami.png", "stats": "145 IPL Wkts | Traded from LSG", "pressure": 89.2, "tag": "Traded Pacer"},
+            {"slot": 11, "name": "Jofra Archer", "role": "Express Spearhead / Over 1 & 20", "img": "archer.png", "stats": "#1 Over 1 Wicket-Taker | 150 km/h", "pressure": 93.5, "tag": "Spearhead (OS)"}
+        ]
+        
+        # Display in rows of 4 columns
+        for row_idx in range(0, len(xi_players), 4):
+            cols = st.columns(4)
+            for col_idx, player in enumerate(xi_players[row_idx:row_idx+4]):
+                with cols[col_idx]:
+                    img_path = Path("assets/images/players") / player["img"]
+                    if img_path.exists():
+                        st.image(str(img_path), use_container_width=True)
+                    st.markdown(f"**#{player['slot']} {player['name']}**")
+                    st.caption(f"{player['role']} • *{player['tag']}*")
+                    st.markdown(f"<span style='font-size:0.8rem; color:#475569;'>{player['stats']}</span>", unsafe_allow_html=True)
+                    st.progress(player['pressure'] / 100.0, text=f"Pressure: {player['pressure']}/100")
+                    st.markdown("<br>", unsafe_allow_html=True)
     
     # ---------------------------------------------------------
     # TAB 1: FORENSIC LOSS AUDIT
