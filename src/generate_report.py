@@ -379,26 +379,31 @@ def generate_docx_report(batters_df: pd.DataFrame, bowlers_df: pd.DataFrame):
     )
     add_h2("7.2 Actionable Auction Targets for RR War Room")
     doc.add_paragraph(
-        "• Tim David (Rank 1 Batter, Rating 76.74 | Priority: Tier 1 Overseas Marquee): The absolute #1 priority target for RR. "
-        "David elevates his strike rate to 188.6 under pressure, delivering +134.5 Runs Over Expected, +2.53 Win Probability Added, and 73% consistency. "
-        "Slotting him at #6 replaces Hetmyer's negative deficit with dominant boundary-hitting power.\n"
-        "• Josh Inglis (Rank 5 Batter, Rating 72.98 | Priority: Tier 1 Overseas Wicketkeeper): Dual-threat asset offering 183.5 pressure SR, "
-        "+98.8 ROE, and an unmatched 81.5% consistency rate. Solves RR's wicketkeeping depth while offering 360-degree spin destruction at #5.\n"
+        "• Matheesha Pathirana (Released by KKR | Priority: Tier 1 Overseas Death Bowler): The absolute #1 priority bowling target for RR. "
+        "Pathirana delivers unhittable 150 km/h toe-crushing dipping yorkers, conceding just 7.44 RPO in Over 18 and 8.89 RPO in Over 19, with +138.0 Runs Saved at the death. "
+        "Slotting him at #9 completely eliminates RR's historical death leakage in overs 18–19.\n"
+        "• Pathum Nissanka (Released by DC | Priority: Tier 1 Overseas Middle Spin Enforcer): Top-order and middle-overs enforcer offering 141.5 pressure SR, "
+        "+21.2 ROE, and an astonishing 182.4 SR at Sawai Mansingh Stadium, Jaipur. Solves RR's middle-overs stall against spin at #4.\n"
         "• Vaibhav Sooryavanshi (Rank 3 Batter, Rating 73.40 | Priority: Crown Jewel Retention): RR's in-house prodigy generated a breathtaking "
-        "213.8 pressure SR and +93.3 ROE specifically for RR. Directive: Cement him permanently as primary opener with Yashasvi Jaiswal.\n"
-        "• High-Value Indian Steals: Naman Dhir (#4 Batter, +63.6 ROE, 183.9 SR) and Sameer Rizvi (#8 Batter, 170.7 SR) provide extreme middle-order "
-        "burst without draining marquee purse funds.\n"
-        "• Bowling Choke Assets: Sunil Narine (#1 Bowler, 5.65 RPO) or Sufiyan Muqeem (#2 Bowler, 3.74 RPO) provides the ultimate middle-overs strangle, "
-        "while Riley Meredith (#3 Bowler, 6.08 RPO) provides 150 km/h death backup."
+        "213.8 pressure SR and 232.2 SR at Jaipur specifically for RR. Directive: Cement him permanently as primary opener with Yashasvi Jaiswal.\n"
+        "• Karun Nair (Released by DC | Priority: High-Value Domestic Clutch Batter): Rank #6 Batter in Data Pack (183.3 Pressure SR, +47.8 Delta, 157.1 SR at SMS). "
+        "Provides experienced Indian middle-order batting depth without inflating purse spend.\n"
+        "• Sufiyan Muqeem (Uncontracted | Priority: Proprietary Mystery Spin Steal): Rank #2 Bowler in Data Pack (3.74 Pressure Econ, +62.3 Runs Saved, 100% consistency). "
+        "Available at base price (₹0.50–0.80 Cr) as unpickable wrist-spin depth alongside Ravi Bishnoi and Ravindra Jadeja."
     )
     add_h2("7.3 Projected Rajasthan Royals Playing XI (2026 Base vs 2027 Champion XI)")
     doc.add_paragraph(
-        "Current 2026 Post-Trade XI: 1. Yashasvi Jaiswal, 2. Vaibhav Sooryavanshi, 3. Riyan Parag, 4. Ravindra Jadeja, 5. Dhruv Jurel (wk), "
-        "6. Shimron Hetmyer (vulnerable), 7. Shubham Dubey/Donovan Ferreira, 8. Ravi Bishnoi, 9. Mohammad Shami (Trade-In), 10. Jofra Archer/Adam Milne, "
+        "Current 2026 Post-Trade Retained Core: 1. Yashasvi Jaiswal, 2. Vaibhav Sooryavanshi, 3. Riyan Parag, 4. Ravindra Jadeja, 5. Dhruv Jurel (wk), "
+        "6. Donovan Ferreira (Retained OS), 7. Shubham Dubey, 8. Ravi Bishnoi, 9. Mohammad Shami (Trade-In), 10. Jofra Archer (Retained OS), "
         "11. Sandeep Sharma. [Impact Sub: Manimaran Siddharth (Trade-In)].\n\n"
-        "Projected 2027 Champion XI: 1. Yashasvi Jaiswal, 2. Vaibhav Sooryavanshi (#3 Batter), 3. Riyan Parag, 4. Ravindra Jadeja, "
-        "5. Josh Inglis [AUCTION TARGET - WK / #5 Batter], 6. Tim David [AUCTION TARGET - #1 Finisher], 7. Dhruv Jurel (Finisher), "
-        "8. Ravi Bishnoi, 9. Mohammad Shami, 10. Jofra Archer / Adam Milne, 11. Sandeep Sharma. [Impact Sub: Manimaran Siddharth / Naman Dhir]."
+        "Projected 2027 Champion XI: 1. Vaibhav Sooryavanshi, 2. Yashasvi Jaiswal, 3. Riyan Parag (VC / 6th Bowler), "
+        "4. Pathum Nissanka [AUCTION TARGET - OS #1], 5. Dhruv Jurel (wk), 6. Donovan Ferreira [RETAINED OS #2 - 360° Finisher], "
+        "7. Ravindra Jadeja [Spin All-Rounder], 8. Ravi Bishnoi [Leg-Spinner], 9. Matheesha Pathirana [AUCTION TARGET - OS #3 Death Slinger], "
+        "10. Mohammad Shami [Strike Seamer], 11. Jofra Archer [RETAINED OS #4 - 150 km/h Enforcer & Closer]. "
+        "[Impact Sub: Sandeep Sharma (Jaipur Knuckleballs) / Karun Nair / Shubham Dubey].\n\n"
+        "Strict 20-Over Law-Compliant Bowling Plan: Over 1 Archer (10 Ov 1 Wkts), Over 2 Shami (6.11 Econ), Over 3 Bishnoi (PP Ambush), "
+        "Over 4 Shami, Over 5 Archer, Over 6 Shami (3 in PP). Middle Choke: Jadeja (7, 9, 11, 13 - 4.00 at SMS), Bishnoi (10, 12, 15), Pathirana (8, 14). "
+        "Death Lockdown: Archer (16), Pathirana (17), Shami (18), Pathirana (19), Archer (20 Closer - 7.50 Econ, 39.3% dots). Zero consecutive overs!"
     )
     
     # Save Word doc
@@ -578,12 +583,16 @@ def generate_pdf_report(batters_df: pd.DataFrame, bowlers_df: pd.DataFrame):
     story.append(Paragraph(
         "<b>2026 Blockbuster Trade Update:</b> Rajasthan Royals traded Sam Curran to LSG to acquire India premier fast bowler <b>Mohammad Shami</b> "
         "and left-arm orthodox spinner <b>Manimaran Siddharth</b>. With Sanju Samson at CSK, Dhruv Jurel anchors wicketkeeping duties.<br/>"
-        "• <b>Fortified Bowling:</b> Shami and Siddharth join Jofra Archer, Sandeep Sharma, Adam Milne (#7 Bowler), and Ravi Bishnoi, creating a complete bowling attack.<br/>"
-        "• <b>Primary Finisher Need (Tier 1):</b> Tim David (#1 Batter, +134.5 ROE, 188.6 SR under pressure) directly solves Shimron Hetmyer's negative regression (-31.5 ROE).<br/>"
-        "• <b>Wicketkeeper Depth (Tier 1):</b> Josh Inglis (#5 Batter, 183.5 SR, 81.5% consistency, specialist keeper) secures vital backup and middle-overs spin acceleration.<br/>"
-        "• <b>Crown Jewel Retention:</b> Vaibhav Sooryavanshi (#3 Batter, 213.8 SR under pressure) cemented as permanent opener with Yashasvi Jaiswal.<br/>"
-        "• <b>Domestic Steals & Choke Assets:</b> Naman Dhir (#4), Sameer Rizvi (#8), and Sufiyan Muqeem (#2 Bowler, 3.74 RPO) provide massive purse efficiency.<br/>"
-        "• <b>Projected 2027 Champion XI:</b> Jaiswal, Sooryavanshi, Parag, Jadeja, Inglis (wk), David, Jurel, Bishnoi, Shami, Archer/Milne, Sandeep Sharma.",
+        "• <b>Fortified Bowling Spine:</b> Shami and Siddharth join Jofra Archer, Sandeep Sharma, Adam Milne (#7 Bowler), and Ravi Bishnoi, creating a complete bowling attack.<br/>"
+        "• <b>Death Bowling Enforcer (Tier 1):</b> Matheesha Pathirana (Released by KKR | 7.44 Ov 18 Econ, 8.89 Ov 19 Econ, +138.0 Runs Saved) solves historical overs 18–19 leakage.<br/>"
+        "• <b>Middle Spin Enforcer (Tier 1):</b> Pathum Nissanka (Released by DC | 141.5 Pressure SR, 182.4 SR at SMS Jaipur) eliminates the middle-overs spin stall.<br/>"
+        "• <b>Crown Jewel Retention:</b> Vaibhav Sooryavanshi (#3 Batter, 213.8 SR under pressure, 232.2 at SMS) cemented as permanent opener with Yashasvi Jaiswal.<br/>"
+        "• <b>Domestic Clutch Depth & Choke Assets:</b> Karun Nair (#6 Batter, 183.3 Pressure SR) and Sufiyan Muqeem (#2 Bowler, 3.74 RPO) provide massive purse efficiency.<br/>"
+        "• <b>Projected 2027 Champion XI:</b> 1. Sooryavanshi, 2. Jaiswal, 3. Parag, 4. Pathum Nissanka [OS #1], 5. Jurel (wk), 6. Donovan Ferreira [OS #2], "
+        "7. Jadeja, 8. Bishnoi, 9. Matheesha Pathirana [OS #3], 10. Shami, 11. Jofra Archer [OS #4]. [Impact Sub: Sandeep Sharma / Karun Nair / Shubham Dubey].<br/>"
+        "• <b>20-Over Strict Law-Compliant Plan:</b> Ov 1 Archer (10 Ov 1 Wkts), Ov 2 Shami (6.11 Econ), Ov 3 Bishnoi (PP Ambush), Ov 4 Shami, Ov 5 Archer, Ov 6 Shami (3 in PP). "
+        "Middle: Jadeja (7, 9, 11, 13 - 4.00 at SMS), Bishnoi (10, 12, 15), Pathirana (8, 14). Death: Archer (16), Pathirana (17), Shami (18), Pathirana (19), Archer (20 closer - 7.50 Econ). "
+        "Zero consecutive overs across all 20 overs!",
         body_style
     ))
     

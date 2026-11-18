@@ -491,89 +491,127 @@ def build_presentation():
     # =========================================================================
     s11 = prs.slides.add_slide(blank_layout)
     apply_slide_background(s11, prs)
-    add_header(s11, "Projected Rajasthan Royals Playing XI: 2026 Base vs 2027 Champion XI")
+    add_header(s11, "Projected Rajasthan Royals Playing XI: 2027 Champion Blueprint")
     
     add_card(s11, Inches(0.8), Inches(1.5), Inches(5.6), Inches(5.3),
-        "Current 2026 Post-Trade Probable XI",
+        "2027 Champion Starting XI (Batting Till #7/#8)",
         [
-            "1. Yashasvi Jaiswal (LH Opener, +53.8 ROE)",
-            "2. Vaibhav Sooryavanshi (LH Opener, 213.8 SR - Rank 3)",
-            "3. Riyan Parag (RH Anchor/Finisher)",
-            "4. Ravindra Jadeja (LH All-Rounder)",
-            "5. Dhruv Jurel (WK / Finisher, +9.3 ROE)",
-            "6. Shimron Hetmyer (OS Finisher, -31.5 ROE - VULNERABILITY)",
-            "7. Shubham Dubey / Donovan Ferreira (Impact Finisher)",
-            "8. Ravi Bishnoi (Leg-Spinner)",
-            "9. Mohammad Shami (Pace Spearhead - Traded In)",
-            "10. Jofra Archer / Adam Milne (Express Pace - Milne Rank 7)",
-            "11. Sandeep Sharma (Death Yorker Specialist)",
-            "Impact Sub: Manimaran Siddharth (Left-Arm Spin - Traded In)"
-        ],
-        border_color=RGBColor(200, 200, 200)
-    )
-    add_card(s11, Inches(6.8), Inches(1.5), Inches(5.7), Inches(5.3),
-        "Projected 2027 Champion XI with Auction Targets",
-        [
-            "1. Yashasvi Jaiswal (LH Opener - Elite Powerplay)",
-            "2. Vaibhav Sooryavanshi (LH Opener - #3 Pressure Batter)",
-            "3. Riyan Parag (RH Anchor / Enforcer)",
-            "4. Ravindra Jadeja (LH All-Rounder / Finisher)",
-            "5. Josh Inglis [AUCTION TARGET] (WK / Spin Destroyer - Rank 5)",
-            "6. Tim David [AUCTION TARGET] (OS Finisher - Rank 1)",
-            "7. Dhruv Jurel (Dual Finisher & Elite Pressure Asset)",
-            "8. Ravi Bishnoi / Manimaran Siddharth (Spin Choke)",
-            "9. Mohammad Shami (New Ball & Reverse Swing)",
-            "10. Jofra Archer / Adam Milne (150 km/h Express Pace)",
-            "11. Sandeep Sharma (Death Knuckleballs)",
-            "Tactical Upgrade: Tim David replaces Hetmyer's -31.5 ROE with +134.5 ROE; Josh Inglis provides 360-degree spin play & solves WK depth!"
+            "1. Vaibhav Sooryavanshi (LH Opener - Rank #3 Pressure Batter, 232.2 SR at SMS)",
+            "2. Yashasvi Jaiswal (LH Opener - Superstar Core, +37.6 Pressure ROE)",
+            "3. Riyan Parag (RH Anchor & 6th Bowler - 158.5 Pressure SR, 8.70 Bowling Econ)",
+            "4. Pathum Nissanka [AUCTION BUY OS #1] (Middle Spin Enforcer - 182.4 SR at SMS)",
+            "5. Dhruv Jurel (RH Wicketkeeper-Finisher - 178.6 Death SR, +9.3 ROE)",
+            "6. Donovan Ferreira [RETAINED OS #2] (360° Death Destroyer - 227.3 SR at SMS)",
+            "7. Ravindra Jadeja (LH Spin All-Rounder - 4.00 Econ at SMS, 8.15 Pressure Econ)",
+            "8. Ravi Bishnoi (RH Attacking Leg-Spinner - 76 Middle Wickets)",
+            "9. Matheesha Pathirana [AUCTION BUY OS #3] (Death Yorker Slinger - 7.44 Ov 18 Econ)",
+            "10. Mohammad Shami (RF Strike Seamer - 6.11 Ov 1 Econ, 58.8% Dots in Ov 1)",
+            "11. Jofra Archer [RETAINED OS #4] (150 km/h Enforcer & Closer - 7.50 Ov 20 Econ)",
+            "Impact Sub Options: Sandeep Sharma (9.03 SMS Econ) / Karun Nair / Shubham Dubey"
         ],
         border_color=C_PINK
     )
+    add_card(s11, Inches(6.8), Inches(1.5), Inches(5.7), Inches(5.3),
+        "Strategic Balance & Winning Formula Proof",
+        [
+            "1. 7–8 Recognized Batters: Batting extends to Jadeja (#7) and Bishnoi (#8); zero tailenders in top 7.",
+            "2. 6–7 Legitimate Bowling Options: Shami, Archer, Pathirana (Pace) + Jadeja, Bishnoi (Spin) + Parag/Ferreira (Flex).",
+            "3. The 4-Foreigner Golden Ratio: Replicates KKR 2024 & CSK 2023 with 2 Batters (Nissanka, Ferreira) + 2 Bowlers (Pathirana, Archer).",
+            "4. Solves Historic RR Vulnerabilities: Nissanka (+21.2 ROE) eliminates Hetmyer's -50.4 ROE middle stall.",
+            "5. Eliminates Death Leakage: Pathirana (7.44 Ov 18, 8.89 Ov 19) and Archer (7.50 Ov 20) protect Shami & Sandeep.",
+            "6. In-House Retained Insurance: Nandre Burger (6.22 Ov 19 Econ), Dasun Shanaka, and Lhuan-dre Pretorius provide elite depth."
+        ],
+        border_color=C_ROYAL
+    )
 
     # =========================================================================
-    # SLIDE 12: Final Tiered Auction Target Matrix
+    # SLIDE 12: Final Tiered Auction Target Matrix & Purse Allocation
     # =========================================================================
     s12 = prs.slides.add_slide(blank_layout)
     apply_slide_background(s12, prs)
-    add_header(s12, "War Room Action Plan: Tiered Auction Target Matrix for RR")
+    add_header(s12, "War Room Action Plan: Tiered Auction Target Matrix & Budget (₹27.05 Cr)")
     
     add_card(s12, Inches(0.8), Inches(1.5), Inches(3.6), Inches(5.3),
-        "TIER 1: MARQUEE CORNERSTONES",
+        "TIER 1: MARQUEE AUCTION STARTERS",
         [
-            "BAT: Tim David (Rank 1)",
-            "Priority: Absolute Top Priority overseas finisher.",
-            "Target Purse Allocation: ₹12–15 Cr.",
-            "BAT/WK: Josh Inglis (Rank 5)",
-            "Priority: Dual WK / 360-degree spin player.",
-            "Target Purse Allocation: ₹7–10 Cr.",
-            "STRATEGY: Allocate bulk purse to David and Inglis to eradicate batting chase vulnerability."
+            "BOWL: Matheesha Pathirana [OS #3]",
+            "Released by KKR | Role: Death Yorker Slinger",
+            "Metrics: 7.44 Ov 18 Econ, +138.0 Runs Saved.",
+            "Target Bid: ₹7.50 Cr | Max Ceiling: ₹8.50 Cr.",
+            "BAT: Pathum Nissanka [OS #1]",
+            "Released by DC | Role: Middle Spin Enforcer",
+            "Metrics: 182.4 SR at SMS, +21.2 Pressure ROE.",
+            "Target Bid: ₹3.20 Cr | Max Ceiling: ₹3.80 Cr.",
+            "STRATEGY: Secure starting core with ₹10.7–12.3 Cr."
         ],
         border_color=C_PINK
     )
     add_card(s12, Inches(4.8), Inches(1.5), Inches(3.6), Inches(5.3),
-        "TIER 2: HIGH-VALUE SPECIALISTS",
+        "TIER 2: SMART VALUE & CLUTCH DEPTH",
         [
-            "BOWL: Sunil Narine (Rank 1) / Sufiyan Muqeem (Rank 2)",
-            "Role: Ultimate spin choke (5.65 RPO Narine / 3.74 RPO Muqeem).",
-            "Target Purse: ₹4–8 Cr.",
-            "BOWL: Riley Meredith (Rank 3) / Mayank Yadav (Rank 9)",
-            "Role: Express 145+ km/h death backup.",
-            "Target Purse: ₹3–6 Cr.",
-            "STRATEGY: Selective bidding on elite bowling choke assets."
+            "BAT: Karun Nair [IND] (Released by DC)",
+            "Role: Domestic Clutch Batter (Rank #6 in Data).",
+            "Metrics: 183.3 Pressure SR, +47.8 Delta. Max: ₹1.5 Cr.",
+            "BOWL: Sufiyan Muqeem [OS] (Uncontracted)",
+            "Role: Proprietary Mystery Spin Steal (Rank #2).",
+            "Metrics: 3.74 Pressure Econ, +62.3 Saved. Max: ₹0.8 Cr.",
+            "BOWL: Adam Milne [OS] (Buyback Option)",
+            "Role: 150 km/h Backup Pacer (Rank #7). Max: ₹1.2 Cr.",
+            "STRATEGY: Acquire elite statistical depth for <₹3.5 Cr."
         ],
         border_color=C_ROYAL
     )
     add_card(s12, Inches(8.8), Inches(1.5), Inches(3.6), Inches(5.3),
-        "TIER 3: SMART DOMESTIC STEALS",
+        "PURSE EFFICIENCY & SAFETY PIVOTS",
         [
-            "BAT: Naman Dhir (Rank 4) / Sameer Rizvi (Rank 8) / Ashutosh Sharma (Rank 11)",
-            "Target Purse: ₹2–4 Cr.",
-            "BOWL: Ehsan Khan (Rank 8)",
-            "Target Purse: ₹1–2 Cr.",
-            "IN-HOUSE: Lock in Vaibhav Sooryavanshi (#3) as primary opener.",
-            "STRATEGY: Extreme purse efficiency, ensuring complete squad depth."
+            "Total Available Purse: ₹27.05 Crore.",
+            "Projected Total Spend: ₹13.80 Cr – ₹16.60 Cr.",
+            "Surplus Emergency Buffer: +₹10.45 Cr to +₹13.25 Cr!",
+            "SAFETY PIVOT PLAN:",
+            "If Pathirana exceeds ₹8.50 Cr, pivot to Mustafizur Rahman (₹3.50 Cr) or Gerald Coetzee (₹4.50 Cr).",
+            "In-House Cover: Retained Nandre Burger boasts an extraordinary 6.22 Econ in Over 19!",
+            "VERDICT: 100% purse solvent and risk-insulated."
         ],
         border_color=C_GOLD
+    )
+
+    # =========================================================================
+    # SLIDE 13: Tactical Execution: 20-Over Law-Compliant Bowling Plan
+    # =========================================================================
+    s13 = prs.slides.add_slide(blank_layout)
+    apply_slide_background(s13, prs)
+    add_header(s13, "Tactical Execution: Strict Law-Compliant 20-Over Bowling Plan")
+    
+    add_card(s13, Inches(0.8), Inches(1.5), Inches(5.6), Inches(5.3),
+        "Powerplay Allocation (Overs 1–6): Shami (3), Archer (2), Bishnoi (1)",
+        [
+            "Ov 1 (Archer): 10 Over 1 Wickets (2024-26); 150 km/h bouncers.",
+            "Ov 2 (Shami): Upright seam outswing; 6.11 Econ, 58.8% dots in Ov 1.",
+            "Ov 3 (Bishnoi): Powerplay Spin Ambush; googly surprises top order.",
+            "Ov 4 (Shami): Attacks top of off-stump; 7.38 Econ, 39.6% dots.",
+            "Ov 5 (Archer): Heavy lengths into the ribs; 150 km/h enforcer pace.",
+            "Ov 6 (Shami): Completes 3 overs in PP; shuts down field restrictions.",
+            "LAW COMPLIANCE: Archer (1, 5), Shami (2, 4, 6) strictly alternate ends!",
+            "Projected Powerplay Conceded: 38–44 runs | 2+ Wickets."
+        ],
+        border_color=C_PINK
+    )
+    add_card(s13, Inches(6.8), Inches(1.5), Inches(5.7), Inches(5.3),
+        "Middle & Death Allocation (Overs 7–20): Non-Consecutive Rhythm",
+        [
+            "Middle Choke (Overs 7–15):",
+            "• Jadeja (Overs 7, 9, 11, 13): 4.00 Econ at SMS; flat darts choke singles.",
+            "• Bishnoi (Overs 10, 12, 15): 76 career middle wkts; attacking googlies.",
+            "• Pathirana (Overs 8, 14): Round-arm yorkers break set middle stands.",
+            "Death Lockdown (Overs 16–20):",
+            "• Ov 16 (Archer): 150 km/h enforcer burst; 7.91 career death Econ.",
+            "• Ov 17 (Pathirana): Wide dipping yorkers outside off.",
+            "• Ov 18 (Shami): 4th and final over; tail-in reverse seam (3.00 at SMS).",
+            "• Ov 19 (Pathirana): Unhittable toe-crushers; 8.89 Econ, 14 wkts in Ov 19!",
+            "• Ov 20 (Archer): The Ultimate Closer; 7.50 Econ & 39.3% dots in Ov 20!",
+            "VERDICT: Zero consecutive overs; Shami fully protected from Overs 19 & 20!"
+        ],
+        border_color=C_ROYAL
     )
 
     out_path = OUTPUT_DIR / "rr_auction_presentation.pptx"
