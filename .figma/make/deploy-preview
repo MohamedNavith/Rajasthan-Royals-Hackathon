@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+build_dir=".figma/make/static-build"
+rm -rf "$build_dir"
+mkdir -p "$build_dir/outputs"
+cp index.html .nojekyll "$build_dir/"
+cp -R assets "$build_dir/"
+cp outputs/report.pdf "$build_dir/outputs/"
+
+[[ -d "$build_dir" ]] || {
+  echo "Expected build output at $build_dir" >&2
+  exit 1
+}
+figma make deploy-preview --build-dir "$build_dir"
